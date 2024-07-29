@@ -3,90 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprende Link</title>
-    <link rel="stylesheet" href="CSS/HOME.CSS">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Lista de usuarios</title>
+    <link rel="stylesheet" href="styleslistausuario.css"> 
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
-            <!-- <a href="MI-EMPRENDIMIENTO-MENU.HTML">
-                <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
-            </a> -->
-            <img src="LINK/LOGO.png" alt="Emprende Link Logo" class="logo">
+        <div class="menu">
+            <img src="img/menu.png" alt="menu" style=" cursor: pointer;">
         </div>
-        <div class="header-right">
-           <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
-        <a href="#"><i class="fas fa-bell"></i> Notificaciones</a>
-        <a href="#"><i class="fas fa-user"></i> Usuario</a>
+        <div class="logo">
+            <img src="img/logo.png" alt="Emprende Link Logo" style=" cursor: pointer;">
         </div>
+        <hr class="horizontal-line">
+        <nav>
+            <div class="nav-item">
+                <img src="img/ayuda.png" alt="ayuda">
+                <a href="#">Ayuda</a>
+            </div>
+            <div class="nav-item">
+                <img src="img/notificacion.png" alt="notificacion">
+                <a href="#">Notificaciones</a>
+            </div>
+            <div class="nav-item">
+                <img src="img/flecha.png" alt="flecha">
+                <a href="#">Usuario</a>
+            </div>
+        </nav>
     </header>
-    <main class="main-content">
-        <div class="hero-section">
-            <h1>¡¿Deseas impulsar tu emprendimiento?!</h1>
-            <p>Conectando ideas, Impulsando negocios</p>
-            <input type="text" placeholder="Buscar...">
-        </div>
-        <section>
-            <h2 class="section-title">¿Qué Puedes Hacer?</h2>
-            <div class="action-cards">
-                <div class="card">
-                    <img src="LINK/image-removebg-preview.png" alt="Icono de chat" class="card-icon">
-                    <h3>Comunícate con los emprendedores</h3>
-                    <p>Conectamos a emprendedores con ideas innovadoras y prometedoras con inversionistas ávidos de oportunidades de inversión. A través de nuestra plataforma, los emprendedores pueden presentar sus proyectos empresariales de manera convincente, mientras que los inversionistas pueden descubrir y evaluar nuevas oportunidades de inversión.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
-                <div class="card-column">
-                    <div class="card">
-                        <img src="LINK/INVIERTE.png" alt="Invierte" class="card-img">
-                        <h3>Llega a mas personas</h3>
-                        <p>Emprendedores, solicitan patrocinio a inversores afines. Juntos, alcanzaremos el éxito.</p>
-                        <a href="#" class="btn">Ver más</a>
-                    </div>
-                    <div class="card">
-                        <img src="LINK/Rectangle 678.png" alt="Emprendimientos" class="card-img">
-                        <h3>Emprendimientos</h3>
-                        <p>Busca emprendimientos que te gusten o con potencial para que crezca su patrimonio.</p>
-                        <a href="#" class="btn">Ver más</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2 class="section-title">Últimas Publicaciones</h2>
-            <div class="latest-posts">
-                <div class="card">
-                    <img src="LINK/LOGO-VINOS.png" alt="Vino el Éxtasis" class="card-img">
-                    <div class="card-content">
-                        <h3>Vino el Éxtasis</h3>
-                        <p>"Aquel que vino al mundo y no toma vino, ¿entonces a qué vino?"</p>
-                        <p>Experimenta la magia del vino: Un viaje sensorial único. Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición.</p>
-                        <a href="#" class="btn">Más Información...</a>
-                    </div>
-                </div>
-                <div class="profile-card">
-                    <img src="LINK/PERFIL-2.png" alt="Perfil" class="profile-img">
-                    <h3>Cristian Sebastian Delgado</h3>
-                    <p>cristiansdp@gmail.com</p>
-                    <p>40 - Jersey City, Gal / 86551<br>320-898-7646<br>Popayán</p>
-                </div>
-            </div>
-        </section>
-    </main>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-left">
-            <img src="LINK/LOGO-FONDO NEGRO.png" alt="F-N">
-            <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo de soluciones innovadoras.</p>
-            <!-- <div class="social-icons"> -->
-                <!-- <a href="#"><img src="LINK/facebook-logo-facebook-icon-transparent-free-png.webp" alt="Facebook"></a>
-                <a href="#"><img src="LINK/linkedin-logo.webp" alt="LinkedIn"></a>
-                <a href="#"><img src="LINK/fondo-instagram-colores-degradados_23-2147823814.avif" alt="Instagram"></a>
-                <a href="#"><img src="LINK/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.webp" alt="YouTube"></a> -->
-            
+        <br><br>
+    <div class="container">
+        <h1>EMPRENDIMIENTOS</h1>
 
+        <div class="profile profile-arepa">
+            
+            <div class="profile-info">
+                <h2>Arepas doña lucia</h2>
+                <div class="icons">
+                  <a href="vistaEmprendimiento.html">
+                    <button class="btn visitar">Visitar</button></a>
+                    <button class="btn conectar">Conectar</button>
+                </div>
+                <p>*Somos un emprendimiento enfocado en el procesamiento y comercializacion de arepas de todo tipo, con queso, sin queso, con, carne, con huevo, con pollo, y con muchas cosas mas.</p>
+            </div>
+        </div>
+        
+        <div class="profile profile-carne">
+           
+            <div class="profile-info">
+                <h2>Carnes LA Buena Vaca</h2>
+                <div class="icons">
+                  
+                    <button class="btn visitar" >Visitar</button>
+                    <button class="btn conectar">Conectar</button>
+                </div>
+                <p>Somos un emprendimiento enfocado en el procesamiento de carnes rojas,
+                     lo que buscamos es lograr que muchas personas consuman esta carne rica en proteinas y asi poder crecer como empresa.</p>
+            </div>
+        </div>
+        
+        <div class="profile profile-funeraria">
+           
+            <div class="profile-info">
+                <h2>Funeraria La Buena Vida</h2>
+                <div class="icons">
+                    <button class="btn visitar">Visitar</button>
+                    <button class="btn conectar">Conectar</button>
+                </div>
+                <p>Somos un emprendimiento enfocado en la buena atencion a los difuntos,
+                     para que asi la gente siempre nos prefiera, estamos al servicio de la comunidad y prestos a servir, te acompañamos en tus peores momentos.</p>
+            </div>
+        </div>
+        
+        <div class="profile profile-vino">
+           
+            <div class="profile-info">
+                <h2>Vino El Extasis</h2>
+                <div class="icons">
+                    <button class="btn visitar">Visitar</button>
+                    <button class="btn conectar">Conectar</button>
+                </div>
+                <p>Descubre nuestro emprendimiento vinícola, donde cada botella es una sinfonía de sabores y pasiones. Con uvas de viñedos seleccionados y técnicas artesanales, te invitamos a explorar el mundo del vino y descubrir a qué vino viniste destinado.
+                     ¡Brinda con nosotros y vive una experiencia única en cada sorbo!.</p>
+            </div>
+        </div>
+        
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Se ha enviado un mensaje a “Arepas Doña Lucia” solicitando una conexión.</p>
+            <button id="accept">Aceptar</button>
+            <button id="cancel">Cancelar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="logo">
+                    <img src="img/logoOscuro.png" alt="Emprende Link" style="width: auto;">
+                </div>
+                <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo conjunto de soluciones innovadoras.</p>
                 <ul class="example-2">
                     <li class="icon-content">
                       <a
@@ -177,80 +194,85 @@
                       <div class="tooltip">Youtube</div>
                     </li>
                   </ul>
-
+                  
+            </div>
+            
+            <div class="footer-section links">
+                <br>
+                <br><br>
+                <h3>Legales</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Acuerdos y términos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <br>
+                <br><br>
+                <h3>Nuestro correo:</h3>
+                <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
+            </div>
+            <div class="footer-section more">
+                <br>
+                <br><br>
+                <h3>Más de nosotros</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Sobre Emprende Link</a></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-right">
-            <div class="footer-column">
-                <h4>Legales</h4>
-                <br>
-                <br>
-                <a href="#">Política de privacidad</a>
-                <br>
-                <a href="#">Acuerdos y términos</a>
-            </div>
-            <div class="footer-column">
-                <h4>Nuestro correo:</h4>
-                <br>
-                <br>
-                <a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a>
-            </div>
-            <div class="footer-column">
-                <h4>Mas de nosotros</h4>
-                <br>
-                <br>
-                <a href="#">Política de privacidad</a>
-                <br>
-                <a href="#">Centro de ayuda</a>
-                <br>
-                <a href="#">Sobre Emprende Link</a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; Emprende Link - Copyright © 2024</p>
         </div>
-<!-- Menú lateral -->
-<aside class="sidebar">
-    <div class="profile-1">
-        <img src="LINK/PERFIL-2.png" alt="User">
-        <br>
-        <span>Cristian Sebastian</span>
-        <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
-    </div>
-    <ul>
-        <li><a href="">Inicio</a></li>
-        <li><a href="perfilUsaurio.html">Perfil</a></li>
-        <li><a href="#">Busqueda por categoría</a></li>
-        <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
-        <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
-        <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
-        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
-        <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
-        <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
-    </ul>
-    </aside>
-
-
-
-    <script>
-        document.querySelector('.barra').addEventListener('click', function() {
-       this.classList.toggle('active');
-       document.querySelector('.sidebar').classList.toggle('active');
-   });
-
-       document.querySelectorAll('.accordion-button').forEach(button => {
-           button.addEventListener('click', () => {
-               const accordionContent = button.nextElementSibling;
-               button.classList.toggle('active');
-
-               if (button.classList.contains('active')) {
-                   accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-               } else {
-                   accordionContent.style.maxHeight = 0;
-               }
-           });
-       });
-
-       
-    </script>
-    
     </footer>
+    
+    <script>
+       // Función para abrir el modal
+    function openModal() {
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    // Agregar evento click a todos los botones "Conectar"
+    document.querySelectorAll('.conectar').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            openModal();
+        });
+    });
+
+    // Evento para cerrar el modal al hacer clic en el botón de cerrar
+    document.querySelector('.close').addEventListener('click', function(event) {
+        event.preventDefault();
+        closeModal();
+    });
+
+    // Evento para cerrar el modal al hacer clic en "Aceptar"
+    document.getElementById('accept').addEventListener('click', function(event) {
+        event.preventDefault();
+        closeModal();
+        // Aquí puedes agregar la lógica adicional para el botón "Aceptar"
+    });
+
+    // Evento para cerrar el modal al hacer clic en "Cancelar"
+    document.getElementById('cancel').addEventListener('click', function(event) {
+        event.preventDefault();
+        closeModal();
+        // Aquí puedes agregar la lógica adicional para el botón "Cancelar"
+    });
+
+    // Cerrar el modal si el usuario hace clic fuera del contenido del modal
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal')) {
+            closeModal();
+        }
+    }
+    </script>
 </body>
 </html>

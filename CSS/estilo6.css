@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.menu-toggle span {
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    
+}
+nav ul li img{
+    width: 20px;
+    height: 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.hero-section {
+    background-image: url('https://img.freepik.com/vector-gratis/grafico-diagrama-inversion-financiera-mercado-valores-flecha-arriba-sobre-fondo-azul_56104-1814.jpg?t=st=1722233989~exp=1722237589~hmac=4880cb2420684e884ee53ada52f956b005b352f651f2f376595ca157b3f78e04&w=1380');
+    background-size: cover;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    width: 1550px;
+    height: 250px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.0); /* Ajusta el último valor para cambiar la opacidad */
+    border-radius: 10px;
+}
+
+.hero-section h1,
+.hero-section p,
+.hero-section input {
+    position: relative;
+    z-index: 1;
+    border-color: black;
+}
+
+.hero-section input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 1); /* Fondo semi-transparente para la barra de búsqueda */
+    border-bottom: black;
+    border-color: black;
+}
+
+.section-title {
+    margin-top: 90px;
+
+}
+
+.action-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(1,1,1,0.2);
+    margin-top: 100px;
+    margin-top: auto;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-icon, .card-img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+/* .card-1-icon, .card-img {
+    width: 10%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-2-icon, .card-img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+} */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.latest-posts {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:#060606;
+    color: #fff;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-left img {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.footer-left p {
+    margin: 58px ;
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-right-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-column {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.footer-column h4 {
+    color: #fff;
+    margin-bottom: 10px;
+   
+  
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+    display: block;
+}
+
+.footer-column a:hover {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+.sidebar {
+    position: fixed;/*maneja el menu de barras */
+    left: -300px; /* maneja la salida de el menu de barras*/
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar .profile img {/*maneja la imagen del menu */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
+    padding: 15px 20px;
+    border-bottom: 2px solid #444;
+}
+
+.sidebar ul li a { /* maneja el color de las letras del menu */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-right: 100px;
+    margin-top: 50px;;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprende Link - Inicio de Sesión</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('fondo.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 100px;
+            margin-right: 5px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        main h2 {
+            margin-bottom: 40px;
+            font-size: 30px;
+            color: #333;
+        }
+        .login-box {
+            width: 20%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .login-box form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .login-box label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .login-box input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: block;
+        }
+        button:hover {
+            background-color: #6b6b6b;
+        }
+        footer {
+            background-color: #060606;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .footer-logo img {
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        .footer-text {
+            max-width: 600px;
+        }
+        .footer-content {
+            white-space: pre-line;
+            margin-top: 20px;
+        }
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .imagenes img {
+            width: 30px;
+            margin: 0 10px;
+        }
+        .footer-section ul {
+            padding: 0;
+            list-style: none;
+            color: #fff;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-bottom p {
+            margin: 0;
+            text-align: center;
+            align-items: center;
+        }
+        .social-media a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Emprende Link">
+            </div>
+        </header>
+        <main>
+            <h2>Registro de usuario</h2>
+            <div class="login-box">
+                <form action="login.php" method="post">
+                    <h1>Registro</h1>
+                    <br>
+                    <label for="username">Nombre</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="username">Apellido</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="username">Documento</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="username">Telefono</label>
+                    <input type="text" id="username" name="username" required>
+                   
+                
+                    <button type="submit">Siguiente</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <div class="logo">
+                        <img src="logo_oscuro.png" alt="Emprende Link">
+                    </div>
+                    <p>Emprende Link busca facilitar la colaboración
+                        y el crecimiento empresarial al conectar de
+                        manera eficiente a emprendedores con grandes
+                        inversores, creando oportunidades para el 
+                        desarrollo conjunto de soluciones innovadoras.</p>
+                    <div class="imagenes">
+                        <img src="https://th.bing.com/th/id/R.ebe12dc32db7d3a0089ce0f1c5b0caea?rik=gatB2Ut7aWOLtg&riu=http%3a%2f%2f3.bp.blogspot.com%2f-EzeswpQ0o7M%2fURusTcu183I%2fAAAAAAAAACQ%2fU6b9mbyvO-4%2fs1600%2ffacebook%2blogo%2b7.jpg&ehk=d8y3tYTW51sJk69QOxaCsmrcJdamfbydV0WUyIMk7EM%3d&risl=&pid=ImgRaw&r=0" alt="Logo 1">
+                        <img src="https://th.bing.com/th/id/OIP.YO7Fxc7mQc7rx-7pDzclCQAAAA?rs=1&pid=ImgDetMain" alt="Logo 2">
+                        <img src="https://th.bing.com/th/id/R.e323a1c490acd8ad3f84d1d1a6d78c9a?rik=pefjyka5%2fJ2tYA&pid=ImgRaw&r=0" alt="Logo 3">
+                        <img src="https://1000logos.net/wp-content/uploads/2017/05/New-YouTube-logo.jpg" alt="Logo 3">
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Legales</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li> 
+                        <li><a href="#">Acuerdos y términos</a></li>  
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Nuestro correo:</h3>
+                    <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
+                </div>
+                <div class="footer-section more">
+                    <h3>Más de nosotros</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Sobre Emprende Link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Emprende Link - Copyright © 2024</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

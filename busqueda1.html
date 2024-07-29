@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprende Link Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .menu-lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 18px;
+            margin-right: 10px;
+        }
+        .menu-lines div {
+            width: 25px;
+            height: 2px;
+            background-color: #000;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .logo .text {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+        }
+        .logo .text .subtext {
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin-left: 30px;
+            display: flex;
+            align-items: center;
+        }
+        nav a img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .content {
+            display: flex;
+            width: calc(100% - 40px); /* Añade espacio a los laterales */
+            height: 300px; /* Aumenta la altura para ajustarse al nuevo diseño */
+            padding: 0;
+            margin: 20px 20px 0; /* Añade separación en la parte superior y los laterales */
+            position: relative; /* Necesario para la posición del pequeño cuadrado */
+        }
+        .rectangle {
+            flex: 0 1 60%;
+            background-color: #ccc;
+            margin-right: 10px; /* Espacio entre el rectángulo y el cuadrado */
+            border-radius: 10px; /* Curvatura del rectángulo */
+            overflow: visible; /* Permite que los elementos hijos sobresalgan */
+            position: relative; /* Necesario para el posicionamiento del cuadrado pequeño */
+        }
+        .square {
+            width: 40%;
+            background-color: #ccc;
+            border-radius: 10px; /* Curvatura del cuadrado */
+            overflow: hidden; /* Asegura que la imagen siga la curvatura */
+            position: relative; /* Necesario para el posicionamiento de los cuadros debajo */
+        }
+        .rectangle img, .square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para cubrir todo el área del contenedor sin distorsionar */
+            border-radius: 10px; /* Curvatura de la imagen */
+        }
+        .small-square {
+            position: absolute;
+            bottom: -50px; /* Ajusta la distancia desde el borde inferior del rectángulo */
+            left: 80px; /* Ajusta la distancia desde el borde izquierdo del rectángulo */
+            width: 150px; /* Tamaño del pequeño cuadrado */
+            height: 150px;
+            background-color: #fff; /* Color de fondo del pequeño cuadrado */
+            border-radius: 10px; /* Curvatura del pequeño cuadrado */
+            border: 2px solid #000; /* Borde del pequeño cuadrado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Asegura que el cuadrado se muestre por encima del rectángulo */
+        }
+        .small-square img {
+            width: 100%; /* Ajusta el tamaño de la imagen dentro del cuadrado */
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para cubrir todo el área del contenedor sin distorsionar */
+            border-radius: 10px; /* Curvatura de la imagen */
+            padding: 2px; /* Espacio entre la imagen y el borde */
+        }
+        .cocacola-text {
+            position: absolute;
+            bottom: -120px; /* Aumenta la distancia desde el borde inferior del rectángulo */
+            left: 78px; /* Ajusta la distancia desde el borde izquierdo del rectángulo para mover el texto a la derecha */
+            width: calc(100% - 60px); /* Ajusta el ancho del contenedor de texto para que ocupe todo el ancho del rectángulo menos el margen */
+            text-align: left; /* Cambia la alineación del texto a la izquierda */
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .cocacola-text img {
+            width: 20px; /* Tamaño de la imagen pequeña */
+            height: auto;
+            margin-left: 10px; /* Espacio entre el texto y la imagen */
+        }
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos horizontalmente */
+            justify-content: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+            margin-top: 20px; /* Añade separación superior */
+            float: right;
+        }
+        .marcas-titulo {
+            font-size: 1.5em; /* Tamaño del texto "Marcas" */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 10px; /* Espacio debajo del título */
+            text-align: center; /* Centra el texto */
+            width: 640px; /* Ancho del contenedor del título */
+        }
+        .cuadro1 {
+            width: 640px;
+            height: 200px;
+            background-color: #fff; /* Cambia el color de fondo a blanco */
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; /* Espacio entre los cuadros */
+            padding: 10px; /* Espacio interno */
+            box-sizing: border-box; /* Incluye el padding en el tamaño total */
+            border: 2px solid #000; /* Borde del pequeño cuadrado */
+        }
+        .cuadro1 div {
+            width: 150px; /* Reduce el ancho de cada cuadro dentro de cuadro1 */
+            height: 148px;
+            background-color: #ddd;
+            margin-right: 10px;
+            border-radius: 5px; /* Opcional: Curvatura de las esquinas */
+            border: 2px solid #000; /* Borde del pequeño cuadrado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cuadro1 div:last-child {
+            margin-right: 0; /* Sin margen derecho en el último cuadro */
+        }
+        .cuadro1 div img {
+            width: 150px; /* Reduce el tamaño de la imagen dentro del cuadro */
+            height: auto;
+            object-fit: cover; /* Ajusta la imagen para cubrir todo el área del contenedor sin distorsionar */
+            border-radius: 5px; /* Opcional: Curvatura de la imagen */
+        }
+        .contenedor2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos horizontalmente */
+            justify-content: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+            margin-top: 20px; /* Añade separación superior */
+            float: right;
+            border: 2px solid #000; /* Borde del pequeño cuadrado */
+        }
+        .cuadro2 {
+            width: 640px;
+            height: 1000px;
+            background-color: #f0f0f0;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Alinea los cuadros hacia arriba */
+            padding: 10px; /* Espacio interno */
+            box-sizing: border-box; /* Incluye el padding en el tamaño total */
+        }
+        .cuadro2 div {
+            --cuadro-ancho: 100%; /* Ancho ajustable */
+            --cuadro-alto: 200px; /* Alto ajustable */
+            width: var(--cuadro-ancho);
+            height: var(--cuadro-alto);
+            background-color: #ddd;
+            border: 1px solid #000; /* Borde de 1px */
+            margin-bottom: 20px; /* Espacio entre los cuadros */
+            display: flex;
+            flex-direction: row; /* Alineación horizontal */
+            align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+            padding: 10px; /* Espacio interno */
+            box-sizing: border-box; /* Incluye el padding en el tamaño total */
+        }
+        .cuadro2 div img {
+            width: 100px; /* Ancho de la imagen */
+            height: auto;
+            object-fit: cover; /* Ajusta la imagen para cubrir todo el área del contenedor sin distorsionar */
+            border-radius: 5px; /* Curvatura de la imagen */
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+        .cuadro2 div p {
+            margin: 0; /* Elimina el margen predeterminado del párrafo */
+            font-size: 1.2em; /* Tamaño de fuente del texto */
+            font-weight: bold; /* Negrita */
+            margin-right: 20px; /* Espacio entre el texto y los botones */
+        }
+        .boton {
+            width: 80px; /* Ancho de los botones */
+            height: 35px; /* Alto de los botones */
+            background-color: #000000; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Curvatura de los bordes del botón */
+            margin-bottom: 5px; /* Espacio entre los botones */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+
+        }
+        .boton:hover {
+            background-color: #000000; /* Color de fondo del botón al pasar el ratón */
+            
+        }
+        /* Estilo de los contenedores y cajas */
+        .container6 {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-left: 50px; /* Añadimos un margen izquierdo para mover los cuadros al lado derecho */
+  margin-top: 50px; /* Añadimos un margen superior para mover los cuadros hacia abajo */
+  margin-bottom: 10%;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #000000;
+  margin-bottom: 20px; /* Agregamos un margen inferior para separar los cuadros */
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="menu-lines">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <img src="logo.png" alt="Menu Icon"> <!-- Aquí va una imagen del icono del menú -->
+        </div>
+        <nav>
+            <a href="#">
+                <img src="ayuda.png" alt="Ayuda Icon"> <!-- Aquí va una imagen del icono de ayuda -->
+                Ayuda
+            </a>
+            <a href="#">
+                <img src="notificaciones.png" alt="Notificaciones Icon"> <!-- Aquí va una imagen del icono de notificaciones -->
+                Notificaciones
+            </a>
+            <a href="#">Usuario</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="rectangle">
+            <div class="small-square">
+                <img src="botellacoca.png" alt="Pequeño cuadrado"> <!-- Imagen en el pequeño cuadrado -->
+            </div>
+            <h1 class="cocacola-text">
+                The coca cola company 
+
+               
+          
+                
+                <img src="verificacion.png" alt="Icono pequeño"> <!-- Imagen pequeña al lado del texto -->
+            </h1>
+            <img src="cocacola.png" alt="Imagen del rectángulo"> <!-- Imagen en el cuadro rectangular -->
+        </div>
+        <div class="square">
+            <img src="cuadrado.png" alt="Imagen del cuadrado">  <!-- Imagen en el cuadro cuadrado -->
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="marcas-titulo">Marcas</div> <!-- Título "Marcas" arriba de los cuadros -->
+        <div class="cuadro1">
+            <div>
+                <img src="botellacoca.png" alt="Imagen 1">
+            </div>
+            <div>
+                <img src="sprite.png" alt="Imagen 2">
+            </div>
+            <div>
+                <img src="fanta.png" alt="Imagen 3">
+            </div>
+        </div>
+
+     
+        <div class="contenedor2">
+            <div class="cuadro2">
+                <div>
+                    <img src="imagen1.png" alt="Imagen 1">  
+                    <p>Amazon los mejores</p> <br> <br> <br>
+                    <p> Empresa amazon dedicada a hacer videos y tambien peliculas ...</p>
+                    
+                    <button class="boton">Visitar</button>
+                    <button class="boton">No me interesa</button>
+                </div>
+                <div>
+                    <img src="pringles.png" alt="Imagen 2"> <br>
+                    <p>Pringles</p> <br>
+                    <p>Pringles papitas demaciadamente ricas de todos los sabores pero de cartón...</p>
+                    <button class="boton">Visitar</button>
+                    <button class="boton">No me interesa</button>
+                </div>
+                <div>
+                    <img src="lego.png" alt="Imagen 3">
+                    <p>Lego</p> 
+                    <p>Juguetes para niños en forma de bloques para aprender a crearar y darle rienda suelta a tu imaginacion</p> <br>
+                    <button class="boton">Visitar</button>
+                    <button class="boton">No me interesa</button>
+                </div>
+                <div>
+                    <img src="sony.png" alt="Imagen 4">
+                    <p>Sony</p> 
+                     <p>Empresa audio visual que busca ayudar a las personas buenas por que nosotros tambien somos buenos
+                     </p>
+                    <button class="boton">Visitar</button>
+                    <button class="boton">No me interesa</button>
+                </div>
+          
+            </div>
+        
+        </div>
+
+    </div>
+    <div class="Container6">
+        <div class="box"></div>
+        <div class="box"></div>
+       
+    </div>
+</body>
+</html>
