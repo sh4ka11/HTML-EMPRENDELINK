@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario - Emprende Link</title>
-    <link rel="stylesheet" href="listaUsuarios.css">
+    <link rel="stylesheet" href="perfilEditarFotocambio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <aside class="sidebar">
         <div class="profile">
@@ -28,7 +27,6 @@
           <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
         </ul>
     </aside>
-
     <header>
         <div class="header-left">
             <div class="menu-toggle">
@@ -43,43 +41,69 @@
         </div>
     </header>
 
-    <main>
-      <section class="notifications">
-          <h2>Lista de Usuarios</h2>
-          <div class="notification">
-              <img src="images/perfilusu1.png" alt="LEGO">
-              <div class="notification-content">
-                 <a href="usaurioPerfil.html"> <h3>Miguel Angel Bonilla</h3></a>
-                  <span class="time">3:15 PM</span>
-                  <p>A career in website design can involve the design, creation, and coding of a range of website types. Other tasks will typically include liaising with clients and discussing website specifications, incorporating feedback, working on graphic design and image editing...</p>
-              </div>
+    <div class="fond">
+    <img class="fondo" src="images/fondo.png" alt="Fondo de la página">
+    </div>    
+    <div class="container">
+      <div class="profile-img">
+          <img src="images/person1.png" alt="Foto de perfil">
+          <i class="fas fa-pencil-alt edit-image-icon"></i>
+      </div>
+      <div class="profile-info">
+          <div class="input-container">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" value="Gustavo Andres Sanchez Ceron">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
           </div>
-          <div class="notification">
-              <img src="images/perfilusu2.png" alt="FANTA">
-              <div class="notification-content">
-                  <h3>Kevin alexis ortiz</h3>
-                  <span class="time">4:32 PM</span>
-                  <p>A career in website design can involve the design, creation, and coding of a range of website types. Other tasks will typically include liaising with clients and discussing website specifications, incorporating feedback, working on graphic design and image editing...</p>
-              </div>
+          <div class="input-container">
+              <label for="birthdate">Fecha de nacimiento:</label>
+              <input type="text" id="birthdate" value="Nacido(a) el 05 de septiembre de 2002">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
           </div>
-          <div class="notification">
-              <img src="images/perfilusu3.png" alt="Sprite">
-              <div class="notification-content">
-                  <h3>Cristian sebastian delgado</h3>
-                  <span class="time">8:00 AM</span>
-                  <p>A career in website design can involve the design, creation, and coding of a range of website types. Other tasks will typically include liaising with clients and discussing website specifications, incorporating feedback, working on graphic design and image editing...</p>
-              </div>
+          <div class="input-container">
+              <label for="email">Correo:</label>
+              <input type="email" id="email" value="sdp402@gmail.com">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
           </div>
-          <div class="notification">
-              <img src="images/perfilusu4.png" alt="Senaworks">
-              <div class="notification-content">
-                  <h3>Hernandez</h3>
-                  <span class="time">11:15 AM</span>
-                  <p>A career in website design can involve the design, creation, and coding of a range of website types. Other tasks will typically include liaising with clients and discussing website specifications, incorporating feedback, working on graphic design and image editing...</p>
-              </div>
+          <div class="input-container">
+              <label for="location">Ubicación:</label>
+              <input type="text" id="location" value="POPAYAN-Cauca-Colombia">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
           </div>
-      </section>
-  </main>
+          <div class="input-container">
+              <label for="phone">Celular:</label>
+              <input type="tel" id="phone" value="3214567890">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
+          </div>
+          <div class="input-container">
+              <label for="gender">Género:</label>
+              <input type="text" id="gender" value="Masculino">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
+          </div>
+          <div class="input-container">
+              <label for="stage">Etapa:</label>
+              <input type="text" id="stage" value="Primera fase: la idea de negocio">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
+          </div>
+          <div class="input-container">
+              <label for="document">Documento:</label>
+              <input type="text" id="document" value="19861598659864">
+              <i class="fas fa-edit edit-icon"></i>
+              <i class="fas fa-trash delete-icon"></i>
+          </div>
+      </div>
+      <div class="buttons">
+        <button>Cambiar contraseña</button>
+        <button>guardar cambios</button>
+      </div>
+  </div>
 
     <footer>
         <div class="footer-content">

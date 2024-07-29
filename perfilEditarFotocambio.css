@@ -12,6 +12,7 @@ header {
     background-color: #f8f8f8;
 }
 
+
 .header-left {
     display: flex;
     align-items: center;
@@ -31,7 +32,14 @@ header {
 .logo {
     height: 100px;
 }
+.fotoperfil{
+position: absolute;
+z-index: 1;
 
+width: 1015px;
+height: 574px;
+  }
+  
 .header-right {
     display: flex;
     align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
@@ -120,20 +128,14 @@ header {
 .edit-icon, .delete-icon {
   position: absolute;
   top: 35px;
-  align-self: start;
+  right: 30px;
   cursor: pointer;
   color: #666;
-  
+  translate: -180px 0px;
 }
 
 .delete-icon {
-  position: absolute;
-  top: 35px;
-  align-self: start;
-  cursor: pointer;
-  color: #666;
-  translate: 20px;
-  
+  right: 5px;
 }
 
 .buttons {
