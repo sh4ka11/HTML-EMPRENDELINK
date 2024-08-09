@@ -162,6 +162,18 @@
         .social-media a {
             margin-right: 10px;
         }
+
+        .verification-box {
+    width: 20%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 20px; /* Agregar un margen superior para separarlo del cuadro de inicio de sesión */
+    text-align: center; /* Centrar el contenido del cuadro */
+}
+
     </style>
 </head>
 <body>
@@ -181,9 +193,14 @@
                     <label for="confirm_password">Confirmación de Contraseña</label>
                     <input type="password" id="confirm_password" name="confirm_password" required> <!-- Cambiado a tipo "password" para la confirmación -->
                     <button type="submit">Enviar</button>
+                    <div class="verification-box">
+                        <p>¡La verificación de identidad se ha realizado exitosamente!</p>
+                    </div>
+                    
                     <div class="options">
                         <a href="#">¿Necesitas Ayuda?</a>
                     </div>
+                    
                 </form>
             </div>
         </main>
@@ -204,6 +221,7 @@
                         <img src="https://th.bing.com/th/id/R.e323a1c490acd8ad3f84d1d1a6d78c9a?rik=pefjyka5%2fJ2tYA&pid=ImgRaw&r=0" alt="Logo 3">
                         <img src="https://1000logos.net/wp-content/uploads/2017/05/New-YouTube-logo.jpg" alt="Logo 3">
                     </div>
+             
                 </div>
                 <div class="footer-section links">
                     <h3>Legales</h3>
@@ -212,10 +230,12 @@
                         <li><a href="#">Acuerdos y términos</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section contact">
                     <h3>Nuestro correo:</h3>
                     <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
                 </div>
+                
                 <div class="footer-section more">
                     <h3>Más de nosotros</h3>
                     <ul>
