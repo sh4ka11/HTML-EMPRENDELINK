@@ -5,49 +5,88 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  color: #ffffff;
+
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-.menu-toggle {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.menu-toggle span {
-    font-size: 32px;
-    margin-right: 10px; /* Añadido para espacio horizontal */
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
 }
 
-.logo {
-    height: 100px;
+.nav-item img {
+  width: 25px; /* Tamaño de los iconos */
+  height: 25px;
+  margin-right: 8px;
 }
 
-.header-right {
-    display: flex;
-    align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
+/* Estilo para los contenedores con borde */
+.bordered {
+  border: 1px solid #040404;
+  border-radius: 25px;
+  
+  
+  
 }
 
-.header-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+
+.bordered a {
+  color: #040404;
+  font-weight: bold;
+  text-decoration: none;
+  
+  
 }
 
-.header-right a i {
-    margin-right: 5px;
+.nav-item:active {
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer clic */
+  transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Suaviza la transición */
+}
+
+
+
+.no-border img {
+  margin-right: 10px;
+}
+
+
+
+/* Para asegurarse de que todos los items estén en la misma fila */
+nav .nav-item:last-child {
+  border: 1px solid #040404;
+  border-radius: 25px;
+  padding: 3px 10px;
+}
+.Inversor{
+  color: #666666;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+.menu-toggle img {
+  font-size: 24px;
+  cursor: pointer;
+  
 }
 
 .fond {
@@ -66,95 +105,69 @@ header {
 }
 
 .container {
-  padding: 20px;
-  margin-left: 250px;
-  background-color: white;
-  z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
 }
 
 .profile-img {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 20px;
+    flex-shrink: 0;
+    margin-right: 20px;
 }
 
 .profile-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.edit-image-icon {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #666;
-  cursor: pointer;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .profile-info {
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.input-container {
-  position: relative;
-  margin-bottom: 15px;
-}
+.profile-info label {
+    margin-bottom: 5px;
+    font-weight: bold;}
 
-.input-container label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.input-container input {
-  width: 80%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.edit-icon, .delete-icon {
-  position: absolute;
-  top: 35px;
-  align-self: start;
-  cursor: pointer;
-  color: #666;
-  
-}
-
-.delete-icon {
-  position: absolute;
-  top: 35px;
-  align-self: start;
-  cursor: pointer;
-  color: #666;
-  translate: 20px;
-  
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #444;
-  color: white;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #555;
-}
+    .profile-info input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+    .buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    translate: 20px 50px;
+    }
+    
+    .buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    }
+    
+    .buttons button
+    {
+    background-color: #555;
+    }
+    
     footer {
     background-color: #000000;
     color: #fff;
@@ -201,7 +214,13 @@ button:hover {
     border-top: 1px solid #555;
     padding-top: 10px;
     }
-    
+    .footer-content a{
+      color: #bbb;
+    }
+
+.buttons a{
+color: #ffffff;
+}
     .burger {
     display: none; /* Escondido por defecto */
     }
@@ -275,6 +294,8 @@ button:hover {
         list-style: none;
 
       }
+     
+
       
       .example-2 {
         display: flex;
@@ -336,20 +357,20 @@ button:hover {
         left: 0;
         width: 100%;
         height: 0;
-        background-color: #000;
+        background-color: #0a0ef7;
         transition: all 0.3s ease-in-out;
       }
       .example-2 .icon-content a:hover .filled {
         height: 100%;
       }
       
-      .example-2 .icon-content a[data-social="linkedin"] .filled,
-      .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+      .example-2 .icon-content a[data-social="Facebook"] .filled,
+      .example-2 .icon-content a[data-social="Facebook"] ~ .tooltip {
         background-color: #0274b3;
       }
       
-      .example-2 .icon-content a[data-social="github"] .filled,
-      .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+      .example-2 .icon-content a[data-social="twitter"] .filled,
+      .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
         background-color: #24262a;
       }
       .example-2 .icon-content a[data-social="instagram"] .filled,

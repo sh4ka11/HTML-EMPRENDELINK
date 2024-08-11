@@ -5,49 +5,88 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  color: #ffffff;
+
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-.menu-toggle {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.menu-toggle span {
-    font-size: 32px;
-    margin-right: 10px; /* Añadido para espacio horizontal */
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
 }
 
-.logo {
-    height: 100px;
+.nav-item img {
+  width: 25px; /* Tamaño de los iconos */
+  height: 25px;
+  margin-right: 8px;
 }
 
-.header-right {
-    display: flex;
-    align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
+/* Estilo para los contenedores con borde */
+.bordered {
+  border: 1px solid #040404;
+  border-radius: 25px;
+  
+  
+  
 }
 
-.header-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+
+.bordered a {
+  color: #040404;
+  font-weight: bold;
+  text-decoration: none;
+  
+  
 }
 
-.header-right a i {
-    margin-right: 5px;
+.nav-item:active {
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer clic */
+  transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Suaviza la transición */
+}
+
+
+
+.no-border img {
+  margin-right: 10px;
+}
+
+
+
+/* Para asegurarse de que todos los items estén en la misma fila */
+nav .nav-item:last-child {
+  border: 1px solid #040404;
+  border-radius: 25px;
+  padding: 3px 10px;
+}
+.Inversor{
+  color: #666666;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+.menu-toggle img {
+  font-size: 24px;
+  cursor: pointer;
+  
 }
 
 .fond {
