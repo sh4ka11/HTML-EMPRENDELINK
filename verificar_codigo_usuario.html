@@ -53,14 +53,14 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
         main h2 {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 30px;
             color: #333;
         }
         .login-box {
-            width: 550%;
-            max-width: 550px;
-            padding: 20px;
+            width: 25%;
+            max-width: 500px;
+            padding: 30px;
             border: 1px solid #000000;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             background-color: #fff;
@@ -68,35 +68,42 @@
         .login-box form {
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
         }
         .login-box label {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: bold;
-            text-align: left;
         }
         .login-box input {
             margin-bottom: 20px;
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #cacaca;
             border-radius: 4px;
-            color: rgb(0, 0, 0);
-            height: 150px;
-            width: 380px;
+            color: black;
         }
-
-        .login-box button {
-        padding: 10px;
-        background-color: rgb(0, 0, 0);
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-bottom: 20px; /* Reducido para acercarlo a las imágenes */
-        display: block;
-        margin: 20px auto 0; /* Ajuste de los márgenes para centrarlo y acercarlo a las imágenes */
-    }
-
+        .codigooo {
+            margin-bottom: 20px;
+        }
+        .codigooo a {
+            color: black;
+            text-decoration: none;
+        }
+        .codigooo a:hover {
+            text-decoration: underline;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            width: fit-content;
+        }
+        button:hover {
+            background-color: #6b6b6b;
+        }
         footer {
     background-color: #000000;
     color: #fff;
@@ -146,7 +153,7 @@ ul {
   
   .footer-bottom {
     text-align: center;
-    margin-top: 2px;
+    margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 10px;
     }
@@ -251,58 +258,9 @@ ul {
             height: 52%;
             width: 78%; 
         }
-        
-        .botellas {
-            display: flex;
-            gap: 20px; /* Espacio entre las botellas */
-  }
 
-        .botellas img {
-            width: 80px;  /* Ajusta el ancho de las botellas */
-            height: auto;  /* Mantiene la proporción de la imagen */
-   }
-   form {
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 0 auto;
-}
-
-label {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-textarea {
-  width: 97%; /* Ocupa el 100% del contenedor */
-  height: 100px; /* Altura del cuadro de texto */
-  padding: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s ease;
-}
-
-textarea:focus {
-  border-color: #000000;
-  outline: none;
-}
-
-textarea::placeholder {
-  color: #888;
-  white-space: pre-line; /* Mantiene los saltos de línea en el placeholder */
-}
-
-div {
-  margin-bottom: 20px;
-}
-
-
-
+ 
+ 
     </style>
 </head>
 <body>
@@ -313,36 +271,18 @@ div {
             </div>
         </header>
         <main>
-            <h2>Registro de inversionista</h2>
             <div class="login-box">
                 <form action="login.php" method="post">
-                    <h1>Registro</h1>
-
-
-
-                    <div>
-                      <label for="investment-experience">Experiencia en inversión</label>
-                      <textarea id="investment-experience" placeholder="AÑADE UNA DESCRIPCIÓN... 
-                      Puedes permitir que los usuarios carguen copias de certificaciones o credenciales financieras que respalden su experiencia en inversiones, como títulos universitarios en finanzas, certificaciones de análisis financiero, o membresías en organismos profesionales relacionados con la inversión."></textarea>
+                    <h2>Verificar Código</h2>
+                    <p>Se ha enviado un código de seguridad a su correo o número de teléfono para confirmar su identidad.</p>
+                    <label for="username">Por favor digite el código recibido</label>
+                    <input type="password" id="username" name="username" required>
+                    <div class="codigooo">            
+                        <a href="#">No he recibido ningún código</a>
                     </div>
-
-                    <div>
-                      <label for="financial-certifications">Certificaciones o credenciales financieras</label>
-                      <textarea id="financial-certifications" placeholder="Puedes permitir que los usuarios carguen copias de certificaciones o credenciales financieras que respalden su experiencia en inversiones, como títulos universitarios en finanzas, certificaciones de análisis financiero, o membresías en organismos profesionales relacionados con la inversión."></textarea>
-                    </div>
-                    
-
-                    
-                    
-
-                     <div class="botellas">
-                      <a href="url_de_destino"><img src="images/drive.jpeg" alt=""></a>
-                      <a href="url_de_destino"><img src="images/clip.jpeg" alt=""></a>
-                  </div>
-                     
-                   
-                
-                    <button type="submit">Siguiente</button>
+                    <a href="cambio_contraseña.html">
+                    <button type="submit">Enviar</button>
+                </a>
                 </form>
             </div>
         </main>
