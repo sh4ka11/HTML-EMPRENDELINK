@@ -18,8 +18,6 @@ header {
     height: auto; /* Mantener auto preserva las proporciones */
 }
 
-
-
 header .logo {
     margin-right: auto; /* Mueve el logo a la izquierda */
     font-size: 1.5em;
