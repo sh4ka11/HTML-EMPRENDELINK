@@ -267,6 +267,69 @@ footer {
   
 
 
+/* Estilo para el menú lateral */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Inicialmente oculto fuera de la pantalla */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #000000;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0; /* Muestra el menú cuando tiene la clase 'active' */
+}
+
+.sidebar .profile-1 {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.sidebar .profile-1 img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 2px solid #444;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ul {
     list-style: none;
   }
@@ -617,8 +680,30 @@ ul {
     </div>
 </footer>
 
+<!-- Menú lateral -->
+<aside class="sidebar">
+  <div class="profile-1">
+      <img src="LINK/PERFIL-2.png" alt="User">
+      <br>
+      <span>Cristian Sebastian</span>
+      <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
+  </div>
+  <ul>
+        <li><a href="HOME.HTML">Inicio</a></li>
+        <li><a href="perfilUsaurio.html">Perfil</a></li>
+        <li><a href="busqueda_filtro.html">Busqueda por categoría</a></li>
+        <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
+        <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
+        <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
+        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
+        <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
+        <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
+
+  </ul>
+    </aside>
+
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.barra').addEventListener('click', function() {
        this.classList.toggle('active');
        document.querySelector('.sidebar').classList.toggle('active');
    });
