@@ -8,27 +8,18 @@
 </head>
 <body>
     <header>
-        <div class="menu">
-           
+        <div class="header-left">
+            <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
+            <!-- <a href="MI-EMPRENDIMIENTO-MENU.HTML">
+                <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
+            </a> -->
+            <img src="img_inversor/logo.png" alt="Emprende Link Logo" class="logo">
         </div>
-        <div class="logo">
-            <img src="img/logo.png" alt="Emprende Link Logo" style=" cursor: pointer;">
+        <div class="header-right">
+           <a href="contactanos1 copy.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+        <a href="notificaciones1 copy.html"><i class="fas fa-bell"></i> Notificaciones</a>
+        <a href="perfilUsaurio.html"><i class="fas fa-user"></i> Usuario</a>
         </div>
-        <hr class="horizontal-line">
-        <nav>
-            <div class="nav-item">
-                <img src="img/ayuda.png" alt="ayuda">
-                <a href="#">Ayuda</a>
-            </div>
-            <div class="nav-item">
-                <img src="img/notificacion.png" alt="notificacion">
-                <a href="#">Notificaciones</a>
-            </div>
-            <div class="nav-item">
-                <img src="img/flecha.png" alt="flecha">
-                <a href="#">Usuario</a>
-            </div>
-        </nav>
     </header>
     <br><br>
     <h1>COMPLETA LOS CAMPOS</h1>
@@ -132,10 +123,35 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
-                <div class="logo">
-                    <img src="img/logoOscuro.png" alt="Emprende Link" style="width: auto;">
+                <div class="logoda">
+                    <img class="logo-dark" src="images/logodark.png" alt="Emprende Link">
                 </div>
+                <h3></h3>
                 <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo conjunto de soluciones innovadoras.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Legales</h3>
+                <ul>
+                    <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
+                    <li><a href="acuerdosyterminos.html">Acuerdos y términos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Nuestro correo:</h3>
+                <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
+            </div>
+            <div class="footer-section more">
+                <h3>Más de nosotros</h3>
+                <ul>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Sobre Emprende Link</a></li>
+                </ul>
+            </div>
+        </div>
+  
+        <div class="footer-bottom">
+            <p>&copy; Emprende Link - Copyright © 2024</p>
+            <div class="imagenes">
                 <ul class="example-2">
                     <li class="icon-content">
                       <a
@@ -226,39 +242,54 @@
                       <div class="tooltip">Youtube</div>
                     </li>
                   </ul>
-            
+                  
             </div>
-            <div class="footer-section links">
-                <br>
-                <br><br>
-                <h3>Legales</h3>
-                <ul>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Acuerdos y términos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <br>
-                <br><br>
-                <h3>Nuestro correo:</h3>
-                <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
-            </div>
-            <div class="footer-section more">
-                <br>
-                <br><br>
-                <h3>Más de nosotros</h3>
-                <ul>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Centro de ayuda</a></li>
-                    <li><a href="#">Sobre Emprende Link</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; Emprende Link - Copyright © 2024</p>
         </div>
     </footer>
+<!-- Menú lateral -->
+<aside class="sidebar">
+    <div class="profile-1">
+        <img src="LINK/PERFIL-2.png" alt="User">
+        <br>
+        <span>Cristian Sebastian</span>
+        <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
+    </div>
+    <ul>
+        <li><a href="HOME.HTML">Inicio</a></li>
+        <li><a href="perfilUsaurio.html">Perfil</a></li>
+        <li><a href="busqueda_filtro.html">Busqueda por categoría</a></li>
+        <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
+        <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
+        <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
+        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
+        <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
+        <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
+    </ul>
+    </aside>
 
+
+
+    <script>
+        document.querySelector('.barra').addEventListener('click', function() {
+       this.classList.toggle('active');
+       document.querySelector('.sidebar').classList.toggle('active');
+   });
+
+       document.querySelectorAll('.accordion-button').forEach(button => {
+           button.addEventListener('click', () => {
+               const accordionContent = button.nextElementSibling;
+               button.classList.toggle('active');
+
+               if (button.classList.contains('active')) {
+                   accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+               } else {
+                   accordionContent.style.maxHeight = 0;
+               }
+           });
+       });
+
+       
+    </script>
     <script>
         document.querySelector('.btn-publicar').addEventListener('click', function(event) {
             event.preventDefault();
