@@ -252,6 +252,10 @@ footer {
     margin-top: 40px;
     }
     
+    .footer-content a{
+        color: #bbb;
+    }
+
     .footer-content {
     width: 90%;
     margin: 0 auto;
@@ -433,6 +437,9 @@ footer {
     font-size: 14px;
     margin: 5px 0;
 }
+
+
+
 
 
 
