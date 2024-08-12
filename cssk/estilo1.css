@@ -8,39 +8,43 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
     padding: 10px 20px;
-    
+    background-color: #f8f8f8;
 }
 
-.container {
+.header-left {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
-    
 }
-.menu-toggle span {
+
+.menu-toggle img {
     font-size: 24px;
     cursor: pointer;
     
 }
 
+.barra {
+    height: 35px; 
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
 .logo img {
     height: 80px;
 }
-
-.logo span {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 10px;
-    
+.header-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
 }
-nav ul li img{
-    width: 20px;
-    height: 20px;
+
+.header-right a i {
+    margin-right: 5px;
 }
 
 
@@ -134,7 +138,8 @@ main h2{
 
 .notifications h2 {
     
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin: 30px 40px;
     
 }
 
