@@ -245,6 +245,9 @@ button:hover {
     border-top: 1px solid #555;
     padding-top: 10px;
     }
+    .footer-content a{
+      color: #bbb;
+    }
     
     .burger {
     display: none; /* Escondido por defecto */
