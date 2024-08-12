@@ -4,50 +4,55 @@ body {
     padding: 0;
 }
 
+
+/* Ajuste de color y tamaño de fuente del header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
 }
 
 .header-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menu-toggle {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .menu-toggle span {
-    font-size: 32px;
-    margin-right: 10px; /* Añadido para espacio horizontal */
+  font-size: 32px;
+  margin-right: 10px; /* Añadido para espacio horizontal */
 }
 
 .logo {
-    height: 100px;
+  height: 100px;
 }
 
 .header-right {
-    display: flex;
-    align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
+  display: flex;
+  align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
 }
 
 .header-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .header-right a i {
-    margin-right: 5px;
+  margin-right: 5px;
+}
+.logo {
+    height: 100px;
 }
 
 .fond {
@@ -155,7 +160,10 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     }
-    
+    .footer-content a{
+      color: #bbb;
+    }
+
     .footer-section {
     flex: 1;
     margin: 10px;
