@@ -5,85 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprende Link</title>
     <style>
-      header {
+     header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    color: #ffffff;
+ 
 }
 
-.header-left {
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+nav {
     display: flex;
     align-items: center;
+    gap: 50px;
 }
 
-.menu-toggle img {
-    font-size: 24px;
-    cursor: pointer;
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.nav-item img {
+    width: 25px; /* Tamaño de los iconos */
+    height: 25px;
+    margin-right: 8px;
+}
+
+/* Estilo para los contenedores con borde */
+.bordered {
+    border: 1px solid #040404;
+    border-radius: 25px;
+    
+    
     
 }
 
-.barra {
-    height: 35px; 
-    margin-right: 10px;
-    margin-left: 8px;
-}
 
-.logo {
-    height: 60px;
-    margin-right: 10px;
-    margin-top: 15px;
-}
-.logo img {
-    height: 80px;
-}
-.header-right a {
-    margin-left: 20px;
+.bordered a {
+    color: #040404;
+    font-weight: bold;
     text-decoration: none;
-    color: #000;
+    
+    
 }
 
-.header-right a i {
-    margin-right: 5px;
+.nav-item:active {
+
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer clic */
+    transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Suaviza la transición */
 }
-        body {
-            
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
 
-        header {
-            background-color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ccc;
-        }
 
-        .ayuda img{
-            height: 30px;
-        }
 
-        header img {
-            margin-right: 5px;
-            height: 90px;
-        }
+.no-border img {
+    margin-right: 10px;
+}
 
-        header nav {
-            display: flex;
-            align-items: center;
-        }
 
-        header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
+
+/* Para asegurarse de que todos los items estén en la misma fila */
+nav .nav-item:last-child {
+    border: 1px solid #040404;
+    border-radius: 25px;
+    padding: 3px 10px;
+}
+.Inversor{
+    color: #666666;
+    font-weight: bold;
+    text-decoration: none; 
+}
 
         .search-bar {
             width: 27%;
@@ -264,7 +263,7 @@ footer {
     color: #bbb;
 }
 
-  
+
 
 
 /* Estilo para el menú lateral */
@@ -321,13 +320,7 @@ footer {
 
 
 
-
-
-
-
-
-
-
+  
 
 
 ul {
@@ -455,19 +448,23 @@ ul {
 </head>
 <body>
   <header>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <div class="header-left">
-        <div class="menu-toggle">
-        <img src="LINK/21.png" alt="Emprende Link BARRA" class="barra">
+    <div class="logo"><img src="link/16.png" alt=""stylesheet width="300px"><span></span></div>
+    <nav>
+        <div class="nav-item bordered">
+            <img src="link/17.png" alt="ayuda">
+            <a href="#">Ayuda</a>
         </div>
-        <img src="LINK/16.png" alt="Emprende Link Logo" class="logo">
-        
-    </div>
-    <div class="header-right">
-        <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
-        <a href="#"><i class="fas fa-bell"></i> Notificaciones</a>
-        <a href="#"><i class="fas fa-user"></i> Usuario</a>
-    </div>
+        <div class="nav-item bordered">
+            <img src="link/18.png" alt="notificacion">
+            <a href="#">Notificaciones</a>
+        </div>
+        <a class="Inversor" href="#">Inversor</a>
+        <div class="nav-item bordered">
+            <div class="menu-toggle">
+            <img src="link/19.png" alt="flecha">
+        </div>
+                <img src="link/20.png" alt="perfil" class="profile-pic">
+            </div>
 </header>
 
     <div class="search-bar">
@@ -689,21 +686,16 @@ ul {
       <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
   </div>
   <ul>
-        <li><a href="HOME.HTML">Inicio</a></li>
-        <li><a href="perfilUsaurio.html">Perfil</a></li>
-        <li><a href="busqueda_filtro.html">Busqueda por categoría</a></li>
-        <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
-        <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
-        <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
-        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
-        <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
-        <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
-
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Busqueda por categoría</a></li>
+    <li><a href="#">Consultar Lista</a></li>
+    <li><a href="#">Chat</a></li>
+    <li><a href="#">Cerrar Sesión</a></li>
   </ul>
     </aside>
 
     <script>
-        document.querySelector('.barra').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
        this.classList.toggle('active');
        document.querySelector('.sidebar').classList.toggle('active');
    });

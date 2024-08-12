@@ -13,11 +13,11 @@
     <nav>
         <div class="nav-item bordered">
             <img src="link/17.png" alt="ayuda">
-            <a href="#">Ayuda</a>
+            <a href="contactanosInver1.html">Ayuda</a>
         </div>
         <div class="nav-item bordered">
             <img src="link/18.png" alt="notificacion">
-            <a href="#">Notificaciones</a>
+            <a href="inverNoti1.html">Notificaciones</a>
         </div>
         <a class="Inversor" href="#">Inversor</a>
         <div class="nav-item bordered">
@@ -38,11 +38,14 @@
     </div>
     <ul>
         
-        <li><a href="#">Perfil</a></li>
-        <li><a href="#">Busqueda por categoría</a></li>
-        <li><a href="#">Consultar Lista</a></li>
-        <li><a href="#">Chat</a></li>
-        <li><a href="#">Cerrar Sesión</a></li>
+
+        <li><a href="perfilInversor.html">Perfil</a></li>
+        <li><a href="busqueda_filtro_inver.html">Busqueda por categoría</a></li>
+        <li><a href="ListaInversionista.html">Consultar Lista</a></li>
+        <li><a href="CHAT-INVERSIONISTA.HTML">Chat</a></li>
+        <li><a href="inicio_sesion_inver.html">Cerrar Sesión</a></li>
+      
+
     </ul>
 </aside>
 <br><br><br><br><br>
@@ -62,7 +65,7 @@
             <h3>Comunicate con los emprendedores</h3>
             <p>Conectamos a emprendedores con ideas innovadoras y prometedoras con inversionistas ávidos de oportunidades de inversión. A través de nuestra plataforma, los emprendedores pueden presentar sus proyectos empresariales de manera convincente, mientras que los inversionistas pueden descubrir y evaluar nuevas oportunidades de inversión.</p>
             <br>
-            <a href="#" class="btn">Ver más </a>
+            <a href="CHAT-INVERSIONISTA.HTML" class="btn">Ver más </a>
         </div>
         <div class="right-options">
             <div class="option2">
@@ -71,7 +74,7 @@
                     <h3>Invierte</h3>
                     <p>Emprendedores, solicitan patrocinio a inversores afines. Juntos, alcanzaremos el éxito.</p>
                 </div>
-                <a href="#" class="btn">Ver más</a>
+                <a href="busqueda_filtro_inver.html" class="btn">Ver más</a>
             </div>
             <div class="option2">
                 <img src="img_inversor/emprende.png" alt="Emprendimientos">
@@ -79,7 +82,7 @@
                     <h3>Emprendimientos</h3>
                     <p>Busca emprendimientos que te gusten o con potencial para que crezca su patrimonio.</p>
                 </div>
-                <a href="#" class="btn">Ver más</a>
+                <a href="busqueda_filtro_inver.html" class="btn">Ver más</a>
             </div>
         </div>
     </div>
@@ -92,7 +95,7 @@
         <div class="part1">
             <div class="imgvino">
             <img src="img_inversor/vino.png" alt="Vino El Extasis" class="imgvin">
-        </div>
+        </div>Z
          <div class="autor">
             <div class="correo">
                 <div>
@@ -127,7 +130,7 @@
        
   
     </div>
-    <button class="btn">mas informacion</button>
+    <button class="btn"><a href="VISITAR-EMPRENDIMIENTO.HTML">mas informacion</a></button>
     </div>
     
     </div>
@@ -258,27 +261,5 @@
             </div>
         </div>
     </footer>
-    <script>
-      document.querySelector('.menu-toggle').addEventListener('click', function() {
-     this.classList.toggle('active');
-     document.querySelector('.sidebar').classList.toggle('active');
- });
-
-     document.querySelectorAll('.accordion-button').forEach(button => {
-         button.addEventListener('click', () => {
-             const accordionContent = button.nextElementSibling;
-             button.classList.toggle('active');
-
-             if (button.classList.contains('active')) {
-                 accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-             } else {
-                 accordionContent.style.maxHeight = 0;
-             }
-         });
-     });
-
-     
- </script>
 </body>
-
 </html>
