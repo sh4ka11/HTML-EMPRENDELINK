@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>verificacion usuario</title>
+    <title>Emprende Link - Inicio de Sesión</title>
     <style>
         html, body {
             height: 100%;
@@ -53,13 +53,13 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
         main h2 {
-            margin-bottom: 10px; /* Reducido para acercar el texto */
+            margin-bottom: 40px;
             font-size: 30px;
             color: #333;
         }
         .login-box {
-            width: 20%;
-            max-width: 400px;
+            width: 550%;
+            max-width: 550px;
             padding: 20px;
             border: 1px solid #000000;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -71,51 +71,32 @@
             text-align: center;
         }
         .login-box label {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
         }
         .login-box input {
             margin-bottom: 20px;
             padding: 10px;
-            border: 1px solid #cacaca;
+            border: 1px solid #ddd;
             border-radius: 4px;
-            color: black;
+            color: rgb(0, 0, 0);
+            height: 150px;
+            width: 380px;
         }
 
-        
-
-        
-        .options {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        .options a {
-            color: #000000; /* Color negro para "¿Necesitas Ayuda?" */
-            text-decoration: none;
-        }
-        .options a:hover {
-            text-decoration: underline;
-        }
         .login-box button {
-    padding: 10px;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 20px; /* Reducido para acercarlo a las imágenes */
-    display: block;
-    margin: 20px auto 0; /* Ajuste de los márgenes para centrarlo y acercarlo a las imágenes */
-}
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 20px; /* Reducido para acercarlo a las imágenes */
+        display: block;
+        margin: 20px auto 0; /* Ajuste de los márgenes para centrarlo y acercarlo a las imágenes */
+    }
 
-        button:hover {
-            background-color: #6b6b6b;
-        }
-        
         footer {
     background-color: #000000;
     color: #fff;
@@ -165,7 +146,7 @@ ul {
   
   .footer-bottom {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2px;
     border-top: 1px solid #555;
     padding-top: 10px;
     }
@@ -270,9 +251,58 @@ ul {
             height: 52%;
             width: 78%; 
         }
+        
+        .botellas {
+            display: flex;
+            gap: 20px; /* Espacio entre las botellas */
+  }
 
- 
- 
+        .botellas img {
+            width: 80px;  /* Ajusta el ancho de las botellas */
+            height: auto;  /* Mantiene la proporción de la imagen */
+   }
+   form {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+textarea {
+  width: 97%; /* Ocupa el 100% del contenedor */
+  height: 100px; /* Altura del cuadro de texto */
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #888;
+  white-space: pre-line; /* Mantiene los saltos de línea en el placeholder */
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -283,25 +313,39 @@ ul {
             </div>
         </header>
         <main>
+            <h2>Registro de inversionista</h2>
             <div class="login-box">
                 <form action="login.php" method="post">
-                    <h2>VERIFICACION</h2>
-                    <p>Para  verificar tu identidad te enviaremos un codigo de 6 dijitos, por favor ingrese su direccion de correo electronico o numero telefonico</p>
-                    <label for="username">Correo electronico</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="telefonico">Número de celular</label>
-                    <input type="tel" id="telefonico" name="telefonico" required> <!-- Cambiado a tipo "tel" para número de celular -->
-                  
-                    <button type="submit">
-                        <a href="verificar_codigo.html">Enviar</a></button>
-                
-                    <div class="options">
-                        <a href="#">¿Necesitas Ayuda?</a>
+                    <h1>Registro</h1>
+
+
+
+                    <div>
+                      <label for="investment-experience">Experiencia en inversión</label>
+                      <textarea id="investment-experience" placeholder="AÑADE UNA DESCRIPCIÓN... 
+                      Puedes permitir que los usuarios carguen copias de certificaciones o credenciales financieras que respalden su experiencia en inversiones, como títulos universitarios en finanzas, certificaciones de análisis financiero, o membresías en organismos profesionales relacionados con la inversión."></textarea>
                     </div>
+
+                    <div>
+                      <label for="financial-certifications">Certificaciones o credenciales financieras</label>
+                      <textarea id="financial-certifications" placeholder="Puedes permitir que los usuarios carguen copias de certificaciones o credenciales financieras que respalden su experiencia en inversiones, como títulos universitarios en finanzas, certificaciones de análisis financiero, o membresías en organismos profesionales relacionados con la inversión."></textarea>
+                    </div>
+                    
+
+                    
+                    
+
+                     <div class="botellas">
+                      <a href="url_de_destino"><img src="drive.jpeg" alt=""></a>
+                      <a href="url_de_destino"><img src="clip.jpeg" alt=""></a>
+                  </div>
+                     
+                   
+                
+                    <button type="submit">Siguiente</button>
                 </form>
             </div>
         </main>
-
         <footer>
             <div class="footer-content">
                 <div class="footer-section about">
@@ -433,7 +477,6 @@ ul {
               </div>
           </div>
       </footer>
-      
     </div>
 </body>
 </html>
