@@ -75,12 +75,16 @@ header {
 
 .cont {
     z-index: 2;
+
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el texto */
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
 }
+.cont h2{
+ margin-top: 20px;
+ margin-bottom: 20px;
 
-
+}
 
 .profile-img {
     flex-shrink: 0;

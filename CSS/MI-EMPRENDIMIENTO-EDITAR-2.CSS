@@ -129,7 +129,7 @@ header {
 }
 
 .hero-buttons {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .hero-buttons button {
@@ -228,65 +228,7 @@ header {
     height: auto;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color:#060606;
-    color: #fff;
-}
 
-.footer-left {
-    width: 50%;
-}
-
-.footer-left img {
-    width: 200px;
-    margin-top: 30px;
-    margin-left: 50px;
-}
-
-.footer-left p {
-    margin: 58px ;
-    margin-bottom: 10px;
-}
-
-.footer-right {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-right-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.footer-column {
-    margin-left: 30px;
-    text-align: left;
-}
-
-.footer-column h4 {
-    color: #fff;
-    margin-bottom: 10px;
-   
-  
-}
-
-.footer-column a {
-    
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 5px;
-    transition: color 0.3s;
-    display: block;
-}
-
-.footer-column a:hover {
-    color: #ccc;
-}
 
 .hero-content h2 {
     margin: 10px 0; 
@@ -319,26 +261,119 @@ footer {
     align-items: flex-start; 
 }
 
-.social-icons {
+
+
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+    }
+    
+    .footer-content {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    
+    .footer-section {
+    flex: 1;
+    margin: 10px;
+    }
+    
+    .footer-section h3 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    }
+    
+    .footer-section ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    }
+    
+    .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    }
+    
+    .burger {
+    display: none; /* Escondido por defecto */
+    }
+    
+    .logo-dark {
+        height: 100px;
+    }
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el menú lateral */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Inicialmente oculto fuera de la pantalla */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #000000;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
 }
 
-.social-icons a {
-    margin-right: 10px;
+.sidebar.active {
+    left: 0; /* Muestra el menú cuando tiene la clase 'active' */
 }
 
-.social-icons img {
-    width: 24px;
-    height: 24px;
+.sidebar .profile-1 {
+    padding: 20px;
+    text-align: center;
+
 }
 
+.sidebar .profile-1 img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
 
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 2px solid #444;
+}
 
-
-
-
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 
 
 ul {
@@ -350,7 +385,8 @@ ul {
     justify-content: start;
     align-items: start;
     margin-right: 100px;
-    margin-top: 50px;;
+    margin-top: -30px;;
+    margin-left: 30px;
   }
   .example-2 .icon-content {
     margin: 0 10px;
@@ -438,3 +474,7 @@ ul {
   .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
   }
+
+
+
+
