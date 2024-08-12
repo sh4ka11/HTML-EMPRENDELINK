@@ -373,6 +373,12 @@ footer {
     .burger {
     display: none; /* Escondido por defecto */
     }
+    .menu-toggle img {
+        font-size: 24px;
+        cursor: pointer;
+        
+    }
+    
     .sidebar {
         position: fixed;/*maneja el menu de barras */
         left: -300px; /* maneja la salida de el menu de barras*/
