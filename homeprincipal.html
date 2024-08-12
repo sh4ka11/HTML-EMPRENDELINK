@@ -212,5 +212,37 @@
           </div>
       </div>
     </footer>
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <h2>Inicia sesión ahora.</h2>
+        <button class="modal-button">>Usuario</button>
+        <button class="modal-button">Inversor</button>
+      </div>
+    </div>
+    
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <h2>Registrate ahora.</h2>
+        <button class="modal-button">Usuario</button>
+        <button class="modal-button">Inversor</button>
+      </div>
+    </div>
+    <script>
+      document.querySelector('a[href="#"]:nth-of-type(3)').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('login-modal').style.display = 'block';
+      });
+    
+      document.querySelector('a[href="#"]:nth-of-type(2)').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('register-modal').style.display = 'block';
+      });
+    
+      window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+          event.target.style.display = "none";
+        }
+      }
+    </script>
 </body>
 </html>
