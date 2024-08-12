@@ -7,44 +7,25 @@
     <link rel="stylesheet" href="home_inversor.css">
 </head>
 <body>
- 
-  <header>
-    <div class="logo"><img src="link/16.png" alt=""stylesheet width="300px"><span></span></div>
-    <nav>
-        <div class="nav-item bordered">
-            <img src="link/17.png" alt="ayuda">
-            <a href="#">Ayuda</a>
-        </div>
-        <div class="nav-item bordered">
-            <img src="link/18.png" alt="notificacion">
-            <a href="#">Notificaciones</a>
-        </div>
-        <a class="Inversor" href="#">Inversor</a>
-        <div class="nav-item bordered">
-            <div class="menu-toggle">
-            <img src="link/19.png" alt="flecha">
-        </div>
-                <img src="link/20.png" alt="perfil" class="profile-pic">
+    <header>
+        <div class="logo"><img src="img_inversor/logo.png" alt=""stylesheet width="300px"><span></span></div>
+        <nav>
+            <div class="nav-item bordered">
+                <img src="img_inversor/ayuda.png" alt="ayuda">
+                <a href="#">Ayuda</a>
             </div>
-</header>
-
-<aside class="sidebar">
-    <div class="profile">
-        <img src="link/15.png" alt="User">
-        <br>
-        <span>Dayron Camilo</span>
-        <br>
-        <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
-    </div>
-    <ul>
-        
-        <li><a href="#">Perfil</a></li>
-        <li><a href="#">Busqueda por categoría</a></li>
-        <li><a href="#">Consultar Lista</a></li>
-        <li><a href="#">Chat</a></li>
-        <li><a href="#">Cerrar Sesión</a></li>
-    </ul>
-</aside>
+            <div class="nav-item bordered">
+                <img src="img_inversor/notificaciones.png" alt="notificacion">
+                <a href="#">Notificaciones</a>
+            </div>
+            <a class="Inversor" href="#">Inversor</a>
+            <div class="nav-item bordered">
+              
+                <img src="img_inversor/menuInversor.png" alt="flecha">
+                <img src="img_inversor/perfil_inversor.png" alt="perfil" class="profile-pic">
+            </div>
+        </nav>
+    </header>
 <br><br><br><br><br>
     <section class="hero">
         
@@ -258,27 +239,6 @@
             </div>
         </div>
     </footer>
-    <script>
-      document.querySelector('.menu-toggle').addEventListener('click', function() {
-     this.classList.toggle('active');
-     document.querySelector('.sidebar').classList.toggle('active');
- });
-
-     document.querySelectorAll('.accordion-button').forEach(button => {
-         button.addEventListener('click', () => {
-             const accordionContent = button.nextElementSibling;
-             button.classList.toggle('active');
-
-             if (button.classList.contains('active')) {
-                 accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-             } else {
-                 accordionContent.style.maxHeight = 0;
-             }
-         });
-     });
-
-     
- </script>
 </body>
 
 </html>
