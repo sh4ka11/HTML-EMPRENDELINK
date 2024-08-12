@@ -123,7 +123,10 @@ nav .nav-item:last-child {
     padding: 0;
     margin: 0;
 }
-
+.btn a{
+    text-decoration: none;
+    color: white;
+}
 .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
     padding: 15px 20px;
     border-bottom: 2px solid #444;
