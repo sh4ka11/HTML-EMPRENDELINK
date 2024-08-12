@@ -1,5 +1,4 @@
 body {
-    
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -48,6 +47,9 @@ nav {
 .bordered {
     border: 1px solid #040404;
     border-radius: 25px;
+    
+    
+    
 }
 
 
@@ -91,6 +93,12 @@ nav .nav-item:last-child {
     
 }
 
+
+
+
+
+
+
 .sidebar {
     position: fixed;/*maneja el menu de barras */
     left: -300px; /* maneja la salida de el menu de barras*/
@@ -118,16 +126,16 @@ nav .nav-item:last-child {
     width: 80px;
     height: 80px;
 }
-.btn a{
-    color: white;
-    text-decoration: none;
-}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+.btn a{
+    text-decoration: none;
+    color: white;
+}
 .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
     padding: 15px 20px;
     border-bottom: 2px solid #444;

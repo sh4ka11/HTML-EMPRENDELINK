@@ -91,7 +91,10 @@ nav .nav-item:last-child {
 
 
 
-
+.hero-buttons a {
+    color: #ffffff;
+    text-decoration: none;
+}
 .main-content {
     display: flex;
     justify-content: space-between;
