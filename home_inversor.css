@@ -47,6 +47,9 @@ nav {
 .bordered {
     border: 1px solid #040404;
     border-radius: 25px;
+    
+    
+    
 }
 
 
@@ -89,6 +92,12 @@ nav .nav-item:last-child {
     cursor: pointer;
     
 }
+
+
+
+
+
+
 
 .sidebar {
     position: fixed;/*maneja el menu de barras */

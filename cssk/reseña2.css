@@ -178,10 +178,12 @@ color: #ccc;
 
 }
 
-
+.footer-content a{
+  color: #bbb;
+}
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
