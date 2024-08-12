@@ -152,11 +152,14 @@ main {
     margin-bottom: 20px;
 }
 
+
 .message.received p {
-    background-color: #EEEEEE;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     margin: 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    width: 220px;
 }
 
 .message.sent p {
@@ -165,13 +168,25 @@ main {
     border-radius: 10px;
     margin: 0;
     text-align: right;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    width: 260px;
+    margin-left: 800px;
 }
 
-.message span {
+.message.sent span {
     display: block;
     font-size: 12px;
     color: #888;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 805px;
+}
+
+.message.received span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+
 }
 
 .chat-input {
