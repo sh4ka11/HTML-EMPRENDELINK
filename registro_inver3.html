@@ -81,24 +81,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .options {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        .options a {
-            color: #000000;
-            text-decoration: none;
-        }
-        .options a:hover {
-            text-decoration: underline;
-        }
 
-        .login-box{
-
-        }
         button {
             padding: 10px;
             background-color: rgb(0, 0, 0);
@@ -109,9 +92,7 @@
             margin-bottom: 20px;
             display: block;
         }
-        button:hover {
-            background-color: #6b6b6b;
-        }
+
         footer {
     background-color: #000000;
     color: #fff;
@@ -266,6 +247,15 @@ ul {
             height: 52%;
             width: 78%; 
         }
+   
+
+       
+     
+
+ 
+
+
+
     </style>
 </head>
 <body>
@@ -276,22 +266,24 @@ ul {
             </div>
         </header>
         <main>
-            <h2>¡BIENVENIDO!</h2>
+            <h2>Registro de inversionista</h2>
             <div class="login-box">
                 <form action="login.php" method="post">
-                    <h1>Inicio de sesión</h1>
+                    <h1>Registro </h1>
                     <br>
-                    <label for="username">USUARIO</label>
+                    <label for="username">Ingrese su usuario</label>
                     <input type="text" id="username" name="username" required>
-                    <label for="password">CONTRASEÑA</label>
+
+                    <label for="password">Digite su contraseña</label>
                     <input type="password" id="password" name="password" required>
-                    <div class="options">
-                        <a href="inicio_sesion2.html">¿Olvidaste tu contraseña?</a>
-                        <p><a href="registro_usuario.html">Registrarse</a></p>
-                    </div>
                     
-                    <button type="submit"> <a href="HOME.HTML">Ingresar</a></button>
-                   
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    
+                    <button type="submit">Siguiente</button>
+                    <div class="options">
+                        <a href="#" style="color: black;">¿Necesitas Ayuda?</a>
+                    </div>
                     
                 </form>
             </div>
