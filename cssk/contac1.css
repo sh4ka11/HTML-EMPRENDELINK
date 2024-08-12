@@ -149,10 +149,12 @@ main { /*maneja el tamaño y ancho del texto del centro */
 }
 
 /*todo la parte de abajo */
-
+.footer-content a{
+    color: #bbb;
+  }
 
 footer {/*coloca el fondo negro de abajo */
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
