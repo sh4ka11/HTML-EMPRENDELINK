@@ -122,10 +122,23 @@ header {
     display: flex;
     padding: 20px;
     border: 2px solid black; /* Borde negro */
-    
     align-items: flex-start;
     padding: 10px;
+    margin-left: -17px;
+    margin-right: 85px;
 }
+
+.card-w h3 {
+
+    margin-top:57px;
+
+}
+.card-w p {
+
+  display: block;
+
+}
+
 .card-1 {
     background-color: white;
     border-radius: 10px;
@@ -167,7 +180,6 @@ header {
    
 }
 .card-w img {
-  
     margin: 15px;
    
 }
@@ -255,16 +267,9 @@ header {
 .latest-posts {
     display: flex;
     gap: 20px;
+    
 }
-.wine-post {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 30px;
-}
+
 
 
 .profile-card {
@@ -274,11 +279,7 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
 }
-.wine-post-header{
-    width: 100px;
-    height: 100px;
 
-}
 .profile-img {
     width: 100px;
     height: 100px;
@@ -578,7 +579,38 @@ footer {
     background-color: #ff0000;
   }
 
-
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .modal-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 
 

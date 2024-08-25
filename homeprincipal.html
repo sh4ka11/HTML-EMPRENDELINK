@@ -14,9 +14,9 @@
             <img src="link/16.png" alt="Emprende Link" width="300px">
         </div>
         <div class="header-right">
-            <a href="contactanos2.html"><i class="fas fa-question-circle"></i> Ayuda</a>
-            <a href="notificaciones1.html"> Registrarse</a>
-            <a href="perfilUsaurio.html"><i class="fas fa-user"></i> Inicion sesion</a>
+            <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+            <a href="#"> Registrarse</a>
+            <a href="#"><i class="fas fa-user"></i> Iniciar sesion</a>
         </div>
     </header>
     <main class="main-content">
@@ -74,7 +74,9 @@
                 <div class="card-content">
                     <h3>¿QUÉ QUEREMOS LOGRAR?</h3>
                     <p>Impulsar el crecimiento y la colaboración entre inversionistas y emprendedores. Nuestro objetivo es conectar de manera eficiente a estos dos grupos clave, creando un ecosistema que facilite el desarrollo conjunto de soluciones innovadoras y el acceso a nuevas oportunidades de inversión</p>
+                    
                     <h3>¿EN QUÉ SE BENEFICIAN LOS INVERSIONISTAS?</h3>
+
                     <p>Los inversionistas se benefician al acceder a ideas innovadoras con alto potencial de crecimiento, diversificar su portafolio con productos y servicios novedosos, obtener rentabilidades atractivas y generar un impacto positivo en el desarrollo económico y social.</p>
                 </div>
             </div>
@@ -212,5 +214,37 @@
           </div>
       </div>
     </footer>
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <h2>Inicia sesión ahora.</h2>
+        <a href="iniciosesion1_usuario.html" class="modal-button">Usuario</a>
+        <a href="inicio_sesion_inver.html" class="modal-button">inversionista</a>
+      </div>
+    </div>
+    
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <h2>Registrate ahora.</h2>
+        <a href="registro_usuario.html" class="modal-button">Usuario</a>
+        <a href="registro_inver1.html" class="modal-button">inversionista</a>
+      </div>
+    </div>
+    <script>
+      document.querySelector('a[href="#"]:nth-of-type(3)').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('login-modal').style.display = 'block';
+      });
+    
+      document.querySelector('a[href="#"]:nth-of-type(2)').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('register-modal').style.display = 'block';
+      });
+    
+      window.onclick = function(event) {
+        if (event.target.className === 'modal') {
+          event.target.style.display = "none";
+        }
+      }
+    </script>
 </body>
 </html>
