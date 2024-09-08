@@ -7,7 +7,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         header {
             display: flex;
             justify-content: space-between;
@@ -49,6 +48,68 @@
         
         .header-right a i {
             margin-right: 5px;
+        }
+        
+        
+        
+        
+        
+        
+        
+        .sidebar {
+            position: fixed;/*maneja el menu de barras */
+            left: -300px; /* maneja la salida de el menu de barras*/
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s ease;
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar .profile {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .sidebar .profile img {/*maneja la imagen del menu */
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
+            padding: 15px 20px;
+            border-bottom: 2px solid #444;
+        }
+        
+        .sidebar ul li a { /* maneja el color de las letras del menu */
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+            padding: 0;
+            
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
         }
 
 
