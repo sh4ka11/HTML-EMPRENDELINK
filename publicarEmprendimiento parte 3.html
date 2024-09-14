@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicar Emprendimiento</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles parte 3 .css"> 
 </head>
 <body>
     <header>
@@ -25,12 +25,12 @@
     <h1>¡Vamos a crear tu emprendimiento!</h1>
 <!--linea 1 2 3 4 -->
 <div class="navigation">
-    <div class="page active">1</div>
-    <div class="line"></div>
-    <div class="page">2</div>
-    <div class="line"></div>
-    <div class="page">3</div>
-    
+  <div class="page">1</div>
+  <div class="line"></div>
+  <div class="page">2</div>
+  <div class="line"></div>
+  <div class="page active">3</div>
+  
 </div>
 <!-- fin linea 1 2 3 4 -->
 
@@ -39,34 +39,28 @@
     <form>
         <div class="form-sections">
             <div class="form-section">
+               
                 <div class="form-group">
-                    <label for="nombre_emprendimiento">Nombre del Emprendimiento</label>
-                    <input type="text" id="nombre_emprendimiento" name="nombre_emprendimiento" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Escribe tu eslogan</label>
-                    <textarea id="descripcion" name="descripcion" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="especificaciones">Especificaciones</label>
+                    <label for="especificaciones">Añade una gran descripcion general de todo tu emprendimiento</label>
                     <textarea id="especificaciones" name="especificaciones"></textarea>
                 </div>
             </div>
-            <div class="form-section">
-                <div class="form-group">
-                    <label for="categoria">Categoría</label>
-                    <select id="categoria" name="categoria" required>
-                        <option value="">Seleccione una categoría</option>
-                        <option value="tecnologia">Tecnología</option>
-                        <option value="servicios">Servicios</option>
-                        <option value="comercio">Comercio</option>
-                        <!-- Añada más opciones según sea necesario -->
-                    </select>
-                </div>
+                       
+                
+                
             </div>
+            <a href="#" class="btn-publicar" id="publicarBtn">Publicar Emprendimiento</a>
         </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>¡Emprendimiento Publicado!</p>
+              <a href="VISITAR-EMPRENDIMIENTO-1.HTML">aceptar</a>
+          </div>
+      </div>
     </form>
-    <a href="publicarEmprendimiento parte 2.html" class="btn-publicar">Siguiente</a>
+    
 </div>
     
 
@@ -196,6 +190,31 @@
             </div>
         </div>
     </footer>
+<!-- ventana de publicado -->
+    <script>
+      // Obtener elementos
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("publicarBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      // Cuando el usuario hace clic en el botón, muestra el modal
+      btn.onclick = function(event) {
+          event.preventDefault();  // Previene que el enlace recargue la página
+          modal.style.display = "block";
+      }
+
+      // Cuando el usuario hace clic en (x), cierra el modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // Cuando el usuario hace clic fuera del modal, cierra el modal
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
 <!-- Menú lateral -->
 <aside class="sidebar">
     <div class="profile-1">
@@ -239,7 +258,8 @@
        });
 
        
-    </script>  
+    </script>
+   
     
 </body>
 </html>
