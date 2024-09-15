@@ -99,6 +99,9 @@ nav .nav-item:last-child {
   z-index: 2000;
   overflow-y: auto;
 }
+.sidebar {
+  transition: all 0.3s ease;
+}
 
 .sidebar.active {
   right: 0;
