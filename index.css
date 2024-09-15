@@ -1461,6 +1461,9 @@ header {
   border-width: 1px;
   flex-direction: column;
   background-color: var(--dl-color-theme-accent2);
+  /* background-color: rgba(95, 158, 160, 0.484); */
+  /* background-color: #295f98c5; */
+  background-color: #088395;
 }
 .pricing14-price14 {
   gap: var(--dl-space-space-twounits);
@@ -2132,6 +2135,7 @@ header {
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
+  
 }
 .steps2-container5 {
   top: 10%;
@@ -3868,25 +3872,30 @@ footer {
   font-weight: bold;
   padding-top: var(--dl-space-space-halfunit);
   white-space: nowrap;
-  border-color: var(--dl-color-theme-primary1);
+  /* border-color: var(--dl-color-theme-primary1); */
+  border-color: #000;
   border-width: 1px;
   padding-left: var(--dl-space-space-oneandhalfunits);
   border-radius: var(--dl-radius-radius-buttonradius);
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-halfunit);
   justify-content: center;
-  background-color: var(--dl-color-theme-primary1);
+  /* background-color: var(--dl-color-theme-primary1); */
+  background-color: black;
 }
 .thq-button-filled:hover {
   fill: var(--dl-color-theme-secondary2);
   color: var(--dl-color-theme-secondary2);
-  border-color: var(--dl-color-theme-primary2);
-  background-color: var(--dl-color-theme-primary2);
+  border-color: #000;
+  /* border-color: var(--dl-color-theme-primary2); */
+  /* background-color: var(--dl-color-theme-primary2); */
+  background-color: #565656;
 }
 .thq-button-outline {
   gap: var(--dl-space-space-halfunit);
   fill: var(--dl-color-theme-primary1);
-  color: var(--dl-color-theme-primary1);
+  /* color: var(--dl-color-theme-primary1); */
+  
   border: 1px solid;
   cursor: pointer;
   display: flex;
@@ -3895,7 +3904,8 @@ footer {
   font-weight: bold;
   padding-top: var(--dl-space-space-halfunit);
   white-space: nowrap;
-  border-color: var(--dl-color-theme-primary1);
+  /* border-color: var(--dl-color-theme-primary1); */
+  border-color: #000;
   padding-left: var(--dl-space-space-oneandhalfunits);
   border-radius: var(--dl-radius-radius-buttonradius);
   padding-right: var(--dl-space-space-oneandhalfunits);
@@ -3904,14 +3914,17 @@ footer {
 }
 .thq-button-outline:hover {
   fill: var(--dl-color-theme-secondary2);
-  color: var(--dl-color-theme-secondary2);
-  border-color: var(--dl-color-theme-primary2);
+  /* color: var(--dl-color-theme-secondary2); */
+  color: white;
+  /* border-color: var(--dl-color-theme-primary2); */
+  border-color: #000;
   background-color: var(--dl-color-theme-primary2);
+  background-color: #565656;
 }
 .thq-button-flat {
   gap: var(--dl-space-space-halfunit);
   fill: var(--dl-color-theme-primary1);
-  color: var(--dl-color-theme-primary1);
+  color: black;
   cursor: pointer;
   display: flex;
   transition: 0.3s;
@@ -3926,12 +3939,15 @@ footer {
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-halfunit);
   justify-content: center;
+
 }
 .thq-button-flat:hover {
   fill: var(--dl-color-theme-secondary1);
   color: var(--dl-color-theme-secondary1);
-  border-color: var(--dl-color-theme-primary2);
-  background-color: var(--dl-color-theme-primary2);
+  /* border-color: var(--dl-color-theme-primary2); */
+  /* background-color: var(--dl-color-theme-primary2); */
+  background-color: #565656;
+  border-color: #000;
 }
 .thq-heading-1 {
   font-size: 48px;
@@ -3955,6 +3971,7 @@ footer {
   font-size: 18px;
   font-family: Noto Sans;
   line-height: 1.5;
+
 }
 .thq-body-small {
   font-size: 16px;
@@ -4039,6 +4056,7 @@ footer {
   align-items: stretch;
   border-radius: var(--dl-radius-radius-cardradius);
   flex-direction: column;
+  
 }
 .thq-box-shadow {
   box-shadow: 0px 0px 5px -2px var(--dl-color-theme-neutral-dark);
@@ -4072,6 +4090,7 @@ footer {
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-theme-neutral-light);
+  /* background-color: #0274b3; */
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg width%3D%2220%22 height%3D%2220%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M4.293 7.293a1 1 0 011.414 0L10 11.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z%22/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: right 8px center;
