@@ -3,129 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprende Link - Chat</title>
-    <link rel="stylesheet" href="CSS/CHAT-INVERSIONISTA.CSS">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Publicar Emprendimiento</title>
+    <link rel="stylesheet" href="styles parte 2.css"> 
 </head>
 <body>
-   
     <header>
-        <div class="logo"><img src="img_inversor/logo.png" alt=""stylesheet width="300px"><span></span></div>
-        <nav>
-            <div class="nav-item bordered">
-                <img src="LINK/AYUDA.png" alt="ayuda">
-                <a href="#">Ayuda</a>
-            </div>
-            <div class="nav-item bordered">
-                <img src="LINK/CAMPANA.png" alt="notificacion">
-                <a href="#">Notificaciones</a>
-            </div>
-            <a class="Inversor" href="#">Inversor</a>
-            <div class="nav-item bordered">
-              
+        <div class="header-left">
+            <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
+            <!-- <a href="MI-EMPRENDIMIENTO-MENU.HTML">
                 <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
-                <img src="LINK/inversor-foto-header.png" alt="perfil" class="profile-pic">
-            </div>
-        </nav>
-    </header>
+            </a> -->
+            <img src="img_inversor/logo.png" alt="Emprende Link Logo" class="logo">
+        </div>
+        <div class="header-right">
+           <a href="contactanos1 copy.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+        <a href="notificaciones1 copy.html"><i class="fas fa-bell"></i> Notificaciones</a>
+        <a href="perfilUsaurio.html"><i class="fas fa-user"></i> Usuario</a>
+        </div>
+    </header>
+    <br><br>
+    <h1>¡Vamos a crear tu emprendimiento!</h1>
+<!--linea 1 2 3 4 -->
+<div class="navigation">
+  <div class="page">1</div>
+  <div class="line"></div>
+  <div class="page active">2</div>
+  <div class="line"></div>
+  <div class="page">3</div>
+  
+</div>
+<!-- fin linea 1 2 3 4 -->
+
+<div class="container">
+    <h2>Registro de Emprendimiento</h2>
+    <form id="emprendimiento-form">
+      <div class="form-sections">
+          <div class="form-group">
+              <label for="logo">Elige tu logo</label>
+              <input type="file" id="logo" name="logo" accept="image/*" required>
+              <div class="image-preview" id="logo-preview">
+                  <img src="img/logoMarca.png" alt="Logo preview">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="portada">¡Elige una portada!</label>
+              <input type="file" id="portada" name="portada" accept="image/*" required>
+              <div class="image-preview" id="portada-preview">
+                  <img src="LINK/FONDO-VINOS.png" alt="Portada preview">
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Añade algunos de tus productos con una pequeña descripción</label>
+              <div class="products-container">
+                  <div class="product-item">
+                      <div class="product-image">
+                          <img src="LINK/VINOS-1.png" alt="Product 1">
+                      </div>
+                      <textarea placeholder="Descripción del producto" rows="4"></textarea>
+                  </div>
+                  <div class="product-item">
+                      <div class="product-image">
+                          <img src="LINK/VINOS-2.png" alt="Product 2">
+                      </div>
+                      <textarea placeholder="Descripción del producto" rows="4"></textarea>
+                  </div>
+                  <div class="product-item">
+                      <div class="product-image">
+                          <img src="LINK/VINOS-3.png" alt="Product 3">
+                      </div>
+                      <textarea placeholder="Descripción del producto" rows="4"></textarea>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+     
+  </form>
+    <a href="publicarEmprendimiento parte 3.html" class="btn-publicar">Siguiente</a>
+</div>
     
-    <main>
-        <aside class="sidebar">
-            <input type="text" placeholder="Buscar...">
-            <a href="ListaInversionista.html"><button class="new-contact"><i class="fas fa-plus"></i> Nuevo Contacto</button></a>
-            <ul class="contacts">
-                <li>
-                    <img src="LINK/PERFIL-0.png" alt="Kevin targaryen">
-                    <div>
-                        <span>Kevin targaryen</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-1.png" alt="Kevin Alexis">
-                    <div>
-                        <span>Kevin Alexis</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-2.png" alt="Cristian sebastian">
-                    <div>
-                        <span>Cristian sebastian</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-3.png" alt="Monica Galindo">
-                    <div>
-                        <span>Monica Galindo</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-4.png" alt="Alexa calvache">
-                    <div>
-                        <span>Alexa calvache</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-5.png" alt="Stiven Godoy">
-                    <div>
-                        <span>Stiven Godoy</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="LINK/PERFIL-6.png" alt="Carlos sebastian">
-                    <div>
-                        <span>Carlos sebastian</span>
-                        <p>Mensaje</p>
-                    </div>
-                </li>
-            </ul>
-        </aside>
-        
-        <section class="chat">
-            <div class="chat-header">
-                <img src="LINK/chat-inversionista-foto.png" alt="Kevin targaryen">
-                <div class="chat-info">
-                    <h2>Miguel Bonilla</h2>
-                    <p>miguelbonilla@gmail.com</p>
-                    <a href="usaurioPerfil.html">Mas Información...</a>
-                </div>
-            </div>
-            
-            <div class="chat-messages">
-                <div class="message received">
-                    <p>Estoy disponible <br>[Disponibilidad del emprendedor].</p>
-                    <span>4:18 PM</span>
-                </div>
-                <div class="message sent">
-                    <p>Sí, perfecto.</p>
-                    <span>4:18 PM</span>
-                </div>
-                <div class="message received">
-                    <p>¡Genial! Espero con interés hablar con usted con más detalle.</p>
-                    <span>4:18 PM</span>
-                </div>
-                <div class="message sent">
-                    <p>Le enviaré un correo electrónico para confirmar la fecha y hora.</p>
-                    <span>4:18 PM</span>
-                </div>
-                <div class="message received">
-                    <p>Gracias, Buena tarde.</p>
-                    <span>4:20 PM</span>
-                </div>
-            </div>
-            
-            <div class="chat-input">
-                <input type="text" placeholder="Escribe tu mensaje...">
-                <button>Enviar</button>
-            </div>
-        </section>
-    </main>
-    
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -149,7 +106,6 @@
             <div class="footer-section more">
                 <h3>Más de nosotros</h3>
                 <ul>
-                    <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
                     <li><a href="#">Centro de ayuda</a></li>
                     <li><a href="#">Sobre Emprende Link</a></li>
                 </ul>
@@ -253,52 +209,51 @@
             </div>
         </div>
     </footer>
-
-        <!-- Menú lateral -->
-<aside class="sidebar-1">
+<!-- Menú lateral -->
+<aside class="sidebar">
     <div class="profile-1">
         <img src="LINK/PERFIL-2.png" alt="User">
         <br>
-        <span>Cristian sebastian</span>
+        <span>Cristian Sebastian</span>
         <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
     </div>
     <ul>
-        <li><a href="home_inversor.html">Inicio</a></li>
-        <li><a href="perfilInversor.html">Perfil</a></li>
-        <li><a href="busqueda_filtro_inver.html">Busqueda por categoría</a></li>
-        <li><a href="ListaInversionista.html">Consultar Lista</a></li>
-        <li><a href="CHAT-INVERSIONISTA.HTML">Chat</a></li>
-        <li><a href="homeprincipal.html">Cerrar Sesión</a></li>
-
+        <li><a href="HOME.HTML">Inicio</a></li>
+        <li><a href="perfilUsaurio.html">Perfil</a></li>
+        <li><a href="busqueda_filtro.html">Busqueda por categoría</a></li>
+        <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
+        <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
+        <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
+        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
+        <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
+        <li><a href="iniciosesion1.html">Cerrar Sesión</a></li>
     </ul>
     </aside>
 
-<script>
-    document.querySelector('.barra').addEventListener('click', function() {
-   this.classList.toggle('active');
-   document.querySelector('.sidebar-1').classList.toggle('active');
-});
 
-   document.querySelectorAll('.accordion-button').forEach(button => {
-       button.addEventListener('click', () => {
-           const accordionContent = button.nextElementSibling;
-           button.classList.toggle('active');
 
-           if (button.classList.contains('active')) {
-               accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-           } else {
-               accordionContent.style.maxHeight = 0;
-           }
-       });
+    <script>
+        document.querySelector('.barra').addEventListener('click', function() {
+       this.classList.toggle('active');
+       document.querySelector('.sidebar').classList.toggle('active');
    });
 
-   
+       document.querySelectorAll('.accordion-button').forEach(button => {
+           button.addEventListener('click', () => {
+               const accordionContent = button.nextElementSibling;
+               button.classList.toggle('active');
+
+               if (button.classList.contains('active')) {
+                   accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+               } else {
+                   accordionContent.style.maxHeight = 0;
+               }
+           });
+       });
+
+       
     </script>
-
-
-
-    
-
+   
     
 </body>
 </html>

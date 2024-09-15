@@ -104,14 +104,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width:300px;
+    max-width: 300px;
     margin: 20px auto;
 }
 .page {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #b9b3b3;
+    background-color: #090909;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,8 +224,41 @@ textarea {
     background-color: #ddd;
     max-width: 50px;
 }
-/* parte 2  */
+/* parte estilo del publiado  */
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* fotter asta el final */
 footer {
     background-color: #000000;

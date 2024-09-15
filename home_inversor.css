@@ -90,7 +90,7 @@ nav .nav-item:last-child {
 .menu-toggle img {
     font-size: 24px;
     cursor: pointer;
-    
+
 }
 
 
@@ -130,7 +130,7 @@ nav .nav-item:last-child {
 }
 .btn a{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
     padding: 15px 20px;
@@ -297,6 +297,7 @@ h2 {
 .part1{
     display: flex;
 }
+
 .imgvin{
     width: 100%;
     height: 100%;
