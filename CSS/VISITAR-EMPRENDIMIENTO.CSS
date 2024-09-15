@@ -376,7 +376,7 @@ footer {
 /* Estilo para el menú lateral */
 .sidebar {
     position: fixed;
-    left: -250px; /* Inicialmente oculto fuera de la pantalla */
+    right: -250px; /* Inicialmente oculto fuera de la pantalla */
     top: 0;
     height: 100%;
     width: 250px;
@@ -388,7 +388,7 @@ footer {
 }
 
 .sidebar.active {
-    left: 0; /* Muestra el menú cuando tiene la clase 'active' */
+    right: 0; /* Muestra el menú cuando tiene la clase 'active' */
 }
 
 .sidebar .profile-1 {

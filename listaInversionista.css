@@ -126,7 +126,7 @@ nav .nav-item:last-child {
 
 .sidebar {
   position: fixed;/*maneja el menu de barras */
-  left: -300px; /* maneja la salida de el menu de barras*/
+  right: -300px; /* maneja la salida de el menu de barras*/
   top: 0;
   height: 100%;
   width: 250px;
@@ -138,7 +138,7 @@ nav .nav-item:last-child {
 }
 
 .sidebar.active {
-  left: 0;
+  right: 0;
 }
 
 .sidebar .profile {
