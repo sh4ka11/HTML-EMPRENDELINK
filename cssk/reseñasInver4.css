@@ -96,13 +96,13 @@ nav .nav-item:last-child {
 
 .sidebar {
   position: fixed;/*maneja el menu de barras */
-  left: -300px; /* maneja la salida de el menu de barras*/
+  right: -300px; /* maneja la salida de el menu de barras*/
   top: 0;
   height: 100%;
   width: 250px;
   background-color: #333;
   color: #fff;
-  transition: left 0.3s ease;
+  transition: right 0.3s ease;
   z-index: 2000;
   overflow-y: auto;
 }

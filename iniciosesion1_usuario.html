@@ -287,7 +287,7 @@ ul {
                         <p><a href="registro_usuario.html">Registrarse</a></p>
                     </div>
                     
-                    <a href="HOME.HTML" style="color: white; background-color: rgb(0, 0, 0); padding: 5px 10px; text-decoration: none;">
+                    <a href="HOME.HTML" style="color: white; background-color: rgb(0, 0, 0); padding: 5px 10px; text-decoration: none;" onclick=logear()>
                       Ingresar
                   </a>
                   
@@ -428,5 +428,27 @@ ul {
         </div>
       </footer>
     </div>
+
+    <script>
+      function logear(){
+
+        let user=document.getElementById("username").value;
+        let pass=document.getElementById("password").value;
+
+        if(user== "dayron" && pass=="venado"){
+
+          window.location="link de la pagiana siguiente ";
+
+        }
+        else{
+          alert("usuario no encontrado");
+        }
+      }
+
+       
+      // window.onload = function() {
+      //       alert('¡Bienvenido a Emprende Link!');
+      //   };
+    </script>
 </body>
 </html>
