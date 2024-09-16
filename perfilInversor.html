@@ -26,7 +26,7 @@
             <div class="menu-toggle">
             <img src="link/19.png" alt="flecha">
         </div>
-                <img src="link/20.png" alt="perfil" class="profile-pic">
+                <img src="link/15.png" alt="perfil" class="profile-pic">
             </div>
 </header>
 
@@ -77,14 +77,11 @@
             <input type="text" id="stage" value="CredencialesFinacieras.pdf">
         </div>
         <div class="buttons">
-          <button> <a href="perfilInversorEditarPerfil.html">Editar perfil</a> </button>
-          <a href="homeprincipal.html"><button>Cerrar Sesión</button></a> 
+          <button id="myButtons"> <a href="perfilInversorEditarPerfil.html">Editar perfil</a> </button>
+          <a href="homeprincipal.html"><button id="myButtons">Cerrar Sesión</button></a> 
         </div>
     </div>
 
-
-
-    
     <footer>
       <div class="footer-content">
           <div class="footer-section about">
@@ -217,59 +214,45 @@
     </div>
   </footer>
     <script>
-     
-
-        document.querySelectorAll('.accordion-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling;
-                button.classList.toggle('active');
-
-                if (button.classList.contains('active')) {
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                }
-            });
-        });
-
     
-      
-      const profilePic = document.querySelector('.profile-pic');
-profilePic.onerror = function() {
-    this.src = 'link/default-profile.png'; // Ruta de la imagen predeterminada
-};
 
-
-
-
-        window.addEventListener('load', function() {
-          const fields = ['name', 'birthdate', 'email', 'location', 'phone', 'gender', 'document', 'stage'];
-      
-          fields.forEach(function(field) {
-              const input = document.getElementById(field);
-              input.value = localStorage.getItem(field) || input.value;
-      
-              input.addEventListener('input', function() {
-                  localStorage.setItem(field, input.value);
-              });
-          });
-      });
-      
       document.querySelector('.menu-toggle').addEventListener('click', function() {
         this.classList.toggle('active');
         document.querySelector('.sidebar').classList.toggle('active');
-        
-        if (document.querySelector('.sidebar').classList.contains('active')) {
-            document.querySelector('.sidebar').style.width = '250px';
-        } else {
-            document.querySelector('.sidebar').style.width = '0';
-        }
     });
 
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+            button.classList.toggle('active');
+
+            if (button.classList.contains('active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = 0;
+            }
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('#myButtons');
+      
+      buttons.forEach(button => {
+          button.addEventListener('mouseover', function () {
+              this.style.backgroundColor = '#BFF7DC'; 
+              this.style.color = 'white'; 
+          });
+          
+          button.addEventListener('mouseout', function () {
+              this.style.backgroundColor = '';
+              this.style.color = ''; 
+          });
+      });
+  });
+  
+  
 
     </script>
-    
-
+  
     
 </body>
 </html>

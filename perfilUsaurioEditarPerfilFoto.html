@@ -104,8 +104,8 @@
           </div>
       </div>
       <div class="buttons">
-        <button>Cambiar contraseña</button>
-        <button>guardar cambios</button>
+        <button id="myButtons">Cambiar contraseña</button>
+        <button id="myButtons">guardar cambios</button>
       </div>
   </div>
 
@@ -242,23 +242,47 @@
 </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.sidebar').classList.toggle('active');
-        });
-
-        document.querySelectorAll('.accordion-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling;
-                button.classList.toggle('active');
-
-                if (button.classList.contains('active')) {
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                }
+      window.addEventListener('load', function() {
+        const fields = ['name', 'birthdate', 'email', 'location', 'phone', 'gender', 'document', 'stage'];
+    
+        fields.forEach(function(field) {
+            const input = document.getElementById(field);
+            input.value = localStorage.getItem(field) || input.value;
+    
+            input.addEventListener('input', function() {
+                localStorage.setItem(field, input.value);
             });
         });
+    });
+    
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.sidebar').classList.toggle('active');
+      
+      if (document.querySelector('.sidebar').classList.contains('active')) {
+          document.querySelector('.sidebar').style.width = '250px';
+      } else {
+          document.querySelector('.sidebar').style.width = '0';
+      }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('#myButtons');
+    
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', function () {
+            this.style.backgroundColor = '#BFF7DC'; 
+            this.style.color = 'white'; 
+        });
+        
+        button.addEventListener('mouseout', function () {
+            this.style.backgroundColor = '';
+            this.style.color = ''; 
+        });
+    });
+});
+
+
     </script>
 </body>
 </html>
