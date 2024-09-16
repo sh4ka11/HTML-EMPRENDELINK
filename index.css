@@ -2090,7 +2090,7 @@ header {
 .steps2-container1 {
   width: 100%;
   display: flex;
-  position: relative;
+  position: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -2106,13 +2106,21 @@ header {
   align-items: start;
 }
 .steps2-section-header {
+  width: 150%;
   gap: var(--dl-space-space-oneandhalfunits);
   top: 10%;
   display: flex;
   position: sticky;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-20%); /* Ajusta la posición horizontal */
+  border-radius: 10px; /* Radio de borde de 10px */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
 }
+
+
 .steps2-actions {
   gap: var(--dl-space-space-unit);
   display: flex;
@@ -3960,6 +3968,7 @@ footer {
   font-family: STIX Two Text;
   font-weight: 600;
   line-height: 1.5;
+  
 }
 .thq-heading-3 {
   font-size: 26px;

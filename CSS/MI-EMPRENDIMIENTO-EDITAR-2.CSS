@@ -158,24 +158,122 @@
         height: 90px; 
         padding-top: 20px;
     }
+
+
+
+
     .description {
+    margin: 20px 0;
+    
+}
+
+.description-text {
+    margin-bottom: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-button {
+    background-color: #007bff;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+textarea.edit-description-text {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+input[type="file"].edit-image {
+    margin-top: 10px;
+}
 
 
-        flex: 1; /* Ajustar para ocupar menos espacio que los productos */
+.description {
+    /* margin: 20px 0; */
+    margin-top: 178px;
+    
+}
+
+/* .description-text {
+    margin-bottom: 10px;
+} */
+
+.edit-button, .delete-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-button {
+    background-color: #007bff;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+textarea.edit-description-text {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+input[type="file"].edit-image {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+    
+    
+    /* .description {
+
+
+        flex: 1; 
         padding: 20px;
-        background-color: #f8f8f8; /* Fondo opcional */
-        border: 1px solid #ddd; /* Borde opcional */
-        border-radius: 8px; /* Bordes redondeados opcionales */
+        background-color: #f8f8f8; 
+        border: 1px solid #ddd; 
+        border-radius: 8px;
         margin-top: 160px;
-        text-align: left; /* Alinear texto a la izquierda */
+        text-align: left; 
         margin-left: -25px;
         display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #f9f9f9; /* Color de fondo opcional */
-        border: 1px solid #ddd; /* Borde opcional */
-        border-radius: 8px; /* Bordes redondeados opcional */
-        position: relative; /* Necesario para posicionar el botón absoluto */
+        background-color: #f9f9f9; 
+        border: 1px solid #ddd; 
+        border-radius: 8px; 
+        position: relative; 
         
 
     }
@@ -201,7 +299,123 @@
     .product img {
         width: 50%;
         height: auto;
-    }
+    } */
+
+
+.products {
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 160px;
+ 
+}
+
+.product {
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product h4 {
+    margin: 10px 0;
+}
+
+.product .description {
+    margin: 10px 0;
+}
+
+.product button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.product button:hover {
+    background-color: #333;
+    color: #ccc;
+}
+
+.product .edit-button {
+    background-color: black;
+}
+
+.product .edit-button:hover {
+    background-color: gray;
+}
+
+.product .delete-button {
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto negro */
+    border: 2px solid black; /* Borde negro */
+    padding: 10px 20px; /* Espaciado interno opcional */
+    font-size: 16px; /* Tamaño de fuente opcional */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados opcional */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    
+}
+
+.product .delete-button:hover {
+    background-color: #c82333;
+    background-color: #dc3545; /* Fondo rojo en hover */
+    color: white; /* Texto blanco en hover */
+}
+
+.product .edit-description {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.product .edit-image {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.product .save-button {
+    background-color: #28a745;
+}
+
+.product .save-button:hover {
+    background-color: gray;
+}
+
+.product .cancel-button {
+    background-color: #6c757d;
+}
+
+.product .cancel-button:hover {
+    background-color: #5a6268;
+}
+
+
+
+
+
+
+
 
     .hero-content h2 {
         margin: 10px 0; 
@@ -371,6 +585,146 @@ button:hover {
     background-color: #333; /* Fondo negro más oscuro */
     color: #ccc; /* Texto en gris claro */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajustar el tamaño y el estilo de la sección de descripción */
+#description-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 650px; /* Ancho máximo de la sección */
+    background-color: #f9f9f9; /* Fondo de la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 180px;
+}
+
+#description-section h3 {
+    font-size: 24px;
+    color: #333; /* Color del texto del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-family: 'Arial', sans-serif; /* Familia de fuente para el título */
+}
+
+.description-text {
+    font-size: 16px;
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    font-family: 'Georgia', serif; /* Familia de fuente para el texto */
+}
+
+.button-container {
+    margin-top: 20px; /* Espacio arriba de los botones */
+    text-align: center; /* Centrar los botones */
+}
+
+.edit-button, .delete-button {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin: 5px; /* Espacio entre botones */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    border-color: #000;
+    border: black;
+    border: 2px solid #000; /* Borde negro */
+}
+
+.delete-button {
+    background-color: white; /* Color de fondo para el botón de borrar */
+    color: #000;
+    border: black;
+    border-bottom: #000;
+    border: 2px solid #000; /* Borde negro */
+   
+}
+
+.edit-button:hover, .delete-button:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el mouse */
+}
+.delete-button:hover{
+    background-color: red;
+}
+
+
+
+.save-button, .cancel-button {
+    background-color: #28a745; /* Color de fondo para el botón de guardar */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde por defecto */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin: 5px; /* Espacio entre botones */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+}
+
+.cancel-button {
+    background-color: #dc3545; /* Fondo rojo para el botón de cancelar */
+}
+
+.cancel-button:hover {
+    background-color: #c82333; /* Color de fondo al pasar el mouse (opcional) */
+}
+
+.save-button:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse (opcional) */
+}
+
+
+
+
+
+/* Estilo para las áreas de texto en modo edición */
+.edit-description-1-text {
+    width: 100px; /* Ocupa todo el ancho del contenedor */
+    height: 150px; /* Altura fija para que sea más grande */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    margin-bottom: 10px; /* Espacio debajo del área de texto */
+  
+}
+
+
+textarea.edit-description-text {
+    width: 650px;
+    height: auto;
+    min-height: 150px;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón de cancelar */
+.cancel-button {
+    background-color: #ccc; /* Fondo gris */
+    color: #000; /* Texto negro */
+    border: 1px solid #aaa; /* Borde gris oscuro */
+}
+
+
+
+
+
 
 
 

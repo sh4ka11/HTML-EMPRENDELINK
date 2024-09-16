@@ -60,11 +60,83 @@
         <div class="header-left">
             <img src="link/16.png" alt="Emprende Link" width="300px">
         </div>
+
+
+
         <div class="header-right">
-            <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
-            <a href="#"> Registrarse</a>
-            <a href="#"><i class="fas fa-user"></i> Iniciar sesion</a>
-        </div>
+          <a href="acuerdosyterminos.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+          <a href="#" id="registroBtn">Registrarse</a>
+          <a href="#" id="iniciarSesionBtn"><i class="fas fa-user"></i> Iniciar sesión</a>
+      
+          <!-- Modal para opciones de registro -->
+          <div id="registroModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+              <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 300px; text-align: center; border-radius: 10px;">
+                  <h2 style="margin-bottom: 20px;">Seleccione tipo de registro</h2>
+                  <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                      <button onclick="window.location.href='registro_usuario.html'" style="background-color: black; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Usuario</button>
+                      <button onclick="window.location.href='registro_inver1.html'" style="background-color: black; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Inversionista</button>
+                  </div>
+                  <button id="cerrarRegistroModal" style="color: rgb(0, 0, 0); border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Cerrar</button>
+              </div>
+          </div>
+      
+          <!-- Modal para opciones de inicio de sesión -->
+          <div id="inicioSesionModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+              <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 300px; text-align: center; border-radius: 10px;">
+                  <h2 style="margin-bottom: 20px;">Seleccione tipo de inicio de sesión</h2>
+                  <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                      <button onclick="window.location.href='iniciosesion1_usuario.html'" style="background-color: black; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Usuario</button>
+                      <button onclick="window.location.href='inicio_sesion_inver.html'" style="background-color: black; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Inversionista</button>
+                  </div>
+                  <button id="cerrarInicioSesionModal" style="color: rgb(0, 0, 0); border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 10px;">Cerrar</button>
+              </div>
+          </div>
+      
+          <!-- JavaScript para manejar los modales -->
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  var registroModal = document.getElementById('registroModal');
+                  var inicioSesionModal = document.getElementById('inicioSesionModal');
+                  var registroBtn = document.getElementById('registroBtn');
+                  var iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
+                  var cerrarRegistroModal = document.getElementById('cerrarRegistroModal');
+                  var cerrarInicioSesionModal = document.getElementById('cerrarInicioSesionModal');
+      
+                  // Mostrar modal de registro al hacer clic en "Registrarse"
+                  registroBtn.onclick = function(e) {
+                      e.preventDefault();
+                      registroModal.style.display = "block";
+                  }
+      
+                  // Mostrar modal de inicio de sesión al hacer clic en "Iniciar sesión"
+                  iniciarSesionBtn.onclick = function(e) {
+                      e.preventDefault();
+                      inicioSesionModal.style.display = "block";
+                  }
+      
+                  // Cerrar modal de registro al hacer clic en el botón "Cerrar"
+                  cerrarRegistroModal.onclick = function() {
+                      registroModal.style.display = "none";
+                  }
+      
+                  // Cerrar modal de inicio de sesión al hacer clic en el botón "Cerrar"
+                  cerrarInicioSesionModal.onclick = function() {
+                      inicioSesionModal.style.display = "none";
+                  }
+      
+                  // Cerrar modales si se hace clic fuera de ellos
+                  window.onclick = function(event) {
+                      if (event.target == registroModal) {
+                          registroModal.style.display = "none";
+                      }
+                      if (event.target == inicioSesionModal) {
+                          inicioSesionModal.style.display = "none";
+                      }
+                  }
+              });
+          </script>
+
+        
     </header>
       <div class="home-container">
     
@@ -99,7 +171,7 @@
                   <span>
                     <fragment class="home-fragment114">
                       <span class="home-text114 thq-body-small">
-                        Regístrate como emprendedor
+                        <a href="registro_usuario.html">Regístrate como emprendedor</a>
                       </span>
                     </fragment>
                   </span>
@@ -108,7 +180,7 @@
                   <span>
                     <fragment class="home-fragment115">
                       <span class="home-text115 thq-body-small">
-                        Regístrate como inversionista
+                        <a href="registro_inver1.html">Regístrate como inversionista</a>
                       </span>
                     </fragment>
                   </span>
@@ -222,7 +294,7 @@
                       >
                         <span>
                           <fragment class="home-fragment124">
-                            <span class="home-text124">Regístrate ahora</span>
+                            <span class="home-text124"><a href="">Regístrate ahora</a></span>
                           </fragment>
                         </span>
                       </button>
@@ -671,29 +743,31 @@
           </div>
         </pricing14-wrapper>
         <steps2-wrapper class="steps2-wrapper">
+
+          
           <!--Steps2 component-->
           <div class="steps2-container1 thq-section-padding">
             <div class="steps2-max-width thq-section-max-width">
               <div class="steps2-container2 thq-grid-2">
                 <div class="steps2-section-header">
                   <h2 class="thq-heading-2">
-                    Discover the Power of Our Products
+                    Descubre el potencial de tu emprendimiento
                   </h2>
                   <p class="thq-body-large">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
+                    Transforma tu idea en una realidad. Nuestro espacio está diseñado para impulsar y conectar a emprendedores como tú. Aprovecha herramientas y recursos para llevar tu proyecto al siguiente nivel.
                   </p>
                   <div class="steps2-actions">
                     <button
                       class="thq-button-filled thq-button-animated steps2-button"
                     >
-                      <span class="thq-body-small">Main action</span>
+                      <span class="thq-body-small"><a href="index.html">Publicar ahora</a></span>
                     </button>
                   </div>
                 </div>
-                <div class="steps2-container3">
+                
+              
+               <br>
+                <div class="steps2-column">
                   <div class="steps2-container4 thq-card">
                     <h2>
                       <fragment class="home-fragment184">
@@ -732,6 +806,8 @@
                     </span>
                     <label class="steps2-text18 thq-heading-3">02</label>
                   </div>
+                </div>
+                <div class="steps2-column">
                   <div class="steps2-container6 thq-card">
                     <h2>
                       <fragment class="home-fragment186">
@@ -771,6 +847,12 @@
                       </fragment>
                     </span>
                     <label class="steps2-text24 thq-heading-3">04</label>
+                  </div>
+                </div>
+              </div>
+                      </fragment>
+                    </span>
+                    <label class="steps2-text24 thq-heading-3"></label>
                   </div>
                 </div>
               </div>
@@ -1201,7 +1283,7 @@
     </div>
     <script
       defer=""
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+      src=""
     ></script>
   </body>
 </html>

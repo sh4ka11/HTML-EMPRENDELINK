@@ -25,7 +25,7 @@
           <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
           <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
           <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
-          <li><a href="homeprincipal.html">Cerrar Sesión</a></li>
+          <li><a href="index.html">Cerrar Sesión</a></li>
 
         </ul>
     </aside>
@@ -70,8 +70,8 @@
             <input type="text" id="document" value="19861598659864">
         </div>
         <div class="buttons">
-          <button> <a href="perfilUsaurioEditarPerfil.html">Editar perfil</a> </button>
-          <a href="iniciosesion1.html"><button>Cerrar Sesión</button></a> 
+          <button id="myButtons"> <a href="perfilUsaurioEditarPerfil.html">Editar perfil</a> </button>
+          <a href="iniciosesion1.html"><button id="myButtons">Cerrar Sesión</button></a> 
         </div>
     </div>
 
@@ -225,6 +225,25 @@
                 }
             });
         });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+          const buttons = document.querySelectorAll('#myButtons');
+          
+          buttons.forEach(button => {
+              button.addEventListener('mouseover', function () {
+                  this.style.backgroundColor = '#BFF7DC'; 
+                  this.style.color = 'white'; 
+              });
+              
+              button.addEventListener('mouseout', function () {
+                  this.style.backgroundColor = '';
+                  this.style.color = ''; 
+              });
+          });
+      });
+      
+      
     </script>
 </body>
 </html>
