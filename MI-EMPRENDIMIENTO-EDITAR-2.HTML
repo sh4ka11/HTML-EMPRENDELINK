@@ -316,7 +316,7 @@
       var newDescriptionHTML = `<textarea class="edit-description">${currentDescription}</textarea>`;
       productElement.querySelector('.description').innerHTML = newDescriptionHTML;
 
-      // Cambiar la imagen para seleccionar una nueva
+      // Cambiar la imagen para seleccionar una nueva  se queda
       var newImageHTML = `<input type="file" class="edit-image" accept="image/*">`;
       productElement.querySelector('img').outerHTML = newImageHTML;
 
@@ -362,7 +362,7 @@
       alert("Los cambios se han guardado exitosamente.");
   }
 
-  // Función para cancelar la edición
+  // Función para cancelar la edición se queda 
   function cancelEdit(productId, originalDescription, originalImageSrc) {
       var productElement = document.getElementById(productId);
 

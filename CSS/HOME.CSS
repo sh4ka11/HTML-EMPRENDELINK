@@ -48,17 +48,26 @@ header {
 }
 
 .hero-section {
-    background-image: url('https://img.freepik.com/vector-gratis/grafico-diagrama-inversion-financiera-mercado-valores-flecha-arriba-sobre-fondo-azul_56104-1814.jpg?t=st=1722233989~exp=1722237589~hmac=4880cb2420684e884ee53ada52f956b005b352f651f2f376595ca157b3f78e04&w=1380');
     background-size: cover;
-    color: white;
-    padding: 50px;
+    color: rgb(21, 17, 17);
     text-align: center;
     border-radius: 30px;
-    width: 1170px;
-    height: 350px;  
-    margin-left: 110px; 
+    /* width: 1170px;
+    height: 350px;   */
+    /* margin-left: 110px;  */
     position: relative;
 }
+
+
+.hero-section img {
+
+    position: center;
+    width: 85%;
+    height: 500px;
+    border-radius: 30px;
+
+}
+
 
 .hero-section::before {
     content: '';
@@ -72,23 +81,25 @@ header {
 }
 
 .hero-section h1,
-.hero-section p,
-.hero-section input {
+.hero-section p {
     position: relative;
     z-index: 1;
     border-color: transparent;
     margin-right: 55px;     
-    margin-top: 38px;
+    margin-top: 68px;
+
 }
 
 .hero-section input {
     width: 80%;
-    padding: 10px;
+    height: 30px;
     border-radius: 20px;
     border: none;
     background-color: rgba(255, 255, 255, 1); 
     border-bottom: black;
     border-color: black;
+    translate: 0px -330px;
+
 }
 
 .section-title {
