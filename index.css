@@ -579,8 +579,31 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
+
+
+
+.thq-animated-group-horizontal {
+  display: flex;
+  width: max-content;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 .hero17-row-container1 {
+  display: flex;
+  overflow: hidden;
   width: 100%;
+  position: relative;
 }
 .hero17-placeholder-image10 {
   width: 400px;
@@ -984,9 +1007,6 @@
 .home-text124 {
   display: inline-block;
 }
-
-
-
 header {
   display: flex;
   justify-content: space-between;
