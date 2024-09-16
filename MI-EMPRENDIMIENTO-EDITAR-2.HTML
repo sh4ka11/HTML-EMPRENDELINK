@@ -57,52 +57,72 @@
 
         <div class="content">
             <section class="products">
-                <div class="product">
-                    <img src="LINK/VINOS-1.png" alt="Vino tinto Malbec argentino">
-                    <h4>Vino tinto Malbec argentino</h4>
-                    <p>Sumérgete en una explosión de sabores...</p>
-                    <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
-                    <button class="delete-button"><i class="fas fa-trash"></i> Borrar</button>
-                </div>
-                <div class="product">
-                    <img src="LINK/VINOS-2.png" alt="Vino rosado Pinot Noir de Francia">
-                    <h4>Vino rosado Pinot Noir de Francia</h4>
-                    <p>Disfruta de la elegancia y la frescura...</p>
-                    <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
-                    <button class="delete-button"><i class="fas fa-trash"></i> Borrar</button>
-                </div>
-                <div class="product">
-                    <img src="LINK/VINOS-3.png" alt="Vino espumoso Brut Cava">
-                    <h4>Vino espumoso Brut Cava</h4>
-                    <p>Eleva tus sentidos con la complejidad...</p>
-                    <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
-                    <button class="delete-button"><i class="fas fa-trash"></i> Borrar</button>
-                </div>
-                <div class="product">
-                    <img src="LINK/VINOS-4.png" alt="Vino rosado">
-                    <h4>Vino rosado</h4>
-                    <p>Disfruta de la frescura y la elegancia de este vino rosado...</p>
-                    <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
-                    <button class="delete-button"><i class="fas fa-trash"></i> Borrar</button>
-                </div>
+         <!-- Producto 1 -->
+<div class="product" id="product-1">
+  <img src="LINK/VINOS-1.png" alt="Producto 1">
+  <h4>Producto 1</h4>
+  <p class="description">Descripción del producto 1</p>
+  <button class="edit-button" onclick="editProduct('product-1')">Editar</button>
+  <button class="delete-button" onclick="deleteProduct('product-1')">Borrar</button>
+</div>
+
+<!-- Producto 2 -->
+<div class="product" id="product-2">
+  <img src="LINK/VINOS-2.png" alt="Producto 2">
+  <h4>Producto 2</h4>
+  <p class="description">Descripción del producto 2</p>
+  <button class="edit-button" onclick="editProduct('product-2')">Editar</button>
+  <button class="delete-button" onclick="deleteProduct('product-2')">Borrar</button>
+</div>
+
+<!-- Producto 3 -->
+<div class="product" id="product-3">
+  <img src="LINK/VINOS-3.png" alt="Producto 3">
+  <h4>Producto 3</h4>
+  <p class="description">Descripción del producto 3</p>
+  <button class="edit-button" onclick="editProduct('product-3')">Editar</button>
+  <button class="delete-button" onclick="deleteProduct('product-3')">Borrar</button>
+</div>
+
+<!-- Producto 4 -->
+<div class="product" id="product-4">
+  <img src="LINK/VINOS-4.png" alt="Producto 4">
+  <h4>Producto 4</h4>
+  <p class="description">Descripción del producto 4</p>
+  <button class="edit-button" onclick="editProduct('product-4')">Editar</button>
+  <button class="delete-button" onclick="deleteProduct('product-4')">Borrar</button>
+</div>
+
+<!-- Producto 5 -->
+<div class="product" id="product-5">
+  <img src="ruta/imagen3.jpg" alt="Producto 5">
+  <h4>Producto 5</h4>
+  <p class="description">Descripción del producto 5</p>
+  <button class="edit-button" onclick="editProduct('product-5')">Editar</button>
+  <button class="delete-button" onclick="deleteProduct('product-5')">Borrar</button>
+</div>
+
+<!-- 
                 <div class="product">
                     <img src="LINK/imagen 1.png" alt="Agregar imagen">
                     <h4>Añade los detalles de tu producto</h4>
                     <button class="add-button"><i class="fas fa-plus"></i> Descripción</button>
                     <button class="add-button"><i class="fas fa-plus"></i> Imagen</button>
-                </div>
+                </div> -->
+
             </section>
 
-            <section class="description">
+            <section class="description-1" id="description-section">
               <h3>Descripción</h3>
-              <p>Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida. Al descorchar una de nuestras botellas, no solo abres un vino; liberas los aromas de las colinas donde crecieron las uvas, el sonido de los vientos que las acariciaron y el esfuerzo de quienes las cuidaron.</p>
-              <p>Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia. Permítete explorar los matices que solo se revelan con el tiempo y la paciencia. Nuestro vino es para quienes buscan algo más que un simple placer; es para aquellos que aprecian la dedicación, la historia y la pasión que se encierran en cada botella.</p>
-              <p>Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte. Desde nuestros bisabuelos, que plantaron las primeras cepas, hasta los innovadores métodos de vinificación que utilizamos hoy, cada etapa es un testimonio de nuestro compromiso. Con cada copa que levantas, compartes no solo un vino, sino una parte de nuestra historia familiar que ha sido transmitida a través de generaciones.</p>
+              <p class="description-text">Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida. Al descorchar una de nuestras botellas, no solo abres un vino; liberas los aromas de las colinas donde crecieron las uvas, el sonido de los vientos que las acariciaron y el esfuerzo de quienes las cuidaron.</p>
+              <p class="description-text">Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia. Permítete explorar los matices que solo se revelan con el tiempo y la paciencia. Nuestro vino es para quienes buscan algo más que un simple placer; es para aquellos que aprecian la dedicación, la historia y la pasión que se encierran en cada botella.</p>
+              <p class="description-text">Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte. Desde nuestros bisabuelos, que plantaron las primeras cepas, hasta los innovadores métodos de vinificación que utilizamos hoy, cada etapa es un testimonio de nuestro compromiso. Con cada copa que levantas, compartes no solo un vino, sino una parte de nuestra historia familiar que ha sido transmitida a través de generaciones.</p>
               <div class="button-container">
-                  <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
-                  <button class="delete-button"><i class="fas fa-trash"></i> Borrar</button>
+                  <button class="edit-button" onclick="editDescription()">Editar</button>
+                  <button class="delete-button" onclick="deleteDescription()">Borrar</button>
               </div>
           </section>
+          
           
     </main>
 
@@ -254,7 +274,7 @@
       <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
       <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
       <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
-      <li><a href="homeprincipal.html">Cerrar Sesión</a></li>
+      <li><a href="index.html">Cerrar Sesión</a></li>
 
     </ul>
     </aside>
@@ -282,6 +302,172 @@
 
        
     </script>
+
+<script>
+  // Función para editar un producto
+  function editProduct(productId) {
+      var productElement = document.getElementById(productId);
+
+      // Obtener la descripción y la imagen actuales
+      var currentDescription = productElement.querySelector('.description').textContent;
+      var currentImageSrc = productElement.querySelector('img').src;
+
+      // Cambiar la descripción por un textarea editable
+      var newDescriptionHTML = `<textarea class="edit-description">${currentDescription}</textarea>`;
+      productElement.querySelector('.description').innerHTML = newDescriptionHTML;
+
+      // Cambiar la imagen para seleccionar una nueva
+      var newImageHTML = `<input type="file" class="edit-image" accept="image/*">`;
+      productElement.querySelector('img').outerHTML = newImageHTML;
+
+      // Cambiar los botones de "Editar" y "Borrar" por "Guardar" y "Cancelar"
+      var buttonsHTML = `
+          <button class="save-button" onclick="saveProduct('${productId}')">Guardar</button>
+          <button class="cancel-button" onclick="cancelEdit('${productId}', '${currentDescription}', '${currentImageSrc}')">Cancelar</button>
+      `;
+      productElement.querySelector('.edit-button').outerHTML = buttonsHTML;
+  }
+
+  // Función para guardar los cambios en un producto
+  function saveProduct(productId) {
+      var productElement = document.getElementById(productId);
+
+      // Obtener la nueva descripción y la nueva imagen
+      var newDescription = productElement.querySelector('.edit-description').value;
+      var newImageFile = productElement.querySelector('.edit-image').files[0];
+
+      if (!newDescription || !newImageFile) {
+          alert("Por favor, asegúrate de haber añadido una nueva descripción y una nueva imagen.");
+          return;
+      }
+
+      // Actualizar la descripción y la imagen del producto
+      productElement.querySelector('.description').textContent = newDescription;
+
+      // Actualizar la imagen
+      var reader = new FileReader();
+      reader.onload = function(e) {
+          productElement.querySelector('.edit-image').outerHTML = `<img src="${e.target.result}" alt="${productId}">`;
+      };
+      reader.readAsDataURL(newImageFile);
+
+      // Cambiar los botones "Guardar" por los originales
+      var buttonsHTML = `
+          <button class="edit-button" onclick="editProduct('${productId}')">Editar</button>
+         
+      `;
+      productElement.querySelector('.save-button').outerHTML = buttonsHTML;
+
+      // Mostrar mensaje de confirmación
+      alert("Los cambios se han guardado exitosamente.");
+  }
+
+  // Función para cancelar la edición
+  function cancelEdit(productId, originalDescription, originalImageSrc) {
+      var productElement = document.getElementById(productId);
+
+      // Revertir la descripción y la imagen
+      productElement.querySelector('.description').textContent = originalDescription;
+      productElement.querySelector('.edit-image').outerHTML = `<img src="${originalImageSrc}" alt="${productId}">`;
+
+      // Cambiar los botones a los originales
+      var buttonsHTML = `
+          <button class="edit-button" onclick="editProduct('${productId}')">Editar</button>
+          <button class="delete-button" onclick="deleteProduct('${productId}')">Borrar</button>
+      `;
+      productElement.querySelector('.save-button').outerHTML = buttonsHTML;
+  }
+
+  // Función para borrar un producto
+  function deleteProduct(productId) {
+      var productElement = document.getElementById(productId);
+      productElement.remove();
+      alert("El producto ha sido eliminado.");
+  }
+</script>
+
+
+
+
+
+
+<script>
+// Función para editar la descripción
+function editDescription() {
+    var descriptionSection = document.getElementById('description-section');
+    var descriptionTexts = descriptionSection.querySelectorAll('.description-text');
+
+    // Convertir los párrafos en áreas de texto editables
+    descriptionTexts.forEach(function(p) {
+        var textContent = p.textContent;
+        p.innerHTML = `<textarea class="edit-description-text">${textContent}</textarea>`;
+    });
+
+    // Cambiar los botones de editar y borrar por guardar y cancelar
+    var buttonsHTML = `
+        <button class="save-button" onclick="saveDescription()">Guardar</button>
+        <button class="cancel-button" onclick="cancelEditDescription()">Cancelar</button>
+    `;
+    descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
+}
+
+
+  // Función para guardar los cambios en la descripción
+  function saveDescription() {
+      var descriptionSection = document.getElementById('description-section');
+      var editAreas = descriptionSection.querySelectorAll('.edit-description-text');
+
+      // Reemplazar las áreas de texto por los párrafos normales
+      editAreas.forEach(function(area) {
+          var newText = area.value;
+          area.parentElement.innerHTML = newText;
+      });
+
+      // Revertir los botones "Guardar" por los originales
+      var buttonsHTML = `
+          <button class="edit-button" onclick="editDescription()">Editar</button>
+          <button class="delete-button" onclick="deleteDescription()">Borrar</button>
+      `;
+      descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
+
+      // Mostrar mensaje de confirmación
+      alert("Los cambios se han guardado exitosamente.");
+  }
+
+  // Función para cancelar la edición de la descripción
+  function cancelEditDescription() {
+      var descriptionSection = document.getElementById('description-section');
+      var originalTexts = [
+          'Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida. Al descorchar una de nuestras botellas, no solo abres un vino; liberas los aromas de las colinas donde crecieron las uvas, el sonido de los vientos que las acariciaron y el esfuerzo de quienes las cuidaron.',
+          'Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia. Permítete explorar los matices que solo se revelan con el tiempo y la paciencia. Nuestro vino es para quienes buscan algo más que un simple placer; es para aquellos que aprecian la dedicación, la historia y la pasión que se encierran en cada botella.',
+          'Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte. Desde nuestros bisabuelos, que plantaron las primeras cepas, hasta los innovadores métodos de vinificación que utilizamos hoy, cada etapa es un testimonio de nuestro compromiso. Con cada copa que levantas, compartes no solo un vino, sino una parte de nuestra historia familiar que ha sido transmitida a través de generaciones.'
+      ];
+
+      var descriptionTexts = descriptionSection.querySelectorAll('.description-text');
+
+      descriptionTexts.forEach(function(p, index) {
+          p.innerHTML = originalTexts[index];
+      });
+
+      // Revertir los botones "Guardar" por los originales
+      var buttonsHTML = `
+          <button class="edit-button" onclick="editDescription()">Editar</button>
+          <button class="delete-button" onclick="deleteDescription()">Borrar</button>
+      `;
+      descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
+  }
+
+  // Función para borrar la descripción
+  function deleteDescription() {
+      var descriptionSection = document.getElementById('description-section');
+      descriptionSection.querySelectorAll('.description-text').forEach(function(p) {
+          p.textContent = '';
+      });
+      alert("La descripción ha sido borrada.");
+  }
+</script>
+
+
 
 </body>
 </html>
