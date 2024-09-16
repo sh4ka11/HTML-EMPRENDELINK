@@ -197,8 +197,9 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #555; /* Cambia el color de fondo cuando el mouse pasa sobre el botón */
 }
+
     footer {
     background-color: #000000;
     color: #fff;
