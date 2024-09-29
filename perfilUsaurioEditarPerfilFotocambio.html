@@ -238,48 +238,7 @@
   </div>
 </footer>
 
-    <script>
-      window.addEventListener('load', function() {
-        const fields = ['name', 'birthdate', 'email', 'location', 'phone', 'gender', 'document', 'stage'];
-    
-        fields.forEach(function(field) {
-            const input = document.getElementById(field);
-            input.value = localStorage.getItem(field) || input.value;
-    
-            input.addEventListener('input', function() {
-                localStorage.setItem(field, input.value);
-            });
-        });
-    });
-    
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      this.classList.toggle('active');
-      document.querySelector('.sidebar').classList.toggle('active');
-      
-      if (document.querySelector('.sidebar').classList.contains('active')) {
-          document.querySelector('.sidebar').style.width = '250px';
-      } else {
-          document.querySelector('.sidebar').style.width = '0';
-      }
-  });
+<script src="Scrips/profile.js"></script>
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('#myButtons');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseover', function () {
-            this.style.backgroundColor = '#BFF7DC'; 
-            this.style.color = 'white'; 
-        });
-        
-        button.addEventListener('mouseout', function () {
-            this.style.backgroundColor = '';
-            this.style.color = ''; 
-        });
-    });
-});
-
-
-    </script>
 </body>
 </html>
