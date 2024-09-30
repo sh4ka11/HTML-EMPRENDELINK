@@ -22,8 +22,8 @@
     
     <main>
         <aside class="sidebar">
-            <input type="text" placeholder="Buscar...">
-            <a href="ListaUsuarios.html"><button class="new-contact"><i class="fas fa-plus"></i> Nuevo Contacto</button></a>
+            <input type="text" id="searchInput" placeholder="Buscar...">
+                        <a href="ListaUsuarios.html"><button class="new-contact"><i class="fas fa-plus"></i> Nuevo Contacto</button></a>
             <ul class="contacts">
                 <li>
                     <img src="LINK/PERFIL-0.png" alt="Kevin targaryen">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             
-            <div class="chat-messages">
+            <div class="chat-messages" id="chatMessages">
                 <div class="message received">
                     <p>Estoy disponible <br>[Disponibilidad del inversor].</p>
                     <span>4:18 PM</span>
@@ -111,8 +111,8 @@
             </div>
             
             <div class="chat-input">
-                <input type="text" placeholder="Escribe tu mensaje...">
-                <button>Enviar</button>
+                <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
+                <button id="sendButton">Enviar</button>
             </div>
         </section>
     </main>
@@ -260,7 +260,6 @@
         <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
         <li><a href="MI-EMPRENDIMIENTO.HTML">Mi emprendimiento</a></li>
         <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
-        <li><a href="listaUsuarios.1.html">Lista de emprendimientos</a></li>
         <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
         <li><a href="index.html">Cerrar Sesión</a></li>
     </ul>
@@ -285,7 +284,75 @@
        });
    });
 
-   
+     /* chat.js */
+document.addEventListener('DOMContentLoaded', function() {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+
+    function addMessage(message, isSent) {
+        const messageElement = document.createElement('div');
+        messageElement.className = `message ${isSent ? 'sent' : 'received'}`;
+        
+        const paragraph = document.createElement('p');
+        paragraph.textContent = message;
+        
+        const timestamp = document.createElement('span');
+        timestamp.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+        messageElement.appendChild(paragraph);
+        messageElement.appendChild(timestamp);
+        
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function sendMessage() {
+        const message = messageInput.value.trim();
+        if (message) {
+            addMessage(message, true);
+            messageInput.value = '';
+            
+            // Simulate received message (remove in production)
+            setTimeout(() => {
+                addMessage("yasta", false);
+            }, 1000);
+            setTimeout(() => {
+                addMessage("agalo real", false);
+            }, 2000);
+        }
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+});
+            // buscar filtro
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const contactsList = document.querySelector('.contacts');
+    const contacts = contactsList.querySelectorAll('li');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        contacts.forEach(contact => {
+            const name = contact.querySelector('span').textContent.toLowerCase();
+            const message = contact.querySelector('p').textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || message.includes(searchTerm)) {
+                contact.style.display = '';
+            } else {
+                contact.style.display = 'none';
+            }
+        });
+    });
+});
     </script>
 
 

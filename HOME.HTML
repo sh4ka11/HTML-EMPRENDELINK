@@ -27,8 +27,8 @@
           <h1>¡¿Deseas impulsar tu emprendimiento?!</h1>
           <p>Conectando ideas, Impulsando negocios</p>
           <img src="https://img.freepik.com/vector-gratis/grafico-diagrama-inversion-financiera-mercado-valores-flecha-arriba-sobre-fondo-azul_56104-1814.jpg?t=st=1722233989~exp=1722237589~hmac=4880cb2420684e884ee53ada52f956b005b352f651f2f376595ca157b3f78e04&w=1380" alt="">
-          <input type="text" placeholder="    Buscar...">
-      </div>
+          <input type="text" id="buscarInput" placeholder="    Buscar..." onkeydown="redirigir(event)">
+        </div>
       <section>
         
           <h2 class="section-title">¿Qué Puedes Hacer?</h2>
@@ -274,6 +274,14 @@
           window.onload = function() {
       alert('¡Bienvenido a Emprende Link!');
  };
+//redireccion de input
+ function redirigir(event) {
+            // Verificar si la tecla presionada es "Enter"
+            if (event.key === "Enter") {
+                // Redirigir a otro archivo HTML
+                window.location.href = "busqueda_filtro.html";
+            }
+        }
     </script>
     
 </body>

@@ -462,7 +462,7 @@ ul {
 </header>
 
     <div class="search-bar">
-        <input type="text" placeholder="Buscar...">
+      <input type="text" id="searchInput" placeholder="Buscar...">
     </div>
 
     <div class="container">
@@ -521,7 +521,7 @@ ul {
                 </div>
                 <div class="card">
                     <img src="images/arepas.png" alt="Arepa Puro Maíz">
-                    <h3>AREPA PURO MAIZ</h3>
+                    <h3>AREPA PURA ARINA</h3>
                     <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de arepas de todo tipo.</p>
                     <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
                 </div>
@@ -709,8 +709,27 @@ ul {
                }
            });
        });
+//filtro
+       document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const contactsList = document.querySelector('.cards');
+    const contacts = contactsList.querySelectorAll('.card');
 
-       
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        contacts.forEach(contact => {
+            const name = contact.querySelector('h3').textContent.toLowerCase();
+            const message = contact.querySelector('p').textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || message.includes(searchTerm)) {
+                contact.style.display = '';
+            } else {
+                contact.style.display = 'none';
+            }
+        });
+    });
+});
    </script>
 </body>
 </html>

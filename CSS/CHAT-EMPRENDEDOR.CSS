@@ -1,4 +1,4 @@
-/* styles.css */
+/* CHAT-EMPRENDEDOR.CSS */
 
 body {
     font-family: Arial, sans-serif;
@@ -78,7 +78,7 @@ main {
 }
 
 .contacts {
-    list-style:armenian;
+    list-style: armenian;
     padding: 0;
 }
 
@@ -138,8 +138,7 @@ main {
 
 .chat-info a {
     text-decoration: none;
-    color: #007BFF; 
-
+    color: #007BFF;
 }
 
 .chat-messages {
@@ -151,7 +150,6 @@ main {
 .message {
     margin-bottom: 20px;
 }
-
 
 .message.received p {
     background-color: white;
@@ -186,21 +184,18 @@ main {
     font-size: 12px;
     color: #888;
     margin-top: 10px;
-
 }
 
 .chat-input {
     display: flex;
     padding: 20px;
     border-top: 1px solid #ccc;
-    
 }
 
 .chat-input input[type="text"] {
     flex: 1;
     padding: 10px;
     box-sizing: border-box;
-    
 }
 
 .chat-input button {
@@ -217,57 +212,55 @@ footer {
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
-    }
-    
-    .footer-content {
+}
+
+.footer-content {
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    }
-    
-    .footer-section {
+}
+
+.footer-section {
     flex: 1;
     margin: 10px;
-    }
-    
-    .footer-section h3 {
+}
+
+.footer-section h3 {
     border-bottom: 1px solid #555;
     padding-bottom: 5px;
     margin-bottom: 10px;
-    }
-    
-    .footer-section ul {
+}
+
+.footer-section ul {
     list-style: none;
     padding: 0;
-    }
-    
-    .footer-section ul li {
+}
+
+.footer-section ul li {
     margin-bottom: 10px;
-    }
-    
-    .footer-section ul li a {
+}
+
+.footer-section ul li a {
     text-decoration: none;
     color: #bbb;
-    }
-    
-    .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 10px;
-    }
-    
-    .burger {
+}
+
+.burger {
     display: none; /* Escondido por defecto */
-    }
-    
-    .logo-dark {
-        height: 100px;
-    }
+}
 
-
+.logo-dark {
+    height: 100px;
+}
 
 /* Estilo para el menú lateral */
 .sidebar-1 {
@@ -290,7 +283,6 @@ footer {
 .sidebar-1 .profile-1 {
     padding: 20px;
     text-align: center;
-
 }
 
 .sidebar-1 .profile-1 img {
@@ -315,30 +307,25 @@ footer {
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
 ul {
     list-style: none;
-  }
-  
-  .example-2 {
+}
+
+.example-2 {
     display: flex;
     justify-content: start;
     align-items: start;
     margin-right: 100px;
-    margin-top: -30px;;
+    margin-top: -30px;
     margin-left: 30px;
-  }
-  .example-2 .icon-content {
+}
+
+.example-2 .icon-content {
     margin: 0 10px;
     position: relative;
-  }
-  .example-2 .icon-content .tooltip {
+}
+
+.example-2 .icon-content .tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -350,13 +337,15 @@ ul {
     visibility: hidden;
     font-size: 14px;
     transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
+}
+
+.example-2 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
-  }
-  .example-2 .icon-content a {
+}
+
+.example-2 .icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -368,20 +357,24 @@ ul {
     color: #4d4d4d;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .example-2 .icon-content a svg {
+}
+
+.example-2 .icon-content a svg {
     position: relative;
     z-index: 1;
     width: 30px;
     height: 30px;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     color: white;
-  }
-  .example-2 .icon-content a .filled {
+}
+
+.example-2 .icon-content a .filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -390,33 +383,83 @@ ul {
     height: 0;
     background-color: #000;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover .filled {
+}
+
+.example-2 .icon-content a:hover .filled {
     height: 100%;
-  }
-  
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
     background-color: #0274b3;
-  }
-  
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
     background-color: #24262a;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
     background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
     );
-  }
-  .example-2 .icon-content a[data-social="youtube"] .filled,
-  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
-  }
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar, .chat {
+        width: 100%;
+    }
+
+    .sidebar {
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .chat-messages {
+        height: calc(100vh - 300px);
+    }
+
+    .message.sent p,
+    .message.received p {
+        max-width: 80%;
+        width: auto;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .message.received p {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .message.sent span,
+    .message.received span {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+    }
+
+    .message.received span {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+    }
+}
