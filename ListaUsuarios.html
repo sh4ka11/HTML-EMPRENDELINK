@@ -46,7 +46,7 @@
     <main>
       <section class="notifications">
           <div class="search-bar">
-              <input type="text" placeholder="Buscar usuarios...">
+            <input type="text" id="searchInput" placeholder="Buscar...">
               <button type="submit"><i class="fas fa-search"></i></button>
           </div>
           <div class="notification">
@@ -85,6 +85,42 @@
               </div>
               <a href="CHAT-EMPRENDEDOR.HTML"> <button class="send-message"><i class="fas fa-envelope"></i> Enviar mensaje</button></a>
           </div>
+          <div class="notification">
+            <img src="images/perfilusu1.png" alt="LEGO">
+            <div class="notification-content">
+              <h3><a href="usaurioPerfil.html">gustavo andres Felipe</a></h3>
+              <p><strong>Correo:</strong> gus@example.com</p>
+              <p><strong>Ubicación:</strong> cali, Colombia</p>
+            </div>
+           <a href="CHAT-EMPRENDEDOR.HTML"> <button class="send-message"><i class="fas fa-envelope"></i> Enviar mensaje</button></a>
+        </div>
+        <div class="notification">
+            <img src="images/perfilusu2.png" alt="FANTA">
+            <div class="notification-content">
+                <h3>Cristian alexis bonilla </h3>
+                <p><strong>Correo:</strong> Cris@example.com</p>
+                <p><strong>Ubicación:</strong> Cucuta, Colombia</p>
+            </div>
+            <a href="CHAT-EMPRENDEDOR.HTML"> <button class="send-message"><i class="fas fa-envelope"></i> Enviar mensaje</button></a>
+        </div>
+        <div class="notification">
+            <img src="images/elias.png" alt="Sprite">
+            <div class="notification-content">
+                <h3>Haiver bonilla Paredes</h3>
+                <p><strong>Correo:</strong> baby@example.com</p>
+                <p><strong>Ubicación:</strong> sinselejo, Colombia</p>
+            </div>
+            <a href="CHAT-EMPRENDEDOR.HTML"> <button class="send-message"><i class="fas fa-envelope"></i> Enviar mensaje</button></a>
+        </div>
+        <div class="notification">
+            <img src="images/perfilusu4.png" alt="Senaworks">
+            <div class="notification-content">
+                <h3> Paloma  Alexis Hernandez</h3>
+                <p><strong>Correo:</strong> mona@example.com</p>
+                <p><strong>Ubicación:</strong> fusagasuga, Colombia</p>
+            </div>
+            <a href="CHAT-EMPRENDEDOR.HTML"> <button class="send-message"><i class="fas fa-envelope"></i> Enviar mensaje</button></a>
+        </div>
       </section>
   </main>
 
@@ -233,8 +269,27 @@
             }
         });
     });
+//filtro buscar
+      document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const contactsList = document.querySelector('.notifications');
+    const contacts = contactsList.querySelectorAll('.notification');
 
-    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        contacts.forEach(contact => {
+            const name = contact.querySelector('h3').textContent.toLowerCase();
+            const message = contact.querySelector('p').textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || message.includes(searchTerm)) {
+                contact.style.display = '';
+            } else {
+                contact.style.display = 'none';
+            }
+        });
+    });
+});
     </script>
 </body>
 </html>
