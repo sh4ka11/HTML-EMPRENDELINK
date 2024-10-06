@@ -691,26 +691,45 @@ ul {
   </ul>
     </aside>
 
-    <script>
-        document.querySelector('.barra').addEventListener('click', function() {
-       this.classList.toggle('active');
-       document.querySelector('.sidebar').classList.toggle('active');
-   });
+<script>
+  document.querySelector('.barra').addEventListener('click', function() {
+ this.classList.toggle('active');
+ document.querySelector('.sidebar').classList.toggle('active');
+});
 
-       document.querySelectorAll('.accordion-button').forEach(button => {
-           button.addEventListener('click', () => {
-               const accordionContent = button.nextElementSibling;
-               button.classList.toggle('active');
+ document.querySelectorAll('.accordion-button').forEach(button => {
+     button.addEventListener('click', () => {
+         const accordionContent = button.nextElementSibling;
+         button.classList.toggle('active');
 
-               if (button.classList.contains('active')) {
-                   accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-               } else {
-                   accordionContent.style.maxHeight = 0;
-               }
-           });
-       });
+         if (button.classList.contains('active')) {
+             accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+         } else {
+             accordionContent.style.maxHeight = 0;
+         }
+     });
+ });
+//filtro
+ document.addEventListener('DOMContentLoaded', function() {
+const searchInput = document.getElementById('searchInput');
+const contactsList = document.querySelector('.cards');
+const contacts = contactsList.querySelectorAll('.card');
 
-       
-   </script>
+searchInput.addEventListener('input', function() {
+  const searchTerm = this.value.toLowerCase();
+
+  contacts.forEach(contact => {
+      const name = contact.querySelector('h3').textContent.toLowerCase();
+      const message = contact.querySelector('p').textContent.toLowerCase();
+
+      if (name.includes(searchTerm) || message.includes(searchTerm)) {
+          contact.style.display = '';
+      } else {
+          contact.style.display = 'none';
+      }
+  });
+});
+});
+</script>
 </body>
 </html>
