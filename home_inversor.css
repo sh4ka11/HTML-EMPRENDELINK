@@ -370,12 +370,18 @@ h2 {
     padding: 3px;
     margin-left: 1150px;
     margin-top: 15px;
+    text-decoration: none;
     
 }
 h2{
     padding-top: 0%;
 }
+.btn a{
+    color: white;           /* Cambia el color del texto a blanco */
+    text-decoration: none;  /* Elimina la línea subrayada */
+}
 
+/* foteer de aqui pa abajo */
 footer {
     background-color: #000000;
     color: #fff;
