@@ -16,6 +16,8 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         }
     });
 });
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('#myButtons');
   
