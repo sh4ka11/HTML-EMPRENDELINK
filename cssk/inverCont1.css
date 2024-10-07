@@ -165,6 +165,7 @@ main { /*maneja el tamaño y ancho del texto del centro */
     border: 1px solid #ddd;
     padding: 10px;
     cursor: pointer;
+    font-size: 18px;
     width: 100%;
     text-align: left;
     outline: none;

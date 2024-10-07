@@ -523,10 +523,11 @@ h2 {
     background-color: #000;
     color: #ffffff;
     border-radius: 5px;
-    padding: 3px;
-    margin-left: 1150px;
-    margin-top: 15px;
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    margin: 15px auto; /* Centrado automático */
     text-decoration: none;
+    display: block; /* Asegura que se comporte como un bloque */
+    width: fit-content; /* Se ajusta al contenido */
 }
 
 h2 {
@@ -564,10 +565,10 @@ h2 {
         margin: 15px auto;
         padding: 5px 15px;
     }
-    
+
 }
 
-/* foteer de aqui pa abajo */
+/* FOOTER DE AQUIII PA ABAJOO  */
 footer {
     background-color: #000000;
     color: #fff;
