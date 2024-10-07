@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="acuerdosyterminos.css">
     <title>Emprende Link</title>
+    <link rel="icon" href="img/logoCuadrado.png" type="image/png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
 </head>
@@ -16,8 +18,8 @@
     </div>
     <div class="header-right">
       <a href="acuerdosyterminos.html"><i class="fas fa-question-circle"></i> Ayuda</a>
-      <a href="#" id="registroBtn">Registrarse</a>
-      <a href="#" id="iniciarSesionBtn"><i class="fas fa-user"></i> Iniciar sesión</a>
+      <a href="registro_usuario.html" id="registroBtn">Registrarse</a>
+      <a href="iniciosesion1_usuario.html" id="iniciarSesionBtn"><i class="fas fa-user"></i> Iniciar sesión</a>
   
       <!-- Modal para opciones de registro -->
       <div id="registroModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
@@ -44,48 +46,7 @@
       </div>
   
       <!-- JavaScript para manejar los modales -->
-      <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              var registroModal = document.getElementById('registroModal');
-              var inicioSesionModal = document.getElementById('inicioSesionModal');
-              var registroBtn = document.getElementById('registroBtn');
-              var iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
-              var cerrarRegistroModal = document.getElementById('cerrarRegistroModal');
-              var cerrarInicioSesionModal = document.getElementById('cerrarInicioSesionModal');
-  
-              // Mostrar modal de registro al hacer clic en "Registrarse"
-              registroBtn.onclick = function(e) {
-                  e.preventDefault();
-                  registroModal.style.display = "block";
-              }
-  
-              // Mostrar modal de inicio de sesión al hacer clic en "Iniciar sesión"
-              iniciarSesionBtn.onclick = function(e) {
-                  e.preventDefault();
-                  inicioSesionModal.style.display = "block";
-              }
-  
-              // Cerrar modal de registro al hacer clic en el botón "Cerrar"
-              cerrarRegistroModal.onclick = function() {
-                  registroModal.style.display = "none";
-              }
-  
-              // Cerrar modal de inicio de sesión al hacer clic en el botón "Cerrar"
-              cerrarInicioSesionModal.onclick = function() {
-                  inicioSesionModal.style.display = "none";
-              }
-  
-              // Cerrar modales si se hace clic fuera de ellos
-              window.onclick = function(event) {
-                  if (event.target == registroModal) {
-                      registroModal.style.display = "none";
-                  }
-                  if (event.target == inicioSesionModal) {
-                      inicioSesionModal.style.display = "none";
-                  }
-              }
-          });
-      </script>
+      
 
 </header>
     <div class="container">
