@@ -53,7 +53,7 @@
 <main>
   <section class="notifications">
       <div class="search-bar">
-          <input type="text" placeholder="Buscar usuarios...">
+        <input type="text" id="searchInput" placeholder="Buscar...">
           <button type="submit"><i class="fas fa-search"></i></button>
       </div>
       <div class="notification">
@@ -245,6 +245,28 @@
                 }
             });
         });
+
+        //filtro buscar
+      document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const contactsList = document.querySelector('.notifications');
+    const contacts = contactsList.querySelectorAll('.notification');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        contacts.forEach(contact => {
+            const name = contact.querySelector('h3').textContent.toLowerCase();
+            const message = contact.querySelector('p').textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || message.includes(searchTerm)) {
+                contact.style.display = '';
+            } else {
+                contact.style.display = 'none';
+            }
+        });
+    });
+});
     </script>
 </body>
 </html>

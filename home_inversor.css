@@ -6,6 +6,7 @@ body {
     color: #333;
     background-image: url(img_inversor/fondo.png);
     background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -141,23 +142,23 @@ nav .nav-item:last-child {
     color: #fff;
     text-decoration: none;
 }
-
+/* COMIENZO DEL CONTENIDOOOOOO*/
 .hero {
     text-align: center;
-    background-image: url('img_inversor/logoplanta.png'); /* Asegúrate de usar la imagen correcta */
-    background-size: contain; /* O prueba con '100% 100%' si 'contain' no da el resultado deseado */
+    background-image: url('img_inversor/logoplanta.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     color: #fff;
     padding: 200px;
     text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.6), /* Sombra leve */
+        1px 1px 2px rgba(0, 0, 0, 0.6),
         -1px -1px 2px rgba(0, 0, 0, 0.6), 
         1px -1px 2px rgba(0, 0, 0, 0.6), 
-        -1px 1px 2px rgba(0, 0, 0, 0.6); 
-    /* Estas sombras crearán un borde alrededor del texto */
-    font-weight: bold; /* Para que el borde sea más visible */
+        -1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
 }
+
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -175,9 +176,8 @@ nav .nav-item:last-child {
     border-radius: 20px;
     border-color: black;
     border: #000;
-    
-
 }
+
 .main-options {
     padding: 10px 100px;
     color: #000;
@@ -228,7 +228,7 @@ h2 {
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    height: 150px; /* Ajustar según sea necesario */
+    height: 150px;
 }
 
 .option2 img {
@@ -257,7 +257,6 @@ h2 {
 }
 
 .option1 .btn, .option2 .btn {
-    
     display: inline-block;
     padding: 5px 20px;
     font-size: 0.8em;
@@ -268,46 +267,43 @@ h2 {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    
 }
-
 
 .btn:hover {
-    background-color: #4b4a4a; /* Cambia este valor por el color que desees */
+    background-color: #4b4a4a;
 }
 
-
-
-
-
-
-.publicacion{
+.publicacion {
     display: flex;
     flex-direction: column;
     padding: 100px;
     border-radius: 10px;
-    padding-top: 0%;
+    padding-top: 0;
 }
-.contenedor{
+
+.contenedor {
     background-color: #ffffff;
-    padding:30px;
+    padding: 30px;
     border-radius: 10px;
     border: solid 2px black;
 }
-.part1{
+
+.part1 {
     display: flex;
 }
 
-.imgvin{
+.imgvin {
     width: 100%;
     height: 100%;
 }
-.imgvino{
+
+.imgvino {
     width: 60%;
     overflow: hidden;
     margin-right: 20px;
 }
-.autor{
+
+.autor {
     display: flex;
     flex-direction: column;
     border: solid 2px black;
@@ -316,20 +312,23 @@ h2 {
     border-radius: 10px;
     font-size: 20px;
 }
-.correo{
+
+.correo {
     display: flex;
     border-bottom: solid 2px black;
 }
-.perfil{
+
+.perfil {
     margin-top: 10px;
     height: 80px;
     margin-right: 20px;
 }
 
-.part2{
+.part2 {
     display: flex;
 }
-.parrafo{
+
+.parrafo {
     margin-top: 30px;
     border: solid 2px black;
     border-radius: 10px;
@@ -337,33 +336,34 @@ h2 {
     width: 100%;
     padding: 10px;
     margin-left: 0px;
-
 }
-.frase{
+
+.frase {
     width: 1000px;
     margin-right: 100px;
     text-align: center;
     margin-left: 100px;
-    
 }
-.frase p{
+
+.frase p {
     margin-top: -20px;
-    
 }
-.frase h3{
+
+.frase h3 {
     font-size: 40px;
 }
-.logoVino img{
-    width: 200px; /* Establece el ancho a 300 píxeles */
-    height: 200px; 
+
+.logoVino img {
+    width: 200px;
+    height: 200px;
     margin-right: 0px;
-    background-color:white;
+    background-color: white;
     margin-top: -150px;
     border: solid 2px black;
     border-radius: 10px;
-   
 }
-.btn{
+
+.btn {
     background-color: #000;
     color: #ffffff;
     border-radius: 5px;
@@ -371,14 +371,200 @@ h2 {
     margin-left: 1150px;
     margin-top: 15px;
     text-decoration: none;
-    
 }
-h2{
+
+h2 {
+    padding-top: 0;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .search-bar input {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .main-options {
+        padding: 10px 50px;
+    }
+
+    h2 {
+        padding: 20px 50px;
+    }
+
+    .frase {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-options {
+        flex-direction: column;
+    }
+
+    .option1, .right-options {
+        width: 100%;
+    }
+
+    .option1 {
+        margin-bottom: 25px;
+    }
+
+    .publicacion {
+        padding: 50px;
+    }
+
+    .part1 {
+        flex-direction: column;
+    }
+
+    .imgvino {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .autor {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .option2 {
+        height: auto;
+    }
+
+    .option2 img {
+        width: 35%;
+    }
+
+    .publicacion {
+        padding: 20px;
+    }
+
+    .part2 {
+        flex-direction: column;
+    }
+
+    .logoVino img {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .main-options {
+        padding: 10px 20px;
+    }
+
+    h2 {
+        padding: 20px;
+        font-size: 1.6em;
+    }
+
+    .option2 {
+        flex-direction: column;
+    }
+
+    .option2 img {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .autor {
+        font-size: 16px;
+    }
+
+    .frase h3 {
+        font-size: 30px;
+    }
+
+}
+.logoVino img {
+    width: 200px;
+    height: 200px;
+    margin-right: 0px;
+    background-color: white;
+    margin-top: -150px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 1150px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+h2 {
     padding-top: 0%;
 }
-.btn a{
-    color: white;           /* Cambia el color del texto a blanco */
-    text-decoration: none;  /* Elimina la línea subrayada */
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 992px) {
+    .logoVino img {
+        width: 150px;
+        height: 150px;
+        margin-top: -75px;
+    }
+    
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: fit-content;
+    }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .logoVino img {
+        display: none; /* El logo desaparece en pantallas pequeñas */
+    }
+    
+    .btn {
+        margin: 15px auto;
+        padding: 5px 15px;
+    }
+    
 }
 
 /* foteer de aqui pa abajo */
