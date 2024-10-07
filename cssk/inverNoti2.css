@@ -495,3 +495,41 @@ ul {
   }
   
 
+   /* Logo responsiveness */
+.logoda img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+  
+    .footer-section {
+        margin: 10px 0;
+    }
+  
+    .example-2 {
+        justify-content: center;
+        translate: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .example-2 .icon-content {
+        margin: 0 5px;
+    }
+  
+    .example-2 .icon-content a {
+        width: 40px;
+        height: 40px;
+    }
+  
+    .example-2 .icon-content a svg {
+        width: 20px;
+        height: 20px;
+    }
+  }
+

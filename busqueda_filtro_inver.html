@@ -491,7 +491,43 @@ ul {
 
 
 
+ /* Logo responsiveness */
+ .logoda img {
+  max-width: 100%;
+  height: auto;
+}
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      margin: 10px 0;
+  }
+
+  .example-2 {
+      justify-content: center;
+      translate: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .example-2 .icon-content {
+      margin: 0 5px;
+  }
+
+  .example-2 .icon-content a {
+      width: 40px;
+      height: 40px;
+  }
+
+  .example-2 .icon-content a svg {
+      width: 20px;
+      height: 20px;
+  }
+}
 
 
   
@@ -577,7 +613,7 @@ ul {
                 </div>
                 <div class="card">
                     <img src="images/arepas.png" alt="Arepa Puro Maíz">
-                    <h3>AREPA PURO MAIZ</h3>
+                    <h3>AREPA PURA ARINA</h3>
                     <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de arepas de todo tipo.</p>
                     <button>Visitar</button>
                 </div>
@@ -593,7 +629,6 @@ ul {
 
 
 
-
     <footer>
       <div class="footer-content">
           <div class="footer-section about">
@@ -604,26 +639,20 @@ ul {
               <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo conjunto de soluciones innovadoras.</p>
           </div>
           <div class="footer-section links">
-              <h3>Legales</h3>
-              <ul>
-                  <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
-                  <li><a href="acuerdosyterminos.html">Acuerdos y términos</a></li>
-              </ul>
-          </div>
-          <div class="footer-section contact">
-              <h3>Nuestro correo:</h3>
-              <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
-          </div>
-          <div class="footer-section more">
-              <h3>Más de nosotros</h3>
-              <ul>
-                  <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
-                  <li><a href="#">Centro de ayuda</a></li>
-                  <li><a href="sobreEmpredelink.html">Sobre Emprende Link</a></li>
-              </ul>
-          </div>
+            <h3>Legales</h3>
+            <ul>
+              <li><a href="sobreEmpredelinkInversor.html">Sobre Emprende Link</a></li>
+                <li><a href="politicayprivacidadInversor.html">Política de privacidad</a></li>
+                <li><a href="acuerdosyterminosInversor.html">Acuerdos y términos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Nuestro correo:</h3>
+            <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
+        </div>
+       
       </div>
-
+  
       <div class="footer-bottom">
         <p>&copy; Emprende Link - Copyright © 2024</p>
         <div class="imagenes">
@@ -724,7 +753,7 @@ ul {
               
         </div>
     </div>
-</footer>
+  </footer>
 
 <!-- Menú lateral -->
 <aside class="sidebar">
