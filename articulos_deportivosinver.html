@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprende Link</title>
-    <link rel="icon" href="img/logoCuadrado.png" type="image/png">
-
     <style>
- 
- header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,10 +119,6 @@ nav .nav-item:last-child {
         display: block;
     }
 }
-
-
-
-
 .Inversor{
     color: #666666;
     font-weight: bold;
@@ -142,7 +135,6 @@ nav .nav-item:last-child {
             border-radius: 10px;
            
         }
-
         .search-bar input[type="text"] {
             width: 100%;
             padding: 10px;
@@ -235,8 +227,9 @@ nav .nav-item:last-child {
 
 
         }
-
         .card img {
+            width: 40%;
+            height: 65%;
             max-width: 100%;
             border-radius: 5px;
             
@@ -311,7 +304,7 @@ footer {
     color: #bbb;
 }
 
-
+  
 
 
 /* Estilo para el menú lateral */
@@ -321,9 +314,9 @@ footer {
     top: 0;
     height: 100%;
     width: 250px;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
-    transition: left 0.3s ease;
+    transition: right 0.3s ease; /* Cambiado 'left' por 'right' */
     z-index: 2000;
     overflow-y: auto;
 }
@@ -335,7 +328,6 @@ footer {
 .sidebar .profile-1 {
     padding: 20px;
     text-align: center;
-
 }
 
 .sidebar .profile-1 img {
@@ -368,7 +360,13 @@ footer {
 
 
 
-  
+
+
+
+
+
+
+
 
 
 ul {
@@ -482,41 +480,29 @@ ul {
             height: 52%;
             width: 78%; 
         }
-
- 
- .card a {
-  text-decoration: none;
-  color: white;
- }
-
-
-
-
-
-
   
     </style>
 </head>
 <body>
-  <header>
-    <div class="logo"><img src="link/16.png" alt=""stylesheet width="300px"><span></span></div>
-    <nav>
-        <div class="nav-item bordered">
-            <img src="link/17.png" alt="ayuda">
-            <a href="contactanosInver1.html">Ayuda</a>
-        </div>
-        <div class="nav-item bordered">
-            <img src="link/18.png" alt="notificacion">
-            <a href="inverNoti1.html ">Notificaciones</a>
-        </div>
-        <a class="Inversor" href="#">Inversor</a>
-        <div class="nav-item bordered">
-            <div class="menu-toggle">
-            <img src="link/19.png" alt="flecha">
-        </div>
-                <img src="link/15.png" alt="perfil" class="profile-pic">
+    <header>
+        <div class="logo"><img src="link/16.png" alt=""stylesheet width="300px"><span></span></div>
+        <nav>
+            <div class="nav-item bordered">
+                <img src="link/17.png" alt="ayuda">
+                <a href="contactanosInver1.html">Ayuda</a>
             </div>
-</header>
+            <div class="nav-item bordered">
+                <img src="link/18.png" alt="notificacion">
+                <a href="inverNoti1.html ">Notificaciones</a>
+            </div>
+            <a class="Inversor" href="#">Inversor</a>
+            <div class="nav-item bordered">
+                <div class="menu-toggle">
+                <img src="link/19.png" alt="flecha">
+            </div>
+                    <img src="link/15.png" alt="perfil" class="profile-pic">
+                </div>
+    </header>
 
     <div class="search-bar">
         <input type="text" placeholder="Buscar...">
@@ -529,9 +515,9 @@ ul {
             <h3>Explorar Todo</h3>
             <ul>
           
-              <li><a href="articulos_deportivosinver.html"><img src="images/deportes.png" alt="Artículos deportivos">Artículos deportivos</a></li>
-              <li><a href="articulos_hogarinver.html"><img src="images/deportes.png" alt="Artículos deportivos">Artículos para el hogar</a></li>
-              <li><a href="articulos_electronicosinver.html" "><img src="images/electronica.png" alt="Artículos deportivos">Electrónica</a></li>
+                <li><a href="articulos_deportivosinver.html" style="color: rgb(0, 255, 0);"><img src="images/deportes.png" alt="Artículos deportivos">Artículos deportivos</a></li>
+                <li><a href="articulos_hogarinver.html"><img src="images/hogar.png" alt="Artículos deportivos">Artículos para el hogar</a></li>
+                <li><a href="articulos_electronicosinver.html"><img src="images/electronica.png" alt="Electrónica">Electrónica</a></li>
                 <li><a href="#"><img src="images/indumentaria.png" alt="Indumentaria">Indumentaria</a></li>
                 <li><a href="#"><img src="images/musica.png" alt="Instrumentos musicales">Instrumentos musicales</a></li>
                 <li><a href="#"><img src="images/mascotas.png" alt="Productos para mascotas">Productos para mascotas</a></li>
@@ -544,54 +530,53 @@ ul {
             </ul>
         </div>
        
-     
+  
         <main class="main-content">
-            <h2>RESULTADOS DE BUSQUEDA...</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="images/vino.png" alt="Vino El Éxtasis">
-                    <h3>VINO EL EXTASIS</h3>
-                    <p>"AQUEL QUE VINO AL MUNDO Y NO TOMA VINO, ¿ENTONCES A QUÉ VINO?"</p>
-                    <button><a href="VISITAR-EMPRENDIMIENTO.HTML">Visitar</a></button>
-                </div>
-                <div class="card">
-                    
-                        <img src="images/arepas.png" alt="Arepa Puro Maíz">
-                    
-                    <h3>AREPA PURO MAIZ</h3>
-                    <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de arepas de todo tipo.</p>
-                    <button><a href="VISITAR-EMPRENDIMIENTO.HTML">Visitar</a></button>
-                </div>
-            
-                <div class="card">
-                    <img src="images/carne.png" alt="Carnes La Buena Vaca">
-                    <h3>CARNES LA BUENA VACA</h3>
-                    <p>Somos un emprendimiento enfocado en el procesamiento de carnes rojas.</p>
-                    <button>Visitar</button>
-                </div>
-                <div class="card">
-                    <img src="images/restaurante.png" alt="Restaurante Don Miguel">
-                    <h3>RESTAURANTE DON MIGUEL</h3>
-                    <p>Restaurante familiar enfocado en darle la mayor atención al cliente para que se sienta satisfecho con nuestros productos.</p>
-                    <button>Visitar</button>
-                </div>
-                <div class="card">
-                    <img src="images/arepas.png" alt="Arepa Puro Maíz">
-                    <h3>AREPA PURO MAIZ</h3>
-                    <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de arepas de todo tipo.</p>
-                    <button>Visitar</button>
-                </div>
-                <div class="card">
-                    <img src="images/vino.png" alt="Vino El Éxtasis">
-                    <h3>VINO EL EXTASIS</h3>
-                    <p>"AQUEL QUE ViINO AL MUNDO Y NO TOMA VINO, ¿ENTONCES A QUÉ VINO?"</p>
-                    <button>Visitar</button>
-                </div>
-            </div>
-        </main>
-    </div>
+          <h2>RESULTADOS DE BUSQUEDA...</h2>
+          <div class="cards">
+              <div class="card">
+                  <img src="images/medias.jpeg" alt="Vino El Éxtasis">
+                  <h3>Medias de colores</h3>
+                  <p>"Medias ergonomicas para hacer ejercicio"</p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
 
-
+              </div>
+              <div class="card">
+                  
+                      <img src="images/cascos.jpeg" alt="Arepa Puro Maíz">
+                  
+                  <h3>Cascos para Bicicleta</h3>
+                  <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de cascos para Bicicletas </p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
+              </div>
+          
+              <div class="card">
+                  <img src="images/guantes.jpeg" alt="Carnes La Buena Vaca">
+                  <h3>Guantes Para Boxx</h3>
+                  <p>Somos un emprendimiento enfocado en la comercialización de guantes para boxx </p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
+              </div>
+              <div class="card">
+                  <img src="images/guallos.jpeg" alt="Restaurante Don Miguel">
+                  <h3>Guallos buenos</h3>
+                  <p>Guallos 100% fabricados con materiales reciclables y muy buenos</p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
+              </div>
+              <div class="card">
+                  <img src="images/gorras.jpeg" alt="Arepa Puro Maíz">
+                  <h3>Gorras Bonitas</h3>
+                  <p>Somos un emprendimiento enfocado en el procesamiento y comercialización de arepas de todo tipo de gorras</p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
+              </div>
+              <div class="card">
+                  <img src="images/zapatos.jpeg" alt="Vino El Éxtasis">
+                  <h3>Zapatos el mocho</h3>
+                  <p>"Zapatos buenos y muy bonitos para caballeros y damas"</p>
+                  <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML" style="color: white;">Visitar</a></button>
+              </div>
+          </div>
+      </main>
+  </div>
 
 
     <footer>
@@ -618,12 +603,12 @@ ul {
               <h3>Más de nosotros</h3>
               <ul>
                   <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
-                  <li><a href="#">Centro de ayuda</a></li>
+                  <li><a href="contactanos1 copy.html">Centro de ayuda</a></li>
                   <li><a href="sobreEmpredelink.html">Sobre Emprende Link</a></li>
               </ul>
           </div>
       </div>
-
+  
       <div class="footer-bottom">
         <p>&copy; Emprende Link - Copyright © 2024</p>
         <div class="imagenes">
@@ -724,7 +709,7 @@ ul {
               
         </div>
     </div>
-</footer>
+  </footer>
 
 <!-- Menú lateral -->
 <aside class="sidebar">
