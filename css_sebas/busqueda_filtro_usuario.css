@@ -472,4 +472,60 @@ ul {
 list-style: none;
 }
 
+/* Estilos para la tarjeta */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegúrate de que esto esté como estaba para alinear el contenido verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    width: 350px; /* Ampliamos el ancho de la tarjeta */
+    height: 350px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative; /* Permite que el botón se posicione de forma absoluta */
+  }
+  
+  /* Estilos para la imagen */
+  .card img {
+    width: 50%;  /* La imagen ocupará el 50% del ancho de la tarjeta */
+    height: 200px; /* Alto fijo para la imagen */
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+  
+  /* Estilos para el contenido de texto */
+  .card h3, .card p {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Estilos para el botón Visitar */
+  .card button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 10px; /* Mantiene el botón en la parte inferior */
+    right: 10px; /* Alineado al lado derecho */
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #333;
+  }
+  
+  .card button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+
 
