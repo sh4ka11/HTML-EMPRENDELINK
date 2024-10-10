@@ -104,7 +104,7 @@ Atentamente,
           <button type="button" class="reply-btn">Adjuntar</button>
       </div>
   </div>
-  <div class="notification" id="notification">
+  <div class="notification" id="notification" style="display: none;">
       <p><h2>¡Su respuesta ha sido enviada Exitosamente!</h2></p>
       <button onclick="hideNotification()">Cerrar</button>
   </div>
@@ -233,13 +233,14 @@ Atentamente,
     </div>
   </footer> 
      <script>
-        function showNotification() {
-            document.getElementById('notification').style.display = 'flex';
-        }
+       function showNotification() {
+        document.getElementById("notification").style.display = "block";
+    }
 
-        function hideNotification() {
-            document.getElementById('notification').style.display = 'none';
-        }
+    // Ocultar la notificación
+    function hideNotification() {
+        document.getElementById("notification").style.display = "none";
+    }
     </script>
 
 <script>
