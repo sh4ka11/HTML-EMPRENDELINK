@@ -89,11 +89,13 @@
                   <button type="button" class="delete-btn" onclick="showNotification()">Eliminar</button>
                   <a href="inverNoti2.html"><button type="button" class="reply-btn">Responder</button></a>
               </div>
-            </div>
-            <div class="notification" id="notification">
-                <p><h2>¡Notificación eliminada exitosamente!</h2></p>
-                <button onclick="hideNotification()">Cerrar</button>
-            </div>
+          </div>
+      
+          <!-- Notificación oculta por defecto -->
+          <div class="notification" id="notification" style="display: none;">
+              <p><h2>¡Notificación eliminada exitosamente!</h2></p>
+              <button onclick="hideNotification()">Cerrar</button>
+          </div>
         </main>
 
        
@@ -245,13 +247,24 @@
        });
 
 
-        function showNotification() {
-            document.getElementById('notification').style.display = 'flex';
-        }
+        // function showNotification() {
+        //     document.getElementById('notification').style.display = 'flex';
+        // }
 
-        function hideNotification() {
-            document.getElementById('notification').style.display = 'none';
-        }
+        // function hideNotification() {
+        //     document.getElementById('notification').style.display = 'none';
+        // }
+
+
+          // Mostrar la notificación
+    function showNotification() {
+        document.getElementById("notification").style.display = "block";
+    }
+
+    // Ocultar la notificación
+    function hideNotification() {
+        document.getElementById("notification").style.display = "none";
+    }
     </script>
 </body>
 </html>

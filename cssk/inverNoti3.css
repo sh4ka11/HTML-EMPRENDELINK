@@ -288,11 +288,13 @@ main {
     color: #333;
     border: none;
     padding: 10px 20px;
+    
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    display: flex;
+    
     justify-content: center;
+   
 }
 .footer-content a{
     color: #bbb;

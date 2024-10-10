@@ -88,12 +88,14 @@
                   
                 
                   
-                <div class="message-actions">
+                  <div class="message-actions">
                     <button type="button" class="delete-btn" onclick="showNotification()">Eliminar</button>
                     <a href="notificaciones2.html"><button type="button" class="reply-btn">Responder</button></a>
                 </div>
             </div>
-            <div class="notification" id="notification">
+        
+            <!-- Notificación oculta por defecto -->
+            <div class="notification" id="notification" style="display: none;">
                 <p><h2>¡Notificación eliminada exitosamente!</h2></p>
                 <button onclick="hideNotification()">Cerrar</button>
             </div>
@@ -247,12 +249,13 @@
     
     <script>
         function showNotification() {
-            document.getElementById('notification').style.display = 'flex';
-        }
+        document.getElementById("notification").style.display = "block";
+    }
 
-        function hideNotification() {
-            document.getElementById('notification').style.display = 'none';
-        }
+    // Ocultar la notificación
+    function hideNotification() {
+        document.getElementById("notification").style.display = "none";
+    }
     </script>
 </body>
 </html>

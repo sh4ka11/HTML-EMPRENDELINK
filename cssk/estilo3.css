@@ -220,7 +220,7 @@ main {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    display: flex;
+    
     justify-content: center;
 }
 
