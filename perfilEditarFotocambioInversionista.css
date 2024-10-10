@@ -10,15 +10,12 @@ header {
   background-color: #ffffff;
   padding: 15px 30px;
   color: #ffffff;
-
 }
 
 header .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
-
-
 
 nav {
   display: flex;
@@ -33,48 +30,92 @@ nav {
 }
 
 .nav-item img {
-  width: 25px; /* Tamaño de los iconos */
+  width: 25px;
   height: 25px;
   margin-right: 8px;
 }
 
-/* Estilo para los contenedores con borde */
 .bordered {
   border: 1px solid #040404;
   border-radius: 25px;
-  
-  
-  
 }
-
 
 .bordered a {
   color: #040404;
   font-weight: bold;
   text-decoration: none;
-  
-  
 }
 
 .nav-item:active {
-
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer clic */
-  transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Suaviza la transición */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.1s ease, box-shadow 0.1s ease;
 }
-
-
 
 .no-border img {
   margin-right: 10px;
 }
 
-
-
-/* Para asegurarse de que todos los items estén en la misma fila */
 nav .nav-item:last-child {
   border: 1px solid #040404;
   border-radius: 25px;
   padding: 3px 10px;
+}
+
+.Inversor {
+  color: #666666;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+/* Estilos responsive para el header */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+  }
+
+  .nav-item {
+      width: 100%;
+      justify-content: flex-start;
+  }
+
+  .nav-item.bordered {
+      border: none;
+      border-radius: 0;
+      padding: 5px 0;
+  }
+
+  .Inversor {
+      order: -1;
+  }
+
+  .menu-toggle,
+  .profile-pic {
+      display: none;
+  }
+}
+
+/* Restaurar estilos para pantallas grandes */
+@media screen and (min-width: 769px) {
+  nav {
+      flex-direction: row;
+  }
+
+  .nav-item {
+      width: auto;
+  }
+
+  .menu-toggle,
+  .profile-pic {
+      display: block;
+  }
 }
 .Inversor{
   color: #666666;
