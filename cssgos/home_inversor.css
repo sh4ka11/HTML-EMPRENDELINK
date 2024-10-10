@@ -16,15 +16,12 @@ header {
     background-color: #ffffff;
     padding: 15px 30px;
     color: #ffffff;
- 
 }
 
 header .logo {
     font-size: 1.5em;
     font-weight: bold;
 }
-
-
 
 nav {
     display: flex;
@@ -39,48 +36,92 @@ nav {
 }
 
 .nav-item img {
-    width: 25px; /* Tamaño de los iconos */
+    width: 25px;
     height: 25px;
     margin-right: 8px;
 }
 
-/* Estilo para los contenedores con borde */
 .bordered {
     border: 1px solid #040404;
     border-radius: 25px;
-    
-    
-    
 }
-
 
 .bordered a {
     color: #040404;
     font-weight: bold;
     text-decoration: none;
-    
-    
 }
 
 .nav-item:active {
-
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer clic */
-    transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Suaviza la transición */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.1s ease, box-shadow 0.1s ease;
 }
-
-
 
 .no-border img {
     margin-right: 10px;
 }
 
-
-
-/* Para asegurarse de que todos los items estén en la misma fila */
 nav .nav-item:last-child {
     border: 1px solid #040404;
     border-radius: 25px;
     padding: 3px 10px;
+}
+
+.Inversor {
+    color: #666666;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+/* Estilos responsive para el header */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-item.bordered {
+        border: none;
+        border-radius: 0;
+        padding: 5px 0;
+    }
+
+    .Inversor {
+        order: -1;
+    }
+
+    .menu-toggle,
+    .profile-pic {
+        display: none;
+    }
+}
+
+/* Restaurar estilos para pantallas grandes */
+@media screen and (min-width: 769px) {
+    nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        width: auto;
+    }
+
+    .menu-toggle,
+    .profile-pic {
+        display: block;
+    }
 }
 .Inversor{
     color: #666666;
@@ -143,6 +184,25 @@ nav .nav-item:last-child {
     text-decoration: none;
 }
 /* COMIENZO DEL CONTENIDOOOOOO*/
+
+@media (max-width: 768px) {
+    .option1 img,
+    .option2 img {
+        display: none; /* Ocultar imágenes en pantallas móviles */
+    }
+
+    .option1 h3, .option1 p,
+    .option2 h3, .option2 p {
+        text-align: center; /* Centrar texto en dispositivos móviles */
+    }
+
+    .option1 .btn, .option2 .btn {
+        display: block; /* Asegurarse de que el botón se muestre */
+        margin: 0 auto; /* Centrar el botón */
+    }
+}
+
+
 .hero {
     text-align: center;
     background-image: url('img_inversor/logoplanta.png');
@@ -187,9 +247,9 @@ nav .nav-item:last-child {
 }
 
 h2 {
-    padding: 20px 100px;
+    padding: 2px 100px;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
     color: #000;
 }
 
@@ -275,11 +335,16 @@ h2 {
 
 .publicacion {
     display: flex;
-    flex-direction: column;
-    padding: 100px;
+    flex-direction: column; /* Asegúrate de que el contenido esté en columna */
+    padding: 100px; /* Ajusta el padding para que no sea excesivo */
     border-radius: 10px;
-    padding-top: 0;
+    border: none; /* Eliminar el borde */
+    max-width: 100%; /* Evita que el contenedor se salga */
+    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
 }
+
+
+
 
 .contenedor {
     background-color: #ffffff;
@@ -298,20 +363,22 @@ h2 {
 }
 
 .imgvino {
-    width: 60%;
+    width: 100%;
     overflow: hidden;
     margin-right: 20px;
 }
 
 .autor {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Cambia a columna para móviles */
     border: solid 2px black;
-    width: 35%;
-    padding: 20px;
+    width: 100%; /* Asegúrate de que no se salga del contenedor */
+    padding: 10px; /* Ajusta el padding según sea necesario */
     border-radius: 10px;
     font-size: 20px;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
+
 
 .correo {
     display: flex;
@@ -350,8 +417,11 @@ h2 {
 }
 
 .frase h3 {
-    font-size: 40px;
+    font-size: 2em; /* Usa em en lugar de px para ser más responsive */
+    margin: 10px 0; /* Mantén márgenes consistentes */
+    text-align: center; /* Asegúrate de que el texto esté centrado */
 }
+
 
 .logoVino img {
     width: 200px;
@@ -364,7 +434,7 @@ h2 {
 }
 
 .btn {
-    background-color: #000;
+    background-color: #e81a1a;
     color: #ffffff;
     border-radius: 5px;
     padding: 3px;
@@ -482,7 +552,7 @@ h2 {
     }
 
     h2 {
-        padding: 20px;
+        padding: 10px;
         font-size: 1.6em;
     }
 
@@ -523,15 +593,14 @@ h2 {
     background-color: #000;
     color: #ffffff;
     border-radius: 5px;
-    padding: 3px;
-    margin-left: 1150px;
-    margin-top: 15px;
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    margin: 15px auto; /* Centrado automático */
     text-decoration: none;
+    display: block; /* Asegura que se comporte como un bloque */
+    width: fit-content; /* Se ajusta al contenido */
 }
 
-h2 {
-    padding-top: 0%;
-}
+
 
 .btn a {
     color: white;
@@ -564,10 +633,12 @@ h2 {
         margin: 15px auto;
         padding: 5px 15px;
     }
-    
+
+
 }
 
-/* foteer de aqui pa abajo */
+
+/* FOOTER DE AQUIII PA ABAJOO  */
 footer {
     background-color: #000000;
     color: #fff;
@@ -746,3 +817,42 @@ footer {
       .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
         background-color: #ff0000;
       }
+
+
+       /* Logo responsiveness */
+.logoda img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+  
+    .footer-section {
+        margin: 10px 0;
+    }
+  
+    .example-2 {
+        justify-content: center;
+        translate: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .example-2 .icon-content {
+        margin: 0 5px;
+    }
+  
+    .example-2 .icon-content a {
+        width: 40px;
+        height: 40px;
+    }
+  
+    .example-2 .icon-content a svg {
+        width: 20px;
+        height: 20px;
+    }
+  }
