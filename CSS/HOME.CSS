@@ -239,14 +239,14 @@ header {
     padding: 20px;
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 1700px; /* Mantiene un ancho máximo para no expandirse demasiado */
+    max-width: 1300px; /* Mantiene un ancho máximo para no expandirse demasiado */
     justify-content: space-between; /* Distribuye bien los elementos en pantallas grandes */
 }
 
 .wine-post {
     flex: 2;
     width: 100%; /* Se asegura de ocupar más espacio en pantalla grande */
-    max-width: 1300px; /* Limita el tamaño máximo en pantallas muy grandes */
+    max-width: 900px; /* Limita el tamaño máximo en pantallas muy grandes */
     background: white;
     border-radius: 10px;
     overflow: hidden;
