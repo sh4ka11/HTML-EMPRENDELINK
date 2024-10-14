@@ -6,7 +6,9 @@ body {
     background-image: url(img/fondo.png);
     background-size: 100% 100%;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 header {
     display: flex;
     justify-content: space-between;
