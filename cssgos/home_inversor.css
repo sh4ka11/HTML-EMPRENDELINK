@@ -8,69 +8,8 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 15px 30px;
-    color: #ffffff;
-}
-
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-}
-
-.nav-item img {
-    width: 25px;
-    height: 25px;
-    margin-right: 8px;
-}
-
-.bordered {
-    border: 1px solid #040404;
-    border-radius: 25px;
-}
-
-.bordered a {
-    color: #040404;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-item:active {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.1s ease, box-shadow 0.1s ease;
-}
-
-.no-border img {
-    margin-right: 10px;
-}
-
-nav .nav-item:last-child {
-    border: 1px solid #040404;
-    border-radius: 25px;
-    padding: 3px 10px;
-}
-
-.Inversor {
-    color: #666666;
-    font-weight: bold;
-    text-decoration: none; 
+html, body {
+    overflow-x: hidden;
 }
 
 /* Estilos responsive para el header */
@@ -132,14 +71,11 @@ nav .nav-item:last-child {
 .menu-toggle img {
     font-size: 24px;
     cursor: pointer;
-
 }
 
-
-
 .sidebar {
-    position: fixed;/*maneja el menu de barras */
-    right: -300px; /* maneja la salida de el menu de barras*/
+    position: fixed;
+    right: -300px;
     top: 0;
     height: 100%;
     width: 250px;
@@ -159,7 +95,7 @@ nav .nav-item:last-child {
     text-align: center;
 }
 
-.sidebar .profile img {/*maneja la imagen del menu */
+.sidebar .profile img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -174,38 +110,21 @@ nav .nav-item:last-child {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-.sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
+.sidebar ul li {
     padding: 15px 20px;
     border-bottom: 2px solid #444;
 }
 
-.sidebar ul li a { /* maneja el color de las letras del menu */
+.sidebar ul li a {
     color: #fff;
     text-decoration: none;
 }
-/* COMIENZO DEL CONTENIDOOOOOO*/
 
-@media (max-width: 768px) {
-    .option1 img,
-    .option2 img {
-        display: none; /* Ocultar imágenes en pantallas móviles */
-    }
-
-    .option1 h3, .option1 p,
-    .option2 h3, .option2 p {
-        text-align: center; /* Centrar texto en dispositivos móviles */
-    }
-
-    .option1 .btn, .option2 .btn {
-        display: block; /* Asegurarse de que el botón se muestre */
-        margin: 0 auto; /* Centrar el botón */
-    }
-}
-
+/* COMIENZO DEL CONTENIDO */
 
 .hero {
     text-align: center;
-    background-image: url('img_inversor/logoplanta.png');
+    background-image: url('../img_inversor/logoplanta.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -243,7 +162,7 @@ nav .nav-item:last-child {
     color: #000;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 h2 {
@@ -262,12 +181,15 @@ h2 {
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .option1 img {
     width: 40%;
     height: auto;
     border-radius: 10px 10px 0 0;
+    align-self: center;
 }
 
 .right-options {
@@ -278,7 +200,7 @@ h2 {
 }
 
 .option2 {
-    width: 95%;
+    width: 100%;
     background-color: white;
     border: 2px solid #000;
     border-radius: 10px;
@@ -286,15 +208,15 @@ h2 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
-    height: 150px;
+    min-height: 150px;
 }
 
 .option2 img {
     width: 25%;
     height: auto;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     margin-right: 20px;
 }
 
@@ -325,7 +247,7 @@ h2 {
     text-decoration: none;
     border-radius: 5px;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
 }
 
@@ -334,23 +256,19 @@ h2 {
 }
 
 .publicacion {
-    display: flex;
-    flex-direction: column; /* Asegúrate de que el contenido esté en columna */
-    padding: 100px; /* Ajusta el padding para que no sea excesivo */
+    padding: 50px 100px;
     border-radius: 10px;
-    border: none; /* Eliminar el borde */
-    max-width: 100%; /* Evita que el contenedor se salga */
-    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
+    border: none;
+    max-width: 100%;
+    box-sizing: border-box;
 }
-
-
-
 
 .contenedor {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     border: solid 2px black;
+
 }
 
 .part1 {
@@ -370,15 +288,14 @@ h2 {
 
 .autor {
     display: flex;
-    flex-direction: column; /* Cambia a columna para móviles */
+    flex-direction: column;
     border: solid 2px black;
-    width: 100%; /* Asegúrate de que no se salga del contenedor */
-    padding: 10px; /* Ajusta el padding según sea necesario */
+    width: 100%;
+    padding: 10px;
     border-radius: 10px;
     font-size: 20px;
-    box-sizing: border-box; /* Incluye padding en el ancho total */
+    box-sizing: border-box;
 }
-
 
 .correo {
     display: flex;
@@ -417,11 +334,10 @@ h2 {
 }
 
 .frase h3 {
-    font-size: 2em; /* Usa em en lugar de px para ser más responsive */
-    margin: 10px 0; /* Mantén márgenes consistentes */
-    text-align: center; /* Asegúrate de que el texto esté centrado */
+    font-size: 2em;
+    margin: 10px 0;
+    text-align: center;
 }
-
 
 .logoVino img {
     width: 200px;
@@ -434,17 +350,19 @@ h2 {
 }
 
 .btn {
-    background-color: #e81a1a;
+    background-color: #000;
     color: #ffffff;
     border-radius: 5px;
-    padding: 3px;
-    margin-left: 1150px;
-    margin-top: 15px;
+    padding: 10px 20px;
+    margin: 15px auto;
     text-decoration: none;
+    display: block;
+    width: fit-content;
 }
 
 h2 {
-    padding-top: 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn a {
@@ -525,8 +443,8 @@ h2 {
         height: auto;
     }
 
-    .option2 img {
-        width: 35%;
+    .option1 img, .option2 img {
+        display: none;
     }
 
     .publicacion {
@@ -560,12 +478,6 @@ h2 {
         flex-direction: column;
     }
 
-    .option2 img {
-        width: 50%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
     .text-content {
         text-align: center;
     }
@@ -577,8 +489,9 @@ h2 {
     .frase h3 {
         font-size: 30px;
     }
-
 }
+
+/* Estilos adicionales para mantener consistencia */
 .logoVino img {
     width: 200px;
     height: 200px;
@@ -589,52 +502,23 @@ h2 {
     border-radius: 10px;
 }
 
-.btn {
-    background-color: #000;
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 10px 20px; /* Ajusta el padding según sea necesario */
-    margin: 15px auto; /* Centrado automático */
-    text-decoration: none;
-    display: block; /* Asegura que se comporte como un bloque */
-    width: fit-content; /* Se ajusta al contenido */
-}
-
-
-
-.btn a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Responsivo para tablets */
 @media (max-width: 992px) {
     .logoVino img {
         width: 150px;
         height: 150px;
         margin-top: -75px;
     }
-    
-    .btn {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: fit-content;
-    }
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
     .logoVino img {
-        display: none; /* El logo desaparece en pantallas pequeñas */
+        display: none;
     }
     
     .btn {
         margin: 15px auto;
         padding: 5px 15px;
     }
-
-
 }
 
 

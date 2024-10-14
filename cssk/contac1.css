@@ -4,18 +4,7 @@ body {
     padding: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-}
 
-.header-left {
-    display: flex;
-    align-items: center;
-}
 
 .menu-toggle img {
     font-size: 24px;
@@ -36,15 +25,6 @@ header {
 }
 .logo img {
     height: 80px;
-}
-.header-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000;
-}
-
-.header-right a i {
-    margin-right: 5px;
 }
 
 

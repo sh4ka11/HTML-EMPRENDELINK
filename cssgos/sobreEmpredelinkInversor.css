@@ -8,50 +8,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  color: #ffffff;
+
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.menu-toggle {
-  font-size: 24px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  font-size: 32px;
-  margin-right: 10px; /* Añadido para espacio horizontal */
-}
-
-.logo {
-  height: 100px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
-}
-
-.header-right a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #000;
+header .logo {
+  font-size: 1.5em;
   font-weight: bold;
-  display: flex;
-  align-items: center;
 }
 
-.header-right a i {
-  margin-right: 5px;
-}
-.logo {
-    height: 100px;
-}
 
 nav {
   display: flex;
@@ -137,7 +104,7 @@ nav .nav-item:last-child {
     margin: 10px auto;
     max-width: 1200px;
     position: relative;
-    background-image: url('images/fondo.png');
+    background-image: url('/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -422,3 +389,40 @@ nav .nav-item:last-child {
         background-color: #ff0000;
       }
      
+       /* Logo responsiveness */
+.logoda img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      margin: 10px 0;
+  }
+
+  .example-2 {
+      justify-content: center;
+      translate: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .example-2 .icon-content {
+      margin: 0 5px;
+  }
+
+  .example-2 .icon-content a {
+      width: 40px;
+      height: 40px;
+  }
+
+  .example-2 .icon-content a svg {
+      width: 20px;
+      height: 20px;
+  }
+}

@@ -208,7 +208,7 @@ main {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    display: flex;
+    
     justify-content: center;
 }
 
@@ -272,7 +272,11 @@ ul {
     list-style: none;
   }
   /* Base styles */
-footer {
+  .footer-content a{
+    color: #bbb;
+  }
+
+  footer {
     background-color: #000000;
     color: #fff;
     padding: 20px 0;
@@ -281,7 +285,7 @@ footer {
 
 .footer-content {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

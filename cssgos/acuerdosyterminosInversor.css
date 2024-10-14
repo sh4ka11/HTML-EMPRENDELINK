@@ -4,6 +4,8 @@ body {
     padding: 0;
 }
 
+
+/* Ajuste de color y tamaño de fuente del header */
 header {
   display: flex;
   justify-content: space-between;
@@ -18,6 +20,7 @@ header .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
+
 
 
 nav {
@@ -84,8 +87,13 @@ nav .nav-item:last-child {
   cursor: pointer;
   
 }
+
 .logo {
   height: 100px;
+}
+
+.logo {
+    height: 100px;
 }
 
 .fond {
@@ -104,7 +112,7 @@ nav .nav-item:last-child {
     margin: 10px auto;
     max-width: 1200px;
     position: relative;
-    background-image: url('images/fondo.png');
+    background-image: url('/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,7 +189,10 @@ nav .nav-item:last-child {
     padding: 20px 0;
     margin-top: 40px;
     }
-    
+    .footer-content a{
+      color: #bbb;
+    }
+
     .footer-content {
     width: 90%;
     margin: 0 auto;
@@ -356,20 +367,20 @@ nav .nav-item:last-child {
         left: 0;
         width: 100%;
         height: 0;
-        background-color: #000;
+        background-color: #0a0ef7;
         transition: all 0.3s ease-in-out;
       }
       .example-2 .icon-content a:hover .filled {
         height: 100%;
       }
       
-      .example-2 .icon-content a[data-social="linkedin"] .filled,
-      .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+      .example-2 .icon-content a[data-social="Facebook"] .filled,
+      .example-2 .icon-content a[data-social="Facebook"] ~ .tooltip {
         background-color: #0274b3;
       }
       
-      .example-2 .icon-content a[data-social="github"] .filled,
-      .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+      .example-2 .icon-content a[data-social="twitter"] .filled,
+      .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
         background-color: #24262a;
       }
       .example-2 .icon-content a[data-social="instagram"] .filled,
@@ -388,8 +399,8 @@ nav .nav-item:last-child {
       .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
         background-color: #ff0000;
       }
-     
-       /* Logo responsiveness */
+      
+     /* Logo responsiveness */
 .logoda img {
   max-width: 100%;
   height: auto;

@@ -4,8 +4,6 @@ body {
     padding: 0;
 }
 
-
-/* Ajuste de color y tamaño de fuente del header */
 header {
   display: flex;
   justify-content: space-between;
@@ -51,10 +49,6 @@ header {
 .header-right a i {
   margin-right: 5px;
 }
-.logo {
-    height: 100px;
-}
-
 .fond {
     position: relative;
     width: 100%;
@@ -71,7 +65,7 @@ header {
     margin: 10px auto;
     max-width: 1200px;
     position: relative;
-    background-image: url('images/fondo.png');
+    background-image: url('/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,16 +74,12 @@ header {
 
 .cont {
     z-index: 2;
-
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el texto */
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
 }
-.cont h2{
- margin-top: 20px;
- margin-bottom: 20px;
 
-}
+
 
 .profile-img {
     flex-shrink: 0;
@@ -145,6 +135,8 @@ header {
     {
     background-color: #555;
     }
+    
+    
     
     .burger {
     display: none; /* Escondido por defecto */

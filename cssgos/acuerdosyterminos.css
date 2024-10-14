@@ -4,6 +4,8 @@ body {
     padding: 0;
 }
 
+
+/* Ajuste de color y tamaño de fuente del header */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,6 +51,12 @@ header {
 .header-right a i {
   margin-right: 5px;
 }
+.logo {
+    height: 100px;
+}
+
+
+
 .fond {
     position: relative;
     width: 100%;
@@ -65,7 +73,7 @@ header {
     margin: 10px auto;
     max-width: 1200px;
     position: relative;
-    background-image: url('images/fondo.png');
+    background-image: url('/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,6 +219,7 @@ header {
         list-style: none;
 
       }
+      
       /* Base styles */
 footer {
   background-color: #000000;
@@ -413,3 +422,4 @@ footer {
       height: 20px;
   }
 }
+     

@@ -53,66 +53,9 @@ header {
 
 
 
-.sidebar {
-    position: fixed;/*maneja el menu de barras */
-    left: -300px; /* maneja la salida de el menu de barras*/
-    top: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    transition: left 0.3s ease;
-    z-index: 2000;
-    overflow-y: auto;
-}
-
-.sidebar.active {
-    left: 0;
-}
-
-.sidebar .profile {
-    padding: 20px;
-    text-align: center;
-}
-
-.sidebar .profile img {/*maneja la imagen del menu */
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
-    padding: 15px 20px;
-    border-bottom: 2px solid #444;
-}
-
-.sidebar ul li a { /* maneja el color de las letras del menu */
-    color: #fff;
-    text-decoration: none;
-}
 
 
 
-
-
-
-
-
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    padding: 0;
-    
-}
 
 nav ul li a {
     text-decoration: none;
@@ -180,9 +123,8 @@ main h2{
     color: #bbb;
   }
 
-footer {
-    background-color:    #000000;
-    ;
+  footer {
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
@@ -190,6 +132,7 @@ footer {
 
 .footer-content {
     width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -199,6 +142,7 @@ footer {
 .footer-section {
     flex: 1;
     margin: 10px;
+    min-width: 200px;
 }
 
 .footer-section h3 {
@@ -216,9 +160,16 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-section ul li a {
+.footer-section ul li a,
+.footer-content a {
     text-decoration: none;
     color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover,
+.footer-content a:hover {
+    color: #fff;
 }
 
 .footer-bottom {
@@ -226,24 +177,28 @@ footer {
     margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 10px;
-
 }
 
-ul {
-    list-style: none;
-  }
-  
-  .example-2 {
+/* Social icons styles */
+.imagenes {
+    margin-top: 15px;
+}
+
+.example-2 {
     display: flex;
-   justify-content: start;
-   margin-right: 100px;
-   align-items: start;
-  }
-  .example-2 .icon-content {
+    justify-content: left;
+    align-items: center;
+    translate: 65px -20px;
+    list-style: none;
+    padding: 0;
+}
+
+.example-2 .icon-content {
     margin: 0 10px;
     position: relative;
-  }
-  .example-2 .icon-content .tooltip {
+}
+
+.example-2 .icon-content .tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -255,13 +210,15 @@ ul {
     visibility: hidden;
     font-size: 14px;
     transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
+}
+
+.example-2 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
-  }
-  .example-2 .icon-content a {
+}
+
+.example-2 .icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -273,57 +230,99 @@ ul {
     color: #4d4d4d;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .example-2 .icon-content a svg {
+    color: white;
+}
+
+.example-2 .icon-content a svg {
     position: relative;
     z-index: 1;
     width: 30px;
     height: 30px;
-  }
-  .example-2 .icon-content a:hover {
-    color: white;
-  }
-  .example-2 .icon-content a .filled {
+}
+
+.example-2 .icon-content a .filled {
     position: absolute;
     top: auto;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 0;
-    background-color: #000;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover .filled {
+}
+
+.example-2 .icon-content a:hover .filled {
     height: 100%;
-  }
-  
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+}
+
+/* Specific social media colors */
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
     background-color: #0274b3;
-  }
-  
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="twitter"] .filled,
+.example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
     background-color: #24262a;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
     background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
     );
-  }
-  .example-2 .icon-content a[data-social="youtube"] .filled,
-  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
-  }
+}
+
+/* Logo responsiveness */
+.logoda img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .example-2 {
+        justify-content: center;
+        translate: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .example-2 .icon-content {
+        margin: 0 5px;
+    }
+
+    .example-2 .icon-content a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .example-2 .icon-content a svg {
+        width: 20px;
+        height: 20px;
+    }
+}
 
   

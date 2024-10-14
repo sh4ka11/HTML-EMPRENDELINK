@@ -4,24 +4,54 @@ body {
     padding: 0;
 }
 
-
-/* Ajuste de color y tamaño de fuente del header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 15px 30px;
-  color: #ffffff;
-
+  padding: 10px 20px;
+  background-color: #f8f8f8;
 }
 
-header .logo {
-  font-size: 1.5em;
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  font-size: 32px;
+  margin-right: 10px; /* Añadido para espacio horizontal */
+}
+
+.logo {
+  height: 100px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center; /* Asegura que los íconos estén alineados horizontalmente */
+}
+
+.header-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
-
+.header-right a i {
+  margin-right: 5px;
+}
+.logo {
+    height: 100px;
+}
 
 nav {
   display: flex;
@@ -45,9 +75,6 @@ nav {
 .bordered {
   border: 1px solid #040404;
   border-radius: 25px;
-  
-  
-  
 }
 
 
@@ -90,13 +117,8 @@ nav .nav-item:last-child {
   cursor: pointer;
   
 }
-
 .logo {
   height: 100px;
-}
-
-.logo {
-    height: 100px;
 }
 
 .fond {
@@ -115,7 +137,7 @@ nav .nav-item:last-child {
     margin: 10px auto;
     max-width: 1200px;
     position: relative;
-    background-image: url('images/fondo.png');
+    background-image: url('/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,16 +146,12 @@ nav .nav-item:last-child {
 
 .cont {
     z-index: 2;
-
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el texto */
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
 }
-.cont h2{
- margin-top: 20px;
- margin-bottom: 20px;
 
-}
+
 
 .profile-img {
     flex-shrink: 0;
@@ -204,10 +222,7 @@ nav .nav-item:last-child {
     justify-content: space-between;
     flex-wrap: wrap;
     }
-    .footer-content a{
-      color: #bbb;
-    }
-
+    
     .footer-section {
     flex: 1;
     margin: 10px;
@@ -406,40 +421,4 @@ nav .nav-item:last-child {
       .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
         background-color: #ff0000;
       }
-      /* Logo responsiveness */
-.logoda img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .footer-content {
-      flex-direction: column;
-  }
-
-  .footer-section {
-      margin: 10px 0;
-  }
-
-  .example-2 {
-      justify-content: center;
-      translate: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .example-2 .icon-content {
-      margin: 0 5px;
-  }
-
-  .example-2 .icon-content a {
-      width: 40px;
-      height: 40px;
-  }
-
-  .example-2 .icon-content a svg {
-      width: 20px;
-      height: 20px;
-  }
-}
+     
