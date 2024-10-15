@@ -17,6 +17,7 @@
   <div id="header"></div>
 
   <script>
+    
     // Cargar el contenido del navbar
     fetch('navbarUsuario.html')
       .then(response => response.text())
@@ -59,7 +60,10 @@
             <p>Correo: fafagfa@gmail.com</p>
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-button">Como cambiar la contraseña</button>
+                  <button class="accordion-button collapsed">
+                    Como cambiar la contraseña
+                    <span class="arrow"></span>
+                  </button>
                     <div class="accordion-content">
                         <p>1. Abre la app de Configuración del dispositivo y presiona Emprende link. Administrar tu Cuenta de nombre.</p>
                         <p>2. En la parte superior, presiona Seguridad.</p>
@@ -68,19 +72,28 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Como publicar un emprendimiento</button>
+                  <button class="accordion-button collapsed">
+                    Como publicar un emprendimiento
+                    <span class="arrow"></span>
+                  </button>
                     <div class="accordion-content">
                         <p>Detalles de cómo publicar un emprendimiento.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Como mirar mi emprendimiento</button>
+                  <button class="accordion-button collapsed">
+                    Como mirar mi emprendimiento
+                    <span class="arrow"></span>
+                  </button>
                     <div class="accordion-content">
                         <p>Detalles de cómo mirar mi emprendimiento.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Como mirar como calificaron mi emprendimiento o que comentaron</button>
+                    <button class="accordion-button collapsed">
+    Como mirar cómo calificaron mi emprendimiento
+    <span class="arrow"></span>
+  </button>
                     <div class="accordion-content">
                         <p>Detalles de cómo mirar cómo calificaron mi emprendimiento o qué comentaron.</p>
                     </div>
@@ -213,10 +226,7 @@
     </div>
   </footer>
     <script>
-         document.querySelector('.menu-toggle').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.sidebar').classList.toggle('active');
-    });
+      
 
         document.querySelectorAll('.accordion-button').forEach(button => {
             button.addEventListener('click', () => {
