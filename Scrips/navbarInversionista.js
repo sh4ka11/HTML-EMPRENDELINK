@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     <li class="nav-item">
                         <a class="nav-link" href="perfilInversor.html"><i class="fas fa-user fa-lg me-1 text-muted"></i> Perfil</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt fa-lg me-1 text-muted"></i> Cerrar sesión</a>
+                    </li>
                 </ul>
             </div>
         </div>
