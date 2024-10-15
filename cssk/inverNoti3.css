@@ -5,69 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 15px 30px;
-    color: #ffffff;
-}
 
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-}
-
-.nav-item img {
-    width: 25px;
-    height: 25px;
-    margin-right: 8px;
-}
-
-.bordered {
-    border: 1px solid #040404;
-    border-radius: 25px;
-}
-
-.bordered a {
-    color: #040404;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-item:active {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.1s ease, box-shadow 0.1s ease;
-}
-
-.no-border img {
-    margin-right: 10px;
-}
-
-nav .nav-item:last-child {
-    border: 1px solid #040404;
-    border-radius: 25px;
-    padding: 3px 10px;
-}
-
-.Inversor {
-    color: #666666;
-    font-weight: bold;
-    text-decoration: none; 
-}
 
 /* Estilos responsive para el header */
 @media screen and (max-width: 768px) {
@@ -119,17 +57,7 @@ nav .nav-item:last-child {
         display: block;
     }
 }
-.Inversor{
-    color: #666666;
-    font-weight: bold;
-    text-decoration: none; 
-}
 
-.menu-toggle img {
-    font-size: 24px;
-    cursor: pointer;
-    
-}
 
 
 
