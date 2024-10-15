@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         <a class="nav-link" href="ListaInversionista.html"><i class="fas fa-search fa-lg me-1 text-muted"></i> Busqueda de emprendores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="perfilInversor.html"><i class="fas fa-user fa-lg me-1 text-muted"></i> Perfil</a>
+                        <a class="nav-link" href="perfilInversor.html"><i class="fas fa-user fa-lg me-1 text-muted"></i>Perfil</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt fa-lg me-1 text-muted"></i> Cerrar sesión</a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt fa-lg me-1 text-muted"></i>Cerrar</a>
                     </li>
                 </ul>
             </div>
