@@ -5,24 +5,6 @@ body {
 }
 
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 15px 30px;
-    color: #ffffff;
-}
-.logo img {
-    width: 200px; /* Cambia este valor al tamaño deseado */
-    height: auto; /* Mantener auto preserva las proporciones */
-}
-
-header .logo {
-    margin-right: auto; /* Mueve el logo a la izquierda */
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 nav {
     display: flex;
@@ -310,53 +292,6 @@ nav .nav-item:last-child {
 
 
 
-
-
-/* Estilo para el menú lateral */
-.sidebar {
-    position: fixed;
-    right: -250px; /* Inicialmente oculto fuera de la pantalla */
-    top: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    transition: left 0.3s ease;
-    z-index: 2000;
-    overflow-y: auto;
-}
-
-.sidebar.active {
-    right: 0; /* Muestra el menú cuando tiene la clase 'active' */
-}
-
-.sidebar .profile-1 {
-    padding: 20px;
-    text-align: center;
-
-}
-
-.sidebar .profile-1 img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    padding: 15px 20px;
-    border-bottom: 2px solid #444;
-}
-
-.sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
 
 
 
