@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- Logo con espacio a la derecha -->
-            <a class="navbar-brand me-3" href="home_inversor.html"><img src="link/16.png" alt=""></a>
+            <a class="navbar-brand me-3" href="home_inversor.html"><img src="link/16.png" alt="" width="250" height="90"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
