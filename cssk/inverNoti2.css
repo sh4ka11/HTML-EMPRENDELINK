@@ -252,87 +252,63 @@ textarea {
 .form-buttons {
     display: flex;
     gap: 10px;
-}
-.footer-content a{
-    color: #bbb;
-  }
-footer {
+}footer {
     background-color: #000000;
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 10px;
-}
-
-.imagenes {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.imagenes img {
-    margin: 0 10px;
-}
-
-
-
-
-/*todo la parte de abajo */
-
-
-footer {/*coloca el fondo negro de abajo */
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.footer-content { /*hace q se alinien en columnas y no en filas */
+    }
+    .logoda img{
+        width: 350px;
+    }
+    .footer-content {
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.footer-section {/*aumenta el tamaño de la parte negra de abajo*/
+    }
+    
+    .footer-section {
     flex: 1;
     margin: 10px;
-}
-
-.footer-section h3 {
+    }
+    
+    .footer-section h3 {
     border-bottom: 1px solid #555;
     padding-bottom: 5px;
     margin-bottom: 10px;
-}
-
-.footer-section ul {
+    }
+    
+    .footer-section ul {
     list-style: none;
     padding: 0;
-}
-
-.footer-section ul li {
+    }
+    
+    .footer-section ul li {
     margin-bottom: 10px;
-}
-
-.footer-section ul li a {
+    }
+    
+    .footer-section ul li a {
     text-decoration: none;
     color: #bbb;
-}
-
-.footer-bottom {
+    }
+    
+    .footer-bottom {
     text-align: center;
     margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 10px;
-
-}
+    }
+    
+    .burger {
+    display: none; /* Escondido por defecto */
+    }
+    .menu-toggle img {
+        font-size: 24px;
+        cursor: pointer;
+        
+    }
 
 ul {
     list-style: none;
