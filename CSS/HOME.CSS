@@ -236,12 +236,12 @@ header {
 }
 
 .latest-posts {
-    display: flex;
+    display: flex;  
     gap: 20px;
     padding: 20px;
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 1300px; /* Mantiene un ancho máximo para no expandirse demasiado */
+    max-width: 85%; /* Mantiene un ancho máximo para no expandirse demasiado */
     justify-content: space-between; /* Distribuye bien los elementos en pantallas grandes */
 }
 
