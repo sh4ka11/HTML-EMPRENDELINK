@@ -233,10 +233,7 @@
 
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-       this.classList.toggle('active');
-       document.querySelector('.sidebar').classList.toggle('active');
-   });
+        
 
        document.querySelectorAll('.accordion-button').forEach(button => {
            button.addEventListener('click', () => {
@@ -252,26 +249,7 @@
        });
 
        //filtro
-       document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const contactsList = document.querySelector('.cards');
-    const contacts = contactsList.querySelectorAll('.card');
-
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-
-        contacts.forEach(contact => {
-            const name = contact.querySelector('h3').textContent.toLowerCase();
-            const message = contact.querySelector('p').textContent.toLowerCase();
-
-            if (name.includes(searchTerm) || message.includes(searchTerm)) {
-                contact.style.display = '';
-            } else {
-                contact.style.display = 'none';
-            }
-        });
-    });
-});
+       
        
 
 
@@ -279,3 +257,26 @@
 
 </body>
 </html>
+<script>
+  // Filtrar resultados de búsqueda
+  const searchInput = document.getElementById('searchInput');
+  const cardsContainer = document.querySelector('.row');
+
+  searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.col-md-6');
+
+      cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+          } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+          }
+      });
+  });
+</script>
