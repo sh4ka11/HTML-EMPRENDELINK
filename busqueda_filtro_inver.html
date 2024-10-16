@@ -19,8 +19,6 @@
      <!-- Scripts -->
      <script src="Scrips/navbarInversionista.js"></script>
 
-  <!-- Navbar container -->
-  <div id="navbar-container"></div>
 
   <!-- Scripts -->
   <script src="Scrips/navbarInversionista.js"></script>
@@ -34,18 +32,19 @@
           <h2>EMPRENDE LINK</h2>
           <h3>Explorar Todo</h3>
           <ul>
-              <li><a href="articulos_deportivosinver.html"><img src="images/deportes.png" alt="Artículos deportivos">Artículos deportivos</a></li>
-              <li><a href="articulos_hogarinver.html"><img src="images/deportes.png" alt="Artículos para el hogar">Artículos para el hogar</a></li>
-              <li><a href="articulos_electronicosinver.html"><img src="images/electronica.png" alt="Electrónica">Electrónica</a></li>
-              <li><a href="#"><img src="images/indumentaria.png" alt="Indumentaria">Indumentaria</a></li>
-              <li><a href="#"><img src="images/musica.png" alt="Instrumentos musicales">Instrumentos musicales</a></li>
-              <li><a href="#"><img src="images/mascotas.png" alt="Productos para mascotas">Productos para mascotas</a></li>
-              <li><a href="#"><img src="images/oficina.png" alt="Suministros de oficina">Suministros de oficina</a></li>
-              <li><a href="#"><img src="images/artesanias.png" alt="Artesanías">Artesanías</a></li>
-              <li><a href="#"><img src="images/herramientas.png" alt="Herramientas de trabajo">Herramientas de trabajo</a></li>
-              <li><a href="#"><img src="images/educacion.png" alt="Educación">Educación</a></li>
-              <li><a href="#"><img src="images/alimentacion.png" alt="Alimentación">Alimentación</a></li>
-              <li><a href="#"><img src="images/vehiculos.png" alt="Vehículos">Vehículos</a></li>
+            <li><a href="busqueda_filtro_inver.html"><img src="images/deportes.png" alt="Artículos deportivos">Todos los empredimientos</a></li>
+              <li><a href="articulos_deportivosinver.html"><img src="images/deportes.png" alt="Artículos deportivos">Empredimietos deportivos</a></li>
+              <li><a href="articulos_hogarinver.html"><img src="images/deportes.png" alt="Artículos para el hogar">Emprendimientos sobre articulos de la casa hogar</a></li>
+              <li><a href="articulos_electronicosinver.html"><img src="images/electronica.png" alt="Electrónica">Empredimientos sobre Electrónica</a></li>
+              <li><a href="#"><img src="images/indumentaria.png" alt="Indumentaria">Empredimientos deIndumentaria</a></li>
+              <li><a href="#"><img src="images/musica.png" alt="Instrumentos musicales">Empredimientos sobre musica</a></li>
+              <li><a href="#"><img src="images/mascotas.png" alt="Productos para mascotas">Empredimientos sobre productos para mascotas</a></li>
+              <li><a href="#"><img src="images/oficina.png" alt="Suministros de oficina">Empredimientos sobre suministros de oficina</a></li>
+              <li><a href="#"><img src="images/artesanias.png" alt="Artesanías">Empredimientos sobre artesanías</a></li>
+              <li><a href="#"><img src="images/herramientas.png" alt="Herramientas de trabajo">Empredimientos sobre herramientas de trabajo</a></li>
+              <li><a href="#"><img src="images/educacion.png" alt="Educación">Empredimientos sobre educación</a></li>
+              <li><a href="#"><img src="images/alimentacion.png" alt="Alimentación">Empredimientos de alimentos</a></li>
+              <li><a href="#"><img src="images/vehiculos.png" alt="Vehículos">Empredimientos sobre Vehículos</a></li>
           </ul>
       </div>
       
@@ -234,10 +233,7 @@
 
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-       this.classList.toggle('active');
-       document.querySelector('.sidebar').classList.toggle('active');
-   });
+        
 
        document.querySelectorAll('.accordion-button').forEach(button => {
            button.addEventListener('click', () => {
@@ -253,26 +249,7 @@
        });
 
        //filtro
-       document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const contactsList = document.querySelector('.cards');
-    const contacts = contactsList.querySelectorAll('.card');
-
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-
-        contacts.forEach(contact => {
-            const name = contact.querySelector('h3').textContent.toLowerCase();
-            const message = contact.querySelector('p').textContent.toLowerCase();
-
-            if (name.includes(searchTerm) || message.includes(searchTerm)) {
-                contact.style.display = '';
-            } else {
-                contact.style.display = 'none';
-            }
-        });
-    });
-});
+       
        
 
 
@@ -280,3 +257,26 @@
 
 </body>
 </html>
+<script>
+  // Filtrar resultados de búsqueda
+  const searchInput = document.getElementById('searchInput');
+  const cardsContainer = document.querySelector('.row');
+
+  searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.col-md-6');
+
+      cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+          } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+          }
+      });
+  });
+</script>
