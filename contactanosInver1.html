@@ -69,33 +69,45 @@
             <p>Tambien puedes contactarnos con este correo:</p>
             <p>Correo: fafagfa@gmail.com</p>
             <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-button">Como cambiar la contraseña</button>
-                    <div class="accordion-content">
-                        <p>1. Abre la app de Configuración del dispositivo y presiona Emprende link. Administrar tu Cuenta de nombre.</p>
-                        <p>2. En la parte superior, presiona Seguridad.</p>
-                        <p>3. En la sección "Acceso a Emprende link", presiona Contraseña. Es posible que debas acceder.</p>
-                        <p>4. Ingresa tu nueva contraseña y presiona Cambiar contraseña.</p>
-                    </div>
+              <div class="accordion-item">
+                <button class="accordion-button collapsed">
+                    Como cambiar la contraseña
+                    <span class="arrow"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>1. Abre la app de Configuración del dispositivo y presiona Emprende link. Administrar tu Cuenta de nombre.</p>
+                    <p>2. En la parte superior, presiona Seguridad.</p>
+                    <p>3. En la sección "Acceso a Emprende link", presiona Contraseña. Es posible que debas acceder.</p>
+                    <p>4. Ingresa tu nueva contraseña y presiona Cambiar contraseña.</p>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Como invertir en un emprendimiento</button>
-                    <div class="accordion-content">
-                        <p>Detalles de cómo invertir en un emprendimiento.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Como mirar los emprendimiento</button>
-                    <div class="accordion-content">
-                        <p>Detalles de cómo mirar el emprendimiento apoyado emprendimiento.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Como mirar como califican los emprendimientos</button>
-                    <div class="accordion-content">
-                        <p>Detalles de cómo mirar cómo califican los emprendimientos y qué comentaron.</p>
-                    </div>
-                </div>
+              </div>
+              <div class="accordion-item">
+                  <button class="accordion-button collapsed">
+                      Como invertir en un emprendimiento
+                      <span class="arrow"></span>
+                  </button>
+                  <div class="accordion-content">
+                      <p>Detalles de cómo invertir en un emprendimiento.</p>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <button class="accordion-button collapsed">
+                      Como mirar los emprendimientos
+                      <span class="arrow"></span>
+                  </button>
+                  <div class="accordion-content">
+                      <p>Detalles de cómo mirar los emprendimientos apoyados.</p>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <button class="accordion-button collapsed">
+                      Como mirar cómo califican los emprendimientos
+                      <span class="arrow"></span>
+                  </button>
+                  <div class="accordion-content">
+                      <p>Detalles de cómo mirar cómo califican los emprendimientos y qué comentaron.</p>
+                  </div>
+              </div>
             </div>
         </section>
     </main>
@@ -225,11 +237,6 @@
     </div>
   </footer>
     <script>
-         document.querySelector('.menu-toggle').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.sidebar').classList.toggle('active');
-    });
-
         document.querySelectorAll('.accordion-button').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionContent = button.nextElementSibling;
@@ -242,7 +249,6 @@
                 }
             });
         });
-
         
         // window.onload = function() {
         //     alert('¡Bienvenido a Emprende Link!');
