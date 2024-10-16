@@ -152,57 +152,63 @@ body {
   {
   background-color: #555;
   }
-  
   footer {
-  background-color: #000000;
-  color: #fff;
-  padding: 20px 0;
-  margin-top: 40px;
-  }
-  
-  .footer-content {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  }
-  
-  .footer-section {
-  flex: 1;
-  margin: 10px;
-  }
-  
-  .footer-section h3 {
-  border-bottom: 1px solid #555;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-  list-style: none;
-  padding: 0;
-  }
-  
-  .footer-section ul li {
-  margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-  text-decoration: none;
-  color: #bbb;
-  }
-  
-  .footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  border-top: 1px solid #555;
-  padding-top: 10px;
-  }
-  .footer-content a{
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+    }
+    .logoda img{
+        width: 350px;
+    }
+    .footer-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    
+    .footer-section {
+    flex: 1;
+    margin: 10px;
+    }
+    
+    .footer-section h3 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    }
+    
+    .footer-section ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+    text-decoration: none;
     color: #bbb;
-  }
-
+    }
+    
+    .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    }
+    
+    .burger {
+    display: none; /* Escondido por defecto */
+    }
+    .menu-toggle img {
+        font-size: 24px;
+        cursor: pointer;
+        
+    }
 .buttons a{
 color: #ffffff;
 }
