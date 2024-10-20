@@ -60,8 +60,10 @@ body {
   background: white;
   cursor: pointer;
 }
-.profile-photo{
+#profile-photo{
 
+  position: absolute;
+  text-align: center;
 
 }
 
