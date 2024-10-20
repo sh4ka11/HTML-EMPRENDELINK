@@ -60,6 +60,10 @@ body {
   background: white;
   cursor: pointer;
 }
+.profile-photo{
+
+
+}
 
 .profile-img:hover::after {
   content: 'Cambiar foto';
