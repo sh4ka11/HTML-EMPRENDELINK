@@ -45,23 +45,6 @@ body {
   background-color: gray;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-}
-
-.nav-item img {
-  width: 25px; /* Tamaño de los iconos */
-  height: 25px;
-  margin-right: 8px;
-}
 
 /* Estilo para los contenedores con borde */
 .bordered {
