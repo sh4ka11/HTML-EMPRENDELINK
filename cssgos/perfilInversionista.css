@@ -97,61 +97,114 @@ body {
   max-width: 1200px;
   position: relative;
 }
+.profile-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-banner {
+  height: 200px;
+  background: linear-gradient(to right, #797f8b, #050506);
+  position: relative;
+}
 
 .profile-img {
-  flex-shrink: 0;
-  margin-right: 20px;
+  position: absolute;
+  bottom: -60px;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  background: white;
 }
 
 .profile-img img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .profile-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  padding: 80px 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .profile-info {
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.profile-info label {
-  margin-bottom: 5px;
-  font-weight: bold;}
+.info-group {
+  margin-bottom: 1rem;
+}
 
-  .profile-info input {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  }
-  
-  .buttons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.info-group label {
   display: flex;
-  gap: 20px;
-  translate: 20px 50px;
-  }
-  
-  .buttons button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  }
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
 
-  .buttons button
-  {
-  background-color: #555;
-  }
+.info-group i {
+  color: #5f636c;
+  width: 1.25rem;
+}
+
+.info-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.profile-actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #626875;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7c818d;
+}
+
+.btn-outline {
+  background-color: white;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-outline:hover {
+  background-color: #f9fafb;
+}
   footer {
     background-color: #000000;
     color: #fff;
