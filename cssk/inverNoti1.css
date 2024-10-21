@@ -101,6 +101,10 @@ main {
     flex: 1;
 }
 
+.notification a{
+  color: #000;
+}
+
 .notification-content h3 {
     margin: 0;
 }
@@ -135,6 +139,9 @@ footer {
   .footer-section {
   flex: 1;
   margin: 10px;
+  }
+  .footer-section a{
+    color: #ddd;
   }
   
   .footer-section h3 {

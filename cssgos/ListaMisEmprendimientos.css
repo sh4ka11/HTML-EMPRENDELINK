@@ -48,7 +48,7 @@ header {
 .section-title-1 {
     font-size: 24px;
     margin-bottom: 20px;
-    margin-left: 125px;
+    margin-left: 4.5%;
     margin-top: 30px; /* Ajustado para bajar el título */
 }
 
@@ -63,9 +63,9 @@ section{
     display:flex;
     /* gap: 20px; */
     padding: 20px;
-    width: 800px;
+    width: 700px;
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 6%;
     margin-right: 6%;
 }
 

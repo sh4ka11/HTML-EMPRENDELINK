@@ -102,6 +102,9 @@ main h2{
 .notification-content {
     flex: 1;
 }
+.notification a{
+    color: #000;
+}
 
 .notification-content h3 {
     margin: 0;

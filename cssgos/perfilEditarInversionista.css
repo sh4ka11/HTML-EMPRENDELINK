@@ -60,6 +60,12 @@ body {
   background: white;
   cursor: pointer;
 }
+#profile-photo{
+
+  position: absolute;
+  text-align: center;
+
+}
 
 .profile-img:hover::after {
   content: 'Cambiar foto';
