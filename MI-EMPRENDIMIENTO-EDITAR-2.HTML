@@ -6,461 +6,509 @@
     <title>Emprende Link - Mercado de Vinos</title>
     <link rel="icon" href="img/logoCuadrado.png" type="image/png">
 
-    <link rel="stylesheet" href="CSS/MI-EMPRENDIMIENTO-EDITAR-2.CSS">
+    <link rel="stylesheet" href="CSS/MI-EMPRENDIMIENTO.CSS">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+
 </head>
+
 <body>
-    <header>
-        <div class="header-left">
-            <img src="LINK/BARRA.png" alt="Emprende Link BARRA" class="barra">
-            <img src="img_inversor/logo.png" alt="Emprende Link Logo" class="logo">
-        </div>
-        <div class="header-right">
-           <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
-           <a href="#"><i class="fas fa-bell"></i> Notificaciones</a>
-           <a href="#"><i class="fas fa-user"></i> Usuario</a>
-        </div>
-    </header>
+  <div id="header"></div>
 
-    <main>
-        <div class="main-content">
-            <section class="hero">
-                <div class="hero-background">
-                    <img src="LINK/FONDO-VINOS.png" alt="Mercado de Vinos">
-                </div>
-                <div class="hero-content">
-                    <img src="LINK/LOGO-VINOS.png" alt="Mercado de Vinos Logo">
-                    <div class="hero-text-and-buttons">
-                        <h2>Vino el Extasis</h2>
-                        <p>"Aquel que vino al mundo y no toma vino, ¿entonces a qué vino?"</p>
-                        <div class="hero-buttons">
-                            <button>Reseñas</button>
-                            <button>Eliminar</button>
-                            <a href="MI-EMPRENDIMIENTO.HTML">
-                            <button>Guardar</button>
-                            </a>
-                        </div>
+  <script>
+  // Cargar el contenido del navbar
+  fetch('navbarUsuario.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+      
+      // Asegúrate de que el JS de Bootstrap esté disponible
+      const bootstrapScript = document.createElement('script');
+      bootstrapScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js";
+      document.body.appendChild(bootstrapScript);
+    });
+  </script>
+
+<main> 
+  <main> 
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-background image-container">
+                <img src="LINK/FONDO-VINOS.png" alt="Mercado de Vinos" data-image="hero-background" id="heroBackground" class="changeable-image">
+                <input type="file" class="image-upload" id="heroBackgroundUpload" accept="image/*">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-main">
+                    <div class="image-container">
+                        <img src="LINK/LOGO-VINOS.png" alt="Mercado de Vinos Logo" class="hero-logo changeable-image" id="heroLogo">
+                        <!-- <input type="file" class="image-upload" id="heroLogoUpload" accept="image/*"> -->
                     </div>
+                    <h1 contenteditable="true">Vino el Éxtasis</h1>
+                    <p class="hero-quote" contenteditable="true">"Aquel que vino al mundo y no toma vino, ¿entonces a qué vino?"</p>
                 </div>
-            </section>
+                <div class="hero-buttons">
+                    <a href="ListaMisEmprendiientos.html" class="btn btn-primary" onclick="saveChanges()">Guardar</a>
+                    <a href="MI-EMPRENDIMIENTO-EDITAR-2.HTML" class="btn btn-secondary">Eliminar</a>
+                </div>
+            </div>
+        </section>
 
-            <section class="profile">
-                <div class="profile-card">
-                    <img src="img_inversor/perfil.png" alt="Cristian Sebastian Delgado">
-                    <br>
-                    <p>CRISTIAN SEBASTIAN DELGADO</p>
-                    <p><a href="mailto:cristiansdp@gmail.com">cristiansdp@gmail.com</a></p>
-                    <p>40 - Jersey City, Gal / 86551</p>
-                    <p>320-898-7646</p>
-                    <p>Popayán</p>
+        <section class="profile">
+            <div class="profile-card">
+                <img src="img_inversor/perfil.png" alt="Cristian Sebastian Delgado" class="profile-image">
+                <div class="profile-info">
+                    <h2 contenteditable="true">CRISTIAN SEBASTIAN DELGADO</h2>
+                    <p contenteditable="true"><i class="fas fa-envelope"></i> <a href="mailto:cristiansdp@gmail.com">cristiansdp@gmail.com</a></p>
+                    <p contenteditable="true"><i class="fas fa-map-marker-alt"></i> 40 - Jersey City, Gal / 86551</p>
+                    <p contenteditable="true"><i class="fas fa-phone"></i> 320-898-7646</p>
+                    <p contenteditable="true"><i class="fas fa-city"></i> Popayán</p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
         <div class="content">
             <section class="products">
-         <!-- Producto 1 -->
-<div class="product" id="product-1">
-  <img src="LINK/VINOS-1.png" alt="Producto 1">
-  <h4>Producto 1</h4>
-  <p class="description">Descripción del producto 1</p>
-  <button class="edit-button" onclick="editProduct('product-1')">Editar</button>
-  <button class="delete-button" onclick="deleteProduct('product-1')">Borrar</button>
-</div>
-
-<!-- Producto 2 -->
-<div class="product" id="product-2">
-  <img src="LINK/VINOS-2.png" alt="Producto 2">
-  <h4>Producto 2</h4>
-  <p class="description">Descripción del producto 2</p>
-  <button class="edit-button" onclick="editProduct('product-2')">Editar</button>
-  <button class="delete-button" onclick="deleteProduct('product-2')">Borrar</button>
-</div>
-
-<!-- Producto 3 -->
-<div class="product" id="product-3">
-  <img src="LINK/VINOS-3.png" alt="Producto 3">
-  <h4>Producto 3</h4>
-  <p class="description">Descripción del producto 3</p>
-  <button class="edit-button" onclick="editProduct('product-3')">Editar</button>
-  <button class="delete-button" onclick="deleteProduct('product-3')">Borrar</button>
-</div>
-
-<!-- Producto 4 -->
-<div class="product" id="product-4">
-  <img src="LINK/VINOS-4.png" alt="Producto 4">
-  <h4>Producto 4</h4>
-  <p class="description">Descripción del producto 4</p>
-  <button class="edit-button" onclick="editProduct('product-4')">Editar</button>
-  <button class="delete-button" onclick="deleteProduct('product-4')">Borrar</button>
-</div>
-
-<!-- Producto 5 -->
-<div class="product" id="product-5">
-  <img src="ruta/imagen3.jpg" alt="Producto 5">
-  <h4>Producto 5</h4>
-  <p class="description">Descripción del producto 5</p>
-  <button class="edit-button" onclick="editProduct('product-5')">Editar</button>
-  <button class="delete-button" onclick="deleteProduct('product-5')">Borrar</button>
-</div>
-
-<!-- 
-                <div class="product">
-                    <img src="LINK/imagen 1.png" alt="Agregar imagen">
-                    <h4>Añade los detalles de tu producto</h4>
-                    <button class="add-button"><i class="fas fa-plus"></i> Descripción</button>
-                    <button class="add-button"><i class="fas fa-plus"></i> Imagen</button>
-                </div> -->
-
+                <div class="product" id="product-template" style="display: none;">
+                    <div class="image-container">
+                        <img src="" alt="" class="changeable-image">
+                        <input type="file" class="image-upload" accept="image/*">
+                    </div>
+                    <div class="product-info">
+                        <h4 contenteditable="true"></h4>
+                        <p contenteditable="true"></p>
+                    </div>
+                </div>
+        
+                <div class="product" id="product-1">
+                    <div class="image-container">
+                        <img src="LINK/VINOS-1.png" alt="Vino tinto Malbec argentino" id="product1Image" class="changeable-image">
+                        <!-- <input type="file" class="image-upload" id="product1Upload" accept="image/*"> -->
+                    </div>
+                    <div class="product-info">
+                        <h4 contenteditable="true">Vino tinto Malbec argentino</h4>
+                        <p contenteditable="true">Intenso y robusto, con notas de frutas negras y un toque de vainilla. Perfecto para acompañar carnes rojas.</p>
+                    </div>
+                </div>
+                <div class="product" id="product-2">
+                    <div class="image-container">
+                        <img src="LINK/VINOS-2.png" alt="Vino rosado Pinot Noir de Francia" id="product2Image" class="changeable-image">
+                        <!-- <input type="file" class="image-upload" id="product2Upload" accept="image/*"> -->
+                    </div>
+                    <div class="product-info">
+                        <h4 contenteditable="true">Vino rosado Pinot Noir de Francia</h4>
+                        <p contenteditable="true">Delicado y fresco, con aromas de fresas y un final cítrico. Ideal para tardes de verano y platos ligeros.</p>
+                    </div>
+                </div>
+                <div class="product" id="product-3">
+                    <div class="image-container">
+                        <img src="LINK/VINOS-3.png" alt="Vino espumoso Brut Cava" id="product3Image" class="changeable-image">
+                        <!-- <input type="file" class="image-upload" id="product3Upload" accept="image/*"> -->
+                    </div>
+                    <div class="product-info">
+                        <h4 contenteditable="true">Vino espumoso Brut Cava</h4>
+                        <p contenteditable="true">Burbujeante y elegante, con notas de manzana verde y pan tostado. Perfecto para celebraciones y aperitivos.</p>
+                    </div>
+                </div>
+                <div class="product" id="product-4">
+                    <div class="image-container">
+                        <img src="LINK/VINOS-4.png" alt="Vino rosado" id="product4Image" class="changeable-image">
+                        <!-- <input type="file" class="image-upload" id="product4Upload" accept="image/*"> -->
+                    </div>
+                    <div class="product-info">
+                        <h4 contenteditable="true">Vino rosado Provenzal</h4>
+                        <p contenteditable="true">Suave y aromático, con toques de melocotón y flores blancas. Excelente acompañante para mariscos y ensaladas.</p>
+                    </div>
+                </div>
+        
+                <button id="add-product-btn" class="add-product-btn"><i class="fas fa-plus"></i> Agregar Producto</button>
             </section>
-
-            <section class="description-1" id="description-section">
-              <h3>Descripción</h3>
-              <p class="description-text">Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida. Al descorchar una de nuestras botellas, no solo abres un vino; liberas los aromas de las colinas donde crecieron las uvas, el sonido de los vientos que las acariciaron y el esfuerzo de quienes las cuidaron.</p>
-              <p class="description-text">Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia. Permítete explorar los matices que solo se revelan con el tiempo y la paciencia. Nuestro vino es para quienes buscan algo más que un simple placer; es para aquellos que aprecian la dedicación, la historia y la pasión que se encierran en cada botella.</p>
-              <p class="description-text">Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte. Desde nuestros bisabuelos, que plantaron las primeras cepas, hasta los innovadores métodos de vinificación que utilizamos hoy, cada etapa es un testimonio de nuestro compromiso. Con cada copa que levantas, compartes no solo un vino, sino una parte de nuestra historia familiar que ha sido transmitida a través de generaciones.</p>
-              <div class="button-container">
-                  <button class="edit-button" onclick="editDescription()">Editar</button>
-                  <button class="delete-button" onclick="deleteDescription()">Borrar</button>
-              </div>
-          </section>
-          
-          
-    </main>
-
-    <footer>
-      <div class="footer-content">
-          <div class="footer-section about">
-              <div class="logoda">
-                  <img class="logo-dark" src="images/logodark.png" alt="Emprende Link">
-              </div>
-              <h3></h3>
-              <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo conjunto de soluciones innovadoras.</p>
-          </div>
-          <div class="footer-section links">
-              <h3>Legales</h3>
-              <ul>
-                  <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
-                  <li><a href="acuerdosyterminos.html">Acuerdos y términos</a></li>
-              </ul>
-          </div>
-          <div class="footer-section contact">
-              <h3>Nuestro correo:</h3>
-              <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
-          </div>  
-      </div>
-  
-      <div class="footer-bottom">
-        <p>&copy; Emprende Link - Copyright © 2024</p>
-        <div class="imagenes">
-            <ul class="example-2">
-                <li class="icon-content">
-                  <a
-                    href="https://linkedin.com/"
-                    aria-label="LinkedIn"
-                    data-social="linkedin"
-                  >
-                    <div class="filled"></div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-linkedin"
-                      viewBox="0 0 16 16"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </a>
-                  <div class="tooltip">LinkedIn</div>
-                </li>
-                <li class="icon-content">
-                  <a
-                    href="https://twitter.com/"
-                    aria-label="Twitter"
-                    data-social="twitter"
-                  >
-                    <div class="filled"></div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-twitter"
-                      viewBox="0 0 16 16"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.283-.01-.422A6.72 6.72 0 0 0 16 3.542a6.558 6.558 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.084.797 3.286 3.286 0 0 0-2.397-1.034c-1.812 0-3.285 1.47-3.285 3.284 0 .258.03.51.086.751A9.325 9.325 0 0 1 1.112 2.6a3.284 3.284 0 0 0-.445 1.65c0 1.137.579 2.143 1.459 2.729a3.301 3.301 0 0 1-1.488-.41v.041c0 1.589 1.132 2.915 2.636 3.215a3.203 3.203 0 0 1-.865.115c-.212 0-.418-.021-.619-.059.42 1.313 1.633 2.266 3.067 2.292a6.588 6.588 0 0 1-4.065 1.4 6.32 6.32 0 0 1-.777-.045 9.344 9.344 0 0 0 5.034 1.474"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </a>
-                  <div class="tooltip">Twitter</div>
-                </li>
-                <li class="icon-content">
-                  <a
-                    href="https://www.instagram.com/"
-                    aria-label="Instagram"
-                    data-social="instagram"
-                  >
-                    <div class="filled"></div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-instagram"
-                      viewBox="0 0 16 16"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </a>
-                  <div class="tooltip">Instagram</div>
-                </li>
-                <li class="icon-content">
-                  <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
-                    <div class="filled"></div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-youtube"
-                      viewBox="0 0 16 16"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </a>
-                  <div class="tooltip">Youtube</div>
-                </li>
-              </ul>
-              
+        
+            <section class="description">
+                <h3>Descripción</h3>
+                <p>Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida.</p>
+                <p>Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia.</p>
+                <p>Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte.</p>
+            </section>
         </div>
     </div>
-  </footer>
-<!-- Menú lateral -->
-<aside class="sidebar">
-    <div class="profile-1">
-        <img src="LINK/PERFIL-2.png" alt="User">
-        <br>
-        <span>Cristian Sebastian</span>
-        <a href="mailto:esdp@gmail.com">esdp@gmail.com</a>
-    </div>
-    <ul>
-      <li><a href="HOME.HTML">Inicio</a></li>
-      <li><a href="perfilUsaurio.html">Perfil</a></li>
-      <li><a href="busqueda_filtro.html">Busqueda por categoría</a></li>
-      <li><a href="ListaUsuarios.html">Consultar Lista</a></li>
-      <li><a href="ListaMisEmprendiientos.HTML">Mis emprendimientos</a></li>
-      <li><a href="publicarEmprendimiento.html">Publicar Emprendimiento</a></li>
-      <li><a href="CHAT-EMPRENDEDOR.HTML">Chat</a></li>
-      <li><a href="index.html">Cerrar Sesión</a></li>
-  </ul>
-    </aside>
+</main>
 
 
 
-    <script>
-        document.querySelector('.barra').addEventListener('click', function() {
-       this.classList.toggle('active');
-       document.querySelector('.sidebar').classList.toggle('active');
-   });
-
-       document.querySelectorAll('.accordion-button').forEach(button => {
-           button.addEventListener('click', () => {
-               const accordionContent = button.nextElementSibling;
-               button.classList.toggle('active');
-
-               if (button.classList.contains('active')) {
-                   accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-               } else {
-                   accordionContent.style.maxHeight = 0;
-               }
-           });
-       });
-
-       
-    </script>
-
-<script>
-  // Función para editar un producto
-  function editProduct(productId) {
-      var productElement = document.getElementById(productId);
-
-      // Obtener la descripción y la imagen actuales
-      var currentDescription = productElement.querySelector('.description').textContent;
-      var currentImageSrc = productElement.querySelector('img').src;
-
-      // Cambiar la descripción por un textarea editable
-      var newDescriptionHTML = `<textarea class="edit-description">${currentDescription}</textarea>`;
-      productElement.querySelector('.description').innerHTML = newDescriptionHTML;
-
-      // Cambiar la imagen para seleccionar una nueva  se queda
-      var newImageHTML = `<input type="file" class="edit-image" accept="image/*">`;
-      productElement.querySelector('img').outerHTML = newImageHTML;
-
-      // Cambiar los botones de "Editar" y "Borrar" por "Guardar" y "Cancelar"
-      var buttonsHTML = `
-          <button class="save-button" onclick="saveProduct('${productId}')">Guardar</button>
-          <button class="cancel-button" onclick="cancelEdit('${productId}', '${currentDescription}', '${currentImageSrc}')">Cancelar</button>
-      `;
-      productElement.querySelector('.edit-button').outerHTML = buttonsHTML;
-  }
-
-  // Función para guardar los cambios en un producto
-  function saveProduct(productId) {
-      var productElement = document.getElementById(productId);
-
-      // Obtener la nueva descripción y la nueva imagen
-      var newDescription = productElement.querySelector('.edit-description').value;
-      var newImageFile = productElement.querySelector('.edit-image').files[0];
-
-      if (!newDescription || !newImageFile) {
-          alert("Por favor, asegúrate de haber añadido una nueva descripción y una nueva imagen.");
-          return;
-      }
-
-      // Actualizar la descripción y la imagen del producto
-      productElement.querySelector('.description').textContent = newDescription;
-
-      // Actualizar la imagen
-      var reader = new FileReader();
-      reader.onload = function(e) {
-          productElement.querySelector('.edit-image').outerHTML = `<img src="${e.target.result}" alt="${productId}">`;
-      };
-      reader.readAsDataURL(newImageFile);
-
-      // Cambiar los botones "Guardar" por los originales
-      var buttonsHTML = `
-          <button class="edit-button" onclick="editProduct('${productId}')">Editar</button>
-         
-      `;
-      productElement.querySelector('.save-button').outerHTML = buttonsHTML;
-
-      // Mostrar mensaje de confirmación
-      alert("Los cambios se han guardado exitosamente.");
-  }
-
-  // Función para cancelar la edición se queda 
-  function cancelEdit(productId, originalDescription, originalImageSrc) {
-      var productElement = document.getElementById(productId);
-
-      // Revertir la descripción y la imagen
-      productElement.querySelector('.description').textContent = originalDescription;
-      productElement.querySelector('.edit-image').outerHTML = `<img src="${originalImageSrc}" alt="${productId}">`;
-
-      // Cambiar los botones a los originales
-      var buttonsHTML = `
-          <button class="edit-button" onclick="editProduct('${productId}')">Editar</button>
-          <button class="delete-button" onclick="deleteProduct('${productId}')">Borrar</button>
-      `;
-      productElement.querySelector('.save-button').outerHTML = buttonsHTML;
-  }
-
-  // Función para borrar un producto
-  function deleteProduct(productId) {
-      var productElement = document.getElementById(productId);
-      productElement.remove();
-      alert("El producto ha sido eliminado.");
-  }
-</script>
-
-
-
-
+  
 
 
 <script>
-// Función para editar la descripción
-function editDescription() {
-    var descriptionSection = document.getElementById('description-section');
-    var descriptionTexts = descriptionSection.querySelectorAll('.description-text');
+//     document.getElementById('add-product-btn').addEventListener('click', function() {
+//     // Clonar el producto plantilla
+//     const newProduct = document.getElementById('product-template').cloneNode(true);
+//     newProduct.style.display = 'block'; // Mostrar el nuevo producto
+//     newProduct.id = 'product-' + (document.querySelectorAll('.product').length + 1); // Actualizar el ID
 
-    // Convertir los párrafos en áreas de texto editables
-    descriptionTexts.forEach(function(p) {
-        var textContent = p.textContent;
-        p.innerHTML = `<textarea class="edit-description-text">${textContent}</textarea>`;
+//     // Limpiar el contenido editable
+//     newProduct.querySelector('h4').innerText = '';
+//     newProduct.querySelector('p').innerText = '';
+
+//     // Añadir el nuevo producto al final de la sección
+//     document.querySelector('.products').insertBefore(newProduct, this);
+// });
+// // Función para cargar los productos desde localStorage
+// function loadProducts() {
+//     const products = JSON.parse(localStorage.getItem('products')) || [];
+//     products.forEach(product => {
+//         addProduct(product.name, product.description, product.image);
+//     });
+// }
+
+// Función para agregar un nuevo producto
+function addProduct(name, description, image) {
+    const newProduct = document.getElementById('product-template').cloneNode(true);
+    newProduct.style.display = 'block'; // Mostrar el nuevo producto
+    newProduct.id = 'product-' + (document.querySelectorAll('.product').length + 1); // Actualizar el ID
+
+    // Asignar los valores a los elementos
+    newProduct.querySelector('h4').innerText = name;
+    newProduct.querySelector('p').innerText = description;
+    newProduct.querySelector('img').src = image;
+
+    // Añadir el nuevo producto al final de la sección
+    document.querySelector('.products').insertBefore(newProduct, document.querySelector('.add-product-form'));
+}
+
+// Manejar el evento del botón de agregar producto
+document.getElementById('add-product-btn').addEventListener('click', function() {
+    const productName = document.getElementById('product-name').value.trim();
+    const productDescription = document.getElementById('product-description').value.trim();
+    const productImage = document.getElementById('product-image-url').value.trim();
+
+    if (productName && productDescription && productImage) {
+        addProduct(productName, productDescription, productImage);
+        saveProducts(); // Guardar en localStorage
+        // Limpiar los campos del formulario
+        document.getElementById('product-name').value = '';
+        document.getElementById('product-description').value = '';
+        document.getElementById('product-image-url').value = '';
+    } else {
+        alert('Por favor, complete todos los campos.');
+    }
+});
+
+// Función para guardar los productos en localStorage
+function saveProducts() {
+    const products = [];
+    document.querySelectorAll('.product').forEach(product => {
+        const name = product.querySelector('h4').innerText;
+        const description = product.querySelector('p').innerText;
+        const image = product.querySelector('img').src;
+        products.push({ name, description, image });
     });
-
-    // Cambiar los botones de editar y borrar por guardar y cancelar
-    var buttonsHTML = `
-        <button class="save-button" onclick="saveDescription()">Guardar</button>
-        <button class="cancel-button" onclick="cancelEditDescription()">Cancelar</button>
-    `;
-    descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
+    localStorage.setItem('products', JSON.stringify(products));
 }
 
 
-  // Función para guardar los cambios en la descripción
-  function saveDescription() {
-      var descriptionSection = document.getElementById('description-section');
-      var editAreas = descriptionSection.querySelectorAll('.edit-description-text');
 
-      // Reemplazar las áreas de texto por los párrafos normales
-      editAreas.forEach(function(area) {
-          var newText = area.value;
-          area.parentElement.innerHTML = newText;
+
+</script>
+  <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const changeableImages = document.querySelectorAll('.changeable-image');
+
+    changeableImages.forEach(img => {
+        if (!img.closest('.profile-card')) {  // Excluir imágenes de perfil
+            const container = img.closest('.image-container');
+            const input = container.querySelector('.image-upload');
+
+            container.addEventListener('click', function() {
+                input.click();
+            });
+
+            input.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        img.src = e.target.result;
+                        // Guardar la imagen en localStorage
+                        localStorage.setItem(img.id, e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    });
+
+    // Cargar imágenes guardadas al cargar la página
+    window.addEventListener('load', function() {
+        changeableImages.forEach(img => {
+            const savedImage = localStorage.getItem(img.id);
+            if (savedImage) {
+                img.src = savedImage;
+            }
+        });
+    });
+});
+  </script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Function to handle image selection
+      function handleImageSelection(callback) {
+          const input = document.createElement('input');
+          input.type = 'file';
+          input.accept = 'image/*';
+          input.onchange = e => {
+              const file = e.target.files[0];
+              if (file) {
+                  const reader = new FileReader();
+                  reader.onload = event => callback(event.target.result);
+                  reader.readAsDataURL(file);
+              }
+          };
+          input.click();
+      }
+
+      // Handle hero background
+      const heroBackground = document.querySelector('.hero-background');
+      heroBackground.addEventListener('click', () => {
+          handleImageSelection(result => {
+              heroBackground.querySelector('img').src = result;
+              localStorage.setItem('heroBackground', result);
+          });
       });
 
-      // Revertir los botones "Guardar" por los originales
-      var buttonsHTML = `
-          <button class="edit-button" onclick="editDescription()">Editar</button>
-          <button class="delete-button" onclick="deleteDescription()">Borrar</button>
-      `;
-      descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
-
-      // Mostrar mensaje de confirmación
-      alert("Los cambios se han guardado exitosamente.");
-  }
-
-  // Función para cancelar la edición de la descripción
-  function cancelEditDescription() {
-      var descriptionSection = document.getElementById('description-section');
-      var originalTexts = [
-          'Experimenta la magia del vino: Un viaje sensorial único. Imagina un atardecer en el viñedo, donde los rayos dorados del sol acarician las vides maduras, listas para ser cosechadas. Cada botella de vino que elaboramos es el resultado de este mágico proceso, donde la tierra, el clima y la pasión de nuestros enólogos se combinan para crear una obra de arte líquida. Al descorchar una de nuestras botellas, no solo abres un vino; liberas los aromas de las colinas donde crecieron las uvas, el sonido de los vientos que las acariciaron y el esfuerzo de quienes las cuidaron.',
-          'Más que una bebida, una pasión: Embárcate en un viaje sensorial sin igual donde cada gota te invita a descubrir un universo de sabores, aromas y tradición. Desde la frescura frutal de un vino joven hasta la complejidad y profundidad de un añejo, cada sorbo es una nueva experiencia. Permítete explorar los matices que solo se revelan con el tiempo y la paciencia. Nuestro vino es para quienes buscan algo más que un simple placer; es para aquellos que aprecian la dedicación, la historia y la pasión que se encierran en cada botella.',
-          'Un legado familiar: Sumérgete en la historia que cada botella cuenta, un relato de tradición familiar, innovación y dedicación inquebrantable. Nuestra bodega ha sido testigo de generaciones que han dedicado sus vidas a perfeccionar su arte. Desde nuestros bisabuelos, que plantaron las primeras cepas, hasta los innovadores métodos de vinificación que utilizamos hoy, cada etapa es un testimonio de nuestro compromiso. Con cada copa que levantas, compartes no solo un vino, sino una parte de nuestra historia familiar que ha sido transmitida a través de generaciones.'
-      ];
-
-      var descriptionTexts = descriptionSection.querySelectorAll('.description-text');
-
-      descriptionTexts.forEach(function(p, index) {
-          p.innerHTML = originalTexts[index];
+      // Handle hero logo
+      const heroLogo = document.querySelector('.hero-logo');
+      heroLogo.addEventListener('click', () => {
+          handleImageSelection(result => {
+              heroLogo.src = result;
+              localStorage.setItem('heroLogo', result);
+          });
       });
 
-      // Revertir los botones "Guardar" por los originales
-      var buttonsHTML = `
-          <button class="edit-button" onclick="editDescription()">Editar</button>
-          <button class="delete-button" onclick="deleteDescription()">Borrar</button>
-      `;
-      descriptionSection.querySelector('.button-container').innerHTML = buttonsHTML;
-  }
-
-  // Función para borrar la descripción
-  function deleteDescription() {
-      var descriptionSection = document.getElementById('description-section');
-      descriptionSection.querySelectorAll('.description-text').forEach(function(p) {
-          p.textContent = '';
+      // Handle product images
+      document.querySelectorAll('.product .image-container').forEach(container => {
+          container.addEventListener('click', () => {
+              handleImageSelection(result => {
+                  container.querySelector('img').src = result;
+                  // Store in localStorage with unique identifier
+                  localStorage.setItem(`product-${container.closest('.product').id}`, result);
+              });
+          });
       });
-      alert("La descripción ha sido borrada.");
-  }
+
+      // Add Product Form
+      const addProductBtn = document.getElementById('add-product-btn');
+      let previewImage = null;
+
+      addProductBtn.addEventListener('click', () => {
+          const formHTML = `
+              <div class="add-product-form">
+                  <h3>Agregar Nuevo Producto</h3>
+                  <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                  <textarea id="product-description" placeholder="Descripción del producto" required></textarea>
+                  <div class="image-preview-container" id="image-preview">
+                      <span class="image-preview-text">Click para agregar imagen</span>
+                  </div>
+                  <button class="btn btn-primary" id="save-product">Guardar Producto</button>
+                  <button class="btn btn-secondary" id="cancel-product">Cancelar</button>
+              </div>
+          `;
+
+          addProductBtn.insertAdjacentHTML('beforebegin', formHTML);
+          addProductBtn.style.display = 'none';
+
+          const imagePreview = document.getElementById('image-preview');
+          imagePreview.addEventListener('click', () => {
+              handleImageSelection(result => {
+                  previewImage = result;
+                  imagePreview.innerHTML = `<img src="${result}" alt="Preview">`;
+              });
+          });
+
+          document.getElementById('save-product').addEventListener('click', () => {
+              const name = document.getElementById('product-name').value;
+              const description = document.getElementById('product-description').value;
+
+              if (name && description && previewImage) {
+                  const productHTML = `
+                      <div class="product" id="product-${Date.now()}">
+                          <div class="image-container">
+                              <img src="${previewImage}" alt="${name}" class="changeable-image">
+                          </div>
+                          <div class="product-info">
+                              <h4 contenteditable="true">${name}</h4>
+                              <p contenteditable="true">${description}</p>
+                          </div>
+                      </div>
+                  `;
+
+                  document.querySelector('.add-product-form').insertAdjacentHTML('beforebegin', productHTML);
+                  document.querySelector('.add-product-form').remove();
+                  addProductBtn.style.display = 'block';
+              } else {
+                  alert('Por favor complete todos los campos e incluya una imagen');
+              }
+          });
+
+          document.getElementById('cancel-product').addEventListener('click', () => {
+              document.querySelector('.add-product-form').remove();
+              addProductBtn.style.display = 'block';
+          });
+      });
+
+      // Load saved images on page load
+      window.addEventListener('load', () => {
+          const savedHeroBackground = localStorage.getItem('heroBackground');
+          if (savedHeroBackground) {
+              heroBackground.querySelector('img').src = savedHeroBackground;
+          }
+
+          const savedHeroLogo = localStorage.getItem('heroLogo');
+          if (savedHeroLogo) {
+              heroLogo.src = savedHeroLogo;
+          }
+
+          document.querySelectorAll('.product').forEach(product => {
+              const savedImage = localStorage.getItem(`product-${product.id}`);
+              if (savedImage) {
+                  product.querySelector('img').src = savedImage;
+              }
+          });
+      });
+  });
 </script>
 
 
+<footer>
+  <div class="footer-content">
+      <div class="footer-section about">
+          <div class="logoda">
+              <img class="logo-dark" src="images/logodark.png" alt="Emprende Link">
+          </div>
+          <h3></h3>
+          <p>Emprende Link busca facilitar la colaboración y el crecimiento empresarial al conectar de manera eficiente a emprendedores con grandes inversores, creando oportunidades para el desarrollo conjunto de soluciones innovadoras.</p>
+      </div>
+      <div class="footer-section links">
+          <h3>Legales</h3>
+          <ul>
+              <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
+              <li><a href="acuerdosyterminos.html">Acuerdos y términos</a></li>
+          </ul>
+      </div>
+      <div class="footer-section contact">
+          <h3>Nuestro correo:</h3>
+          <p><a href="mailto:emprendelink234@gmail.com">emprendelink234@gmail.com</a></p>
+      </div>  
+  </div>
 
+  <div class="footer-bottom">
+    <p>&copy; Emprende Link - Copyright © 2024</p>
+    <div class="imagenes">
+        <ul class="example-2">
+            <li class="icon-content">
+              <a
+                href="https://linkedin.com/"
+                aria-label="LinkedIn"
+                data-social="linkedin"
+              >
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+              <a
+                href="https://twitter.com/"
+                aria-label="Twitter"
+                data-social="twitter"
+              >
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.283-.01-.422A6.72 6.72 0 0 0 16 3.542a6.558 6.558 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.084.797 3.286 3.286 0 0 0-2.397-1.034c-1.812 0-3.285 1.47-3.285 3.284 0 .258.03.51.086.751A9.325 9.325 0 0 1 1.112 2.6a3.284 3.284 0 0 0-.445 1.65c0 1.137.579 2.143 1.459 2.729a3.301 3.301 0 0 1-1.488-.41v.041c0 1.589 1.132 2.915 2.636 3.215a3.203 3.203 0 0 1-.865.115c-.212 0-.418-.021-.619-.059.42 1.313 1.633 2.266 3.067 2.292a6.588 6.588 0 0 1-4.065 1.4 6.32 6.32 0 0 1-.777-.045 9.344 9.344 0 0 0 5.034 1.474"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">Twitter</div>
+            </li>
+            <li class="icon-content">
+              <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram"
+                data-social="instagram"
+              >
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">Instagram</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-youtube"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">Youtube</div>
+            </li>
+          </ul>
+          
+    </div>
+</div>
+</footer>
+
+
+    
 </body>
 </html>
 
