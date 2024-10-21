@@ -62,6 +62,7 @@ body {
 }
 #profile-photo{
 
+  font-size: smaller; 
   position: absolute;
   text-align: center;
 
