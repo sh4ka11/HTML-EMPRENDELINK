@@ -360,24 +360,24 @@ function saveProducts() {
       });
 
       // Load saved images on page load
-      window.addEventListener('load', () => {
-          const savedHeroBackground = localStorage.getItem('heroBackground');
-          if (savedHeroBackground) {
-              heroBackground.querySelector('img').src = savedHeroBackground;
-          }
+    //   window.addEventListener('load', () => {
+    //       const savedHeroBackground = localStorage.getItem('heroBackground');
+    //       if (savedHeroBackground) {
+    //           heroBackground.querySelector('img').src = savedHeroBackground;
+    //       }
 
-          const savedHeroLogo = localStorage.getItem('heroLogo');
-          if (savedHeroLogo) {
-              heroLogo.src = savedHeroLogo;
-          }
+    //       const savedHeroLogo = localStorage.getItem('heroLogo');
+    //       if (savedHeroLogo) {
+    //           heroLogo.src = savedHeroLogo;
+    //       }
 
-          document.querySelectorAll('.product').forEach(product => {
-              const savedImage = localStorage.getItem(`product-${product.id}`);
-              if (savedImage) {
-                  product.querySelector('img').src = savedImage;
-              }
-          });
-      });
+    //       document.querySelectorAll('.product').forEach(product => {
+    //           const savedImage = localStorage.getItem(`product-${product.id}`);
+    //           if (savedImage) {
+    //               product.querySelector('img').src = savedImage;
+    //           }
+    //       });
+    //   });
   });
 </script>
 

@@ -6,7 +6,7 @@
     <title>Emprende Link - Mercado de Vinos</title>
     <link rel="icon" href="img/logoCuadrado.png" type="image/png">
 
-    <link rel="stylesheet" href="CSS/MI-EMPRENDIMIENTO.CSS">
+    <link rel="stylesheet" href="CSS/MI-EMPRENDIMIENTO-EDITAR-2.CSS">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -84,7 +84,7 @@
         
                 <div class="product" id="product-1">
                     <div class="image-container">
-                        <img src="LINK/VINOS-1.png" alt="Vino tinto Malbec argentino" id="product1Image" class="changeable-image">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/27/14/37/wines-2447514_1280.jpg" alt="Vino tinto Malbec argentino" id="product1Image" class="changeable-image">
                         <!-- <input type="file" class="image-upload" id="product1Upload" accept="image/*"> -->
                     </div>
                     <div class="product-info">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="product" id="product-2">
                     <div class="image-container">
-                        <img src="LINK/VINOS-2.png" alt="Vino rosado Pinot Noir de Francia" id="product2Image" class="changeable-image">
+                        <img src="https://cdn.pixabay.com/photo/2020/04/09/15/54/wines-5022033_1280.png" alt="Vino rosado Pinot Noir de Francia" id="product2Image" class="changeable-image">
                         <!-- <input type="file" class="image-upload" id="product2Upload" accept="image/*"> -->
                     </div>
                     <div class="product-info">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="product" id="product-3">
                     <div class="image-container">
-                        <img src="LINK/VINOS-3.png" alt="Vino espumoso Brut Cava" id="product3Image" class="changeable-image">
+                        <img src="https://cdn.pixabay.com/photo/2020/02/02/15/07/wine-4813260_1280.jpg" alt="Vino espumoso Brut Cava" id="product3Image" class="changeable-image">
                         <!-- <input type="file" class="image-upload" id="product3Upload" accept="image/*"> -->
                     </div>
                     <div class="product-info">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="product" id="product-4">
                     <div class="image-container">
-                        <img src="LINK/VINOS-4.png" alt="Vino rosado" id="product4Image" class="changeable-image">
+                        <img src="https://cdn.pixabay.com/photo/2016/07/26/16/16/wine-1543170_1280.jpg" alt="Vino rosado" id="product4Image" class="changeable-image">
                         <!-- <input type="file" class="image-upload" id="product4Upload" accept="image/*"> -->
                     </div>
                     <div class="product-info">
@@ -322,61 +322,59 @@ document.getElementById('add-product-btn').addEventListener('click', function() 
 });
 
 // Función para guardar los productos en localStorage
-function saveProducts() {
-    const products = [];
-    document.querySelectorAll('.product').forEach(product => {
-        const name = product.querySelector('h4').innerText;
-        const description = product.querySelector('p').innerText;
-        const image = product.querySelector('img').src;
-        products.push({ name, description, image });
-    });
-    localStorage.setItem('products', JSON.stringify(products));
-}
+// function saveProducts() {
+//     const products = [];
+//     document.querySelectorAll('.product').forEach(product => {
+//         const name = product.querySelector('h4').innerText;
+//         const description = product.querySelector('p').innerText;
+//         const image = product.querySelector('img').src;
+//         products.push({ name, description, image });
+//     });
+//     localStorage.setItem('products', JSON.stringify(products));
+// }
 
 
 
 
 </script>
   <script>
- document.addEventListener('DOMContentLoaded', function() {
-    const changeableImages = document.querySelectorAll('.changeable-image');
+//  document.addEventListener('DOMContentLoaded', function() {
+//     const changeableImages = document.querySelectorAll('.changeable-image');
 
-    changeableImages.forEach(img => {
-        if (!img.closest('.profile-card')) {  // Excluir imágenes de perfil
-            const container = img.closest('.image-container');
-            const input = container.querySelector('.image-upload');
+//     changeableImages.forEach(img => {
+//         if (!img.closest('.profile-card')) {  // Excluir imágenes de perfil
+//             const container = img.closest('.image-container');
+//             const input = container.querySelector('.image-upload');
 
-            container.addEventListener('click', function() {
-                input.click();
-            });
+//             container.addEventListener('click', function() {
+//                 input.click();
+//             });
 
-            input.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        img.src = e.target.result;
-                        // Guardar la imagen en localStorage
-                        localStorage.setItem(img.id, e.target.result);
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-        }
-    });
+//             input.addEventListener('change', function(event) {
+//                 const file = event.target.files[0];
+//                 if (file) {
+//                     const reader = new FileReader();
+//                     reader.onload = function(e) {
+//                         img.src = e.target.result;
+//                         // Guardar la imagen en localStorage
+//                         localStorage.setItem(img.id, e.target.result);
+//                     };
+//                     reader.readAsDataURL(file);
+//                 }
+//             });
+//         }
+//     });
 
     // Cargar imágenes guardadas al cargar la página
-    window.addEventListener('load', function() {
-        changeableImages.forEach(img => {
-            const savedImage = localStorage.getItem(img.id);
-            if (savedImage) {
-                img.src = savedImage;
-            }
-        });
-    });
-});
+    // window.addEventListener('load', function() {
+    //     changeableImages.forEach(img => {
+    //         const savedImage = localStorage.getItem(img.id);
+    //         if (savedImage) {
+    //             img.src = savedImage;
+    //         }
+    //     });
+    // });
   </script>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -486,24 +484,24 @@ function saveProducts() {
       });
 
       // Load saved images on page load
-      window.addEventListener('load', () => {
-          const savedHeroBackground = localStorage.getItem('heroBackground');
-          if (savedHeroBackground) {
-              heroBackground.querySelector('img').src = savedHeroBackground;
-          }
+    //   window.addEventListener('load', () => {
+    //       const savedHeroBackground = localStorage.getItem('heroBackground');
+    //       if (savedHeroBackground) {
+    //           heroBackground.querySelector('img').src = savedHeroBackground;
+    //       }
 
-          const savedHeroLogo = localStorage.getItem('heroLogo');
-          if (savedHeroLogo) {
-              heroLogo.src = savedHeroLogo;
-          }
+    //       const savedHeroLogo = localStorage.getItem('heroLogo');
+    //       if (savedHeroLogo) {
+    //           heroLogo.src = savedHeroLogo;
+    //       }
 
-          document.querySelectorAll('.product').forEach(product => {
-              const savedImage = localStorage.getItem(`product-${product.id}`);
-              if (savedImage) {
-                  product.querySelector('img').src = savedImage;
-              }
-          });
-      });
+    //       document.querySelectorAll('.product').forEach(product => {
+    //           const savedImage = localStorage.getItem(`product-${product.id}`);
+    //           if (savedImage) {
+    //               product.querySelector('img').src = savedImage;
+    //           }
+    //       });
+    //   });
   });
 </script>
 
