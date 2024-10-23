@@ -11,6 +11,7 @@
 <body>
     <div id="header"></div>
 
+
     <script>
       // Cargar el contenido del navbar
       fetch('navbarUsuario.html')
@@ -158,6 +159,28 @@
 </footer>
 
 
+<script>
+  // Filtrar resultados de búsqueda
+  const searchInput = document.getElementById('searchInput');
+  const cardsContainer = document.querySelector('.row');
 
+  searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.col-md-6');
+
+      cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+          } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+          }
+      });
+  });
+</script>
 </body>
 </html>
