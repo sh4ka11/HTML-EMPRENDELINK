@@ -11,6 +11,8 @@
 <body>
     <div id="header"></div>
 
+
+
     <script>
       // Cargar el contenido del navbar
       fetch('navbarUsuario.html')
@@ -18,58 +20,15 @@
         .then(data => {
           document.getElementById('header').innerHTML = data;
           
-          // Asegúrate de que el jS de Bootstrap esté disponible
+          // Asegúrate de que el JS de Bootstrap esté disponible
           const bootstrapScript = document.createElement('script');
           bootstrapScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js";
           document.body.appendChild(bootstrapScript);
         });
-
-      // Función para filtrar y reordenar los resultados
-      function filterResults() {
-        const input = document.getElementById('searchInput');
-        const filter = input.value.toLowerCase();
-        const cards = document.querySelectorAll('.card');
-        const cardsContainer = document.querySelector('.row');
-        const matchedCards = []; // Almacenar tarjetas que coinciden
-        const unmatchedCards = []; // Almacenar tarjetas que no coinciden
-
-        cards.forEach(card => {
-          const title = card.querySelector('h3').textContent.toLowerCase();
-          const description = card.querySelector('p').textContent.toLowerCase();
-          
-          if (title.includes(filter) || description.includes(filter)) {
-            matchedCards.push(card); // Añadir a coincidentes
-          } else {
-            unmatchedCards.push(card); // Añadir a no coincidentes
-          }
-        });
-
-        // Limpiar el contenedor de tarjetas
-        cardsContainer.innerHTML = '';
-
-        // Añadir primero las tarjetas que coinciden
-        matchedCards.forEach(card => {
-          const colDiv = document.createElement('div');
-          colDiv.classList.add('col-md-6');
-          colDiv.appendChild(card);
-          cardsContainer.appendChild(colDiv);
-        });
-
-        // Luego añadir las tarjetas que no coinciden
-        unmatchedCards.forEach(card => {
-          const colDiv = document.createElement('div');
-          colDiv.classList.add('col-md-6');
-          colDiv.appendChild(card);
-          cardsContainer.appendChild(colDiv);
-        });
-      }
-
-      // Añadir un evento para el input de búsqueda
-      document.addEventListener('DOMContentLoaded', () => {
-        const input = document.getElementById('searchInput');
-        input.addEventListener('keyup', filterResults); // Filtrar al escribir
-      });
     </script>
+
+
+
 
 <div class="search-bar">
   <input type="text" id="searchInput" placeholder="Buscar...">
@@ -83,7 +42,7 @@
       <ul>
 
         <li><a href="busqueda_filtro.html"><img src="images/deportes.png" alt="Artículos deportivos">Todos los empredimientos</a></li>   
-        <li><a href="articulos deportivos.html" style="color: rgb(0, 255, 0);"><img src="images/deportes.png" alt="Artículos deportivos">Empredimietos deportivos</a></li>
+        <li><a href="articulos deportivos.html" style="color: rgb(67, 184, 67);"><img src="images/deportes.png" alt="Artículos deportivos">Empredimietos deportivos</a></li>
         <li><a href="articulos_hogar.html"><img src="images/hogar.png" alt="Artículos deportivos">Emprendimientos sobre articulos de la casa hogar</a></li>
         <li><a href="articulos_electronicos.html"><img src="images/electronica.png" alt="Electrónica">Empredimientos sobre Electrónica</a></li>
         <li><a href="#"><img src="images/indumentaria.png" alt="Indumentaria">Emprendimientos de indumentaria</a></li>
@@ -151,7 +110,7 @@
                 <button><a href="VISITAR-EMPRENDIMIENTO-1.HTML">Visitar</a></button>
             </div>
         </div>
-    </div> <!-- Cierra la fila -->
+    </div> 
 </main>
 </div>
 
@@ -207,6 +166,28 @@
 </footer>
 
 
+<script>
+  // Filtrar resultados de búsqueda
+  const searchInput = document.getElementById('searchInput');
+  const cardsContainer = document.querySelector('.row');
 
+  searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.col-md-6');
+
+      cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+          } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+          }
+      });
+  });
+</script>
 </body>
 </html>

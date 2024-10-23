@@ -140,7 +140,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         }
-        
+        .footer-section a{
+          color: gray;
+           }
         .footer-section {
         flex: 1;
         margin: 10px;

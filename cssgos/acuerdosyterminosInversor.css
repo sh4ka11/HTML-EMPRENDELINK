@@ -151,82 +151,12 @@ body {
     .burger {
     display: none; /* Escondido por defecto */
     }
-    .sidebar {
-        position: fixed;/*maneja el menu de barras */
-        left: -300px; /* maneja la salida de el menu de barras*/
-        top: 0;
-        height: 100%;
-        width: 250px;
-        background-color: #333;
-        color: #fff;
-        transition: left 0.3s ease;
-        z-index: 2000;
-        overflow-y: auto;
-    }
-    
-    .sidebar.active {
-        left: 0;
-    }
-    
-    .sidebar .profile {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .sidebar .profile img {/*maneja la imagen del menu */
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-    }
-    
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
-        padding: 15px 20px;
-        border-bottom: 2px solid #444;
-    }
-    
-    .sidebar ul li a { /* maneja el color de las letras del menu */
-        color: #fff;
-        text-decoration: none;
-    }
-    @media (max-width: 768px) {
-    .nav-links {
-    display: none; /* Esconder menú en pantallas pequeñas */
-    }.header-right {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .header-right a {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-    
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .buttons button {
-        width: 100%;
-        text-align: center;
-    }
-    }    
-    ul {
-        list-style: none;
-
-      }
       
       .example-2 {
         display: flex;
         justify-content:left;
         align-items: center;
-        translate: 65px -20px;
+    margin-left: 20%;
       }
       .example-2 .icon-content {
         margin: 0 10px;
@@ -318,7 +248,7 @@ body {
      /* Logo responsiveness */
 .logoda img {
   max-width: 100%;
-  height: auto;
+  height: 150px;
 }
 
 /* Responsive styles */
