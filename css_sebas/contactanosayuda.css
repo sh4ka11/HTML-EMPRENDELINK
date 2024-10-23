@@ -2,267 +2,99 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 1000;
-}
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
 
-.menu-toggle {
+.menu-toggle img {
     font-size: 24px;
     cursor: pointer;
+    
 }
 
+.barra {
+    height: 35px; 
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
 .logo img {
     height: 80px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    padding: 0;
-}
 
-nav ul li {
-    display: flex;
-    align-items: center;
-}
 
-nav ul li img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
 
-main {
+main { /*maneja el tamaño y ancho del texto del centro */
     width: 90%;
-    margin: 20px auto;
+    margin: 60px auto; 
+    position: relative;
+    z-index: 100;
 }
 
-.message {
+/* .notifications, .contact { coloca el fondo blanco al link
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-}
+    margin-bottom: 20px;
+} */
 
-.message-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px 5px 0 0;
-}
-
-.message-header h2 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.message-controls {
-    display: flex;
-    gap: 10px;
-}
-
-.message-controls span {
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.message h2 {
+.notifications h2, .contact h2 { /*maneja el espacio entre contactanos y el resto del texto */
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.message-actions { /*coloca eliminar a la derecha */
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.message-actions .delete-btn, .message-actions .reply-btn { /*acomoda los botones eliminar */
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-
-
-
-.notification {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 50px;
-    border-radius: 8px;
-    text-align: center;
+.notification, .accordion-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.notification button {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+.notification p {
+    margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-textarea {
-    width: 100%;
-    padding: 10px;
+.accordion-button {
+    background-color: #f1f1f1;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.3s;
+    position: relative;  /* Asegura que el pseudo-elemento esté posicionado correctamente */
 }
 
-textarea {
-    height: 300px;
-    resize: none;
+.accordion-button.active, .accordion-button:hover {
+    background-color: #e1e1e1;
 }
 
-.form-buttons {
-    display: flex;
-    gap: 10px;
+ .accordion-content {/*hace que se las fechas funcionen  */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    margin-top: 40px;
+.accordion-content p {
+    margin: 10px 0;
 }
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 10px;
-}
-
-.imagenes {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.imagenes img {
-    margin: 0 10px;
-}
-
-.sidebar {
-    width: 250px;
-    background-color: #f8f8f8;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding-top: 80px;
-    display: none;
-}
-
-.sidebar.active {
-    display: block;
-}
-
-.sidebar .profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: block;
-}
-
-
 
 /*todo la parte de abajo */
-
+.footer-content a{
+    color: #bbb;
+  }
 
 footer {/*coloca el fondo negro de abajo */
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     margin-top: 40px;
@@ -405,5 +237,45 @@ ul {
   .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
   }
-  
+/*
+.footer-content .about p {
+    font-size: 14px; /*maneja el tamñano de la letra emprende link de la parte de abajo 
+} */
 
+
+
+
+
+.accordion-button::after {
+    content: '\25bc';  /* Triángulo hacia abajo */
+    font-size: 12px;
+    position: absolute;
+    right: 20px;  /* Ajusta la posición de la flecha según sea necesario */
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active::after {
+    transform: rotate(180deg);  /* Rota la flecha hacia arriba */
+}
+
+.accordion-button.active, .accordion-button:hover {
+    background-color: #e1e1e1;
+}
+
+
+
+
+.menu-toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.menu-toggle.active span {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
