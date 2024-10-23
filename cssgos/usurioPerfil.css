@@ -315,7 +315,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
         left: 0;
         width: 50px;
         height: 2px;
-        background: #4a90e2;
+        background: #7d838a;
       }
       
       .footer-section p {
@@ -353,7 +353,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
         height: 1px;
         bottom: -2px;
         left: 0;
-        background-color: #4a90e2;
+        background-color: #646f7b;
         transition: width 0.3s ease;
       }
       
@@ -452,12 +452,12 @@ input[type="text"], input[type="email"], input[type="tel"] {
       /* Specific social media colors with gradients */
       .example-2 .icon-content a[data-social="linkedin"] .filled,
       .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-        background: linear-gradient(45deg, #0274b3, #0093e9);
+        background: linear-gradient(45deg, #96aebb, #9fb4c0);
       }
       
       .example-2 .icon-content a[data-social="twitter"] .filled,
       .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
-        background: linear-gradient(45deg, #1DA1F2, #19c3ff);
+        background: linear-gradient(45deg, #919da4, #9fa8ac);
       }
       
       .example-2 .icon-content a[data-social="instagram"] .filled,
