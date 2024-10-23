@@ -26,25 +26,38 @@
         <div class="flex-column">
 
 
-            <label>Dijite su contraseña</label>
-        </div>
-        <div class="inputForm">
-            <svg height="20" viewBox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg">
-                <g id="Layer_3" data-name="Layer 3">
-                </g>
-            </svg>
-            <input type="text" class="input" placeholder="Ingrese su usuario" />
-        </div>
-        <div class="flex-column">
+            <label>Ingrese su contraseña</label>
+            <div class="inputForm">
+                <input type="password" class="input" id="passwordInput" placeholder="Ingrese su contraseña" />
+            </div>
+            
             <label>Confirmar contraseña</label>
-        </div>
-        <div class="inputForm">
-            <svg height="20" viewBox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg">
-                <g id="Layer_3" data-name="Layer 3">
-                </g>
-            </svg>
-            <input type="text" class="input" placeholder="Ingrese su usuario" />
-        </div>
+            <div class="inputForm">
+                <input type="password" class="input" id="confirmPasswordInput" placeholder="Confirme su contraseña" />
+            </div>
+            
+            
+            <script>
+                const checkPasswordButton = document.getElementById('checkPasswordButton');
+                const passwordInput = document.getElementById('passwordInput');
+                const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+            
+                checkPasswordButton.addEventListener('click', function() {
+                    const password = passwordInput.value;
+                    const confirmPassword = confirmPasswordInput.value;
+                    const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+            
+                    if (password !== confirmPassword) {
+                        alert("Las contraseñas no coinciden.");
+                    } else if (!specialCharacterRegex.test(password)) {
+                        alert("La contraseña debe contener al menos un carácter especial.");
+                    } else {
+                        alert("La contraseña es válida.");
+                        // Aquí puedes agregar la lógica para continuar a la siguiente vista
+                    }
+                });
+            </script>
+            
 
 
 
@@ -57,7 +70,7 @@
 
         <div class="flex-row">
       
-            <span class="span"><a href="contactanos1 copy.html" class="link">¿Necesitas ayuda?</a></span>
+            <span class="span"><a href="contactanosayuda.html" class="link">¿Necesitas ayuda?</a></span>
         </div>
         <a href="iniciosesion1_usuario.html" class="button-submit">Registrarse</a>
 
