@@ -11,6 +11,7 @@
 <body>
     <div id="header"></div>
 
+
     <script>
       // Cargar el contenido del navbar
       fetch('navbarUsuario.html')
@@ -37,7 +38,7 @@
       <ul>
         <li><a href="busqueda_filtro.html"><img src="images/deportes.png" alt="Artículos deportivos">Todos los empredimientos</a></li>
         <li><a href="articulos deportivos.html"><img src="images/deportes.png" alt="Artículos deportivos">Emprendimientos deportivos</a></li>
-        <li><a href="articulos_hogar.html" style="color: rgb(0, 255, 0);"><img src="images/hogar.png" alt="Artículos deportivos">Emprendimientos sobre articulos de la casa hogar</a></li>
+        <li><a href="articulos_hogar.html" style="color: rgb(67, 184, 67);"><img src="images/hogar.png" alt="Artículos deportivos">Emprendimientos sobre articulos de la casa hogar</a></li>
         <li><a href="articulos_electronicos.html"><img src="images/electronica.png" alt="Electrónica">Empredimientos sobre Electrónica</a></li>
         <li><a href="#"><img src="images/indumentaria.png" alt="Indumentaria">Emprendimientos de indumentaria</a></li>
         <li><a href="#"><img src="images/musica.png" alt="Instrumentos musicales">Empredimientos sobre musica</a></li>
@@ -116,7 +117,7 @@
         </div>
         <div class="footer-section links">
             <h3>Legales</h3>
-            <ul>
+            <ul><li><a href="sobreEmpredelinkInversor.html">Sobre Emprende Link</a></li>
                 <li><a href="politicayprivacidad.html">Política de privacidad</a></li>
                 <li><a href="acuerdosyterminos.html">Acuerdos y términos</a></li>
             </ul>
@@ -158,6 +159,28 @@
 </footer>
 
 
+<script>
+  // Filtrar resultados de búsqueda
+  const searchInput = document.getElementById('searchInput');
+  const cardsContainer = document.querySelector('.row');
 
+  searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.col-md-6');
+
+      cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+          } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+          }
+      });
+  });
+</script>
 </body>
 </html>
