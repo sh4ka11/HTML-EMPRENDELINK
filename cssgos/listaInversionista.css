@@ -289,7 +289,9 @@ background-color: #555;
     flex: 1;
     margin: 10px;
     }
-    
+    .footer-section a{
+     color: gray;
+      }
     .footer-section h3 {
     border-bottom: 1px solid #555;
     padding-bottom: 5px;

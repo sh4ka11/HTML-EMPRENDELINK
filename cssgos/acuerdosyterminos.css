@@ -286,7 +286,7 @@ footer {
   display: flex;
   justify-content: left;
   align-items: center;
-  translate: 65px -20px;
+  margin-left: 20%;
   list-style: none;
   padding: 0;
 }
