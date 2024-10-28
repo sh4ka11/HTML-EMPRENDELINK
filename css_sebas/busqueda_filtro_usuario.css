@@ -1,14 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
 
-
-
-
-
-
-.Inversor{
-    color: #666666;
-    font-weight: bold;
-    text-decoration: none; 
- }
  .content {
    max-height: 80px; /* Limitar la altura del contenido */
    overflow: hidden;
@@ -25,65 +18,7 @@
  }
  
  
- 
-        .search-bar {
- 
-            width: 25%;
-            display: flex;
-            align-items: center;
-            margin: 20px;
-            border: 1px solid #000000; /* Grosor del borde de 2px y color rojo */
-           border-radius: 10px;
-           
-         }
- 
-       .search-bar input[type="text"] {
-           width: 100%;
-           padding: 10px;
-           border: 1px solid #ccc;
-           border-radius: 10px;
-       }
- 
- 
-       .carticas {
-           width: 100%;
-         
-           padding: 20px;
-           background-color: white;
-           border-right: 1px solid #000000;
-       }
- 
- 
- 
-       .carticas h2 {
-           margin-top: 0;
-       }
- 
-       .carticas ul {
-           list-style: none;
-           padding: 0;
-       }
- 
-       .carticas ul li {
-           margin-bottom: 10px;
-           
-       }
-       .carticas ul li a {
-           text-decoration: none;
-           color: black;
-           display: flex;
-           align-items: center;
-           
-       }
- 
-       .carticas ul li a img {
-         
-           margin-right: 10px;
-           height: 30px;
- 
- 
-       }
- 
+      
  
        .main-content h2 {
            margin-top: 0;
@@ -116,16 +51,11 @@
        .card button:hover {
            background-color: #333;
        }
-       .carticas{
-           border: 1px solid #000000; /* Grosor del borde de 2px y color rojo */
-           margin: 20px;
-           border-radius: 10px;
        
-       }
        
  
        
- footer {
+ /* footer {
    background-color: #000000;
    color: #fff;
    padding: 20px 0;
@@ -278,7 +208,7 @@
            .footer-content .logoda img {
            height: 52%;
            width: 78%; 
-       }
+       } */
  
  
  .card a {
@@ -295,7 +225,7 @@
  }
  
  /* Responsive styles */
- @media screen and (max-width: 768px) {
+ /* @media screen and (max-width: 768px) {
   .footer-content {
       flex-direction: column;
   }
@@ -324,7 +254,7 @@
       width: 20px;
       height: 20px;
   }
- }
+ } */
  
  
  
@@ -332,14 +262,8 @@
  
  
  
- .container-bar {
-   display: flex;
- }
- 
- .carticas {
-   width: 25%; /* Ajusta el ancho según sea necesario */
-   margin-right: 20px; /* Espacio entre la carticas y las cards */
- }
+
+
  
  .main-content {
    flex: 1; /* Ocupa el resto del espacio disponible */
@@ -354,16 +278,13 @@
    width: 30%; /* Ancho de cada tarjeta, ajusta según sea necesario */
    height: 30%;
    margin: 10px; /* Espacio entre tarjetas */
+  
  }
  
  
  
  
- /* Estilos para el contenedor principal */
- .main-content {
-   padding: 20px; /* Espacio alrededor del contenido principal */
- }
- 
+
  /* Estilos para la fila */
  .row {
    display: flex; /* Usa flexbox para organizar las tarjetas */
@@ -373,26 +294,25 @@
  
  /* Estilos para la tarjeta */
  .card {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between; /* Espacia el contenido uniformemente */
-   align-items: center; /* Centra horizontalmente el contenido */
-   width: 90%; /* Ancho completo de la columna */
-   max-width: 1000000%; /* Ancho máximo de la tarjeta (ajustado) */
-   height: 350px; /* Altura fija para mantener consistencia */
-   border: 1px solid #ccc; /* Borde de la tarjeta */
-   border-radius: 5px; /* Bordes redondeados */
-   padding: 10px; /* Espacio interno */
-   margin: 10px 0; /* Margen vertical entre tarjetas */
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  max-width: 1000000%;
+  height: 350px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 20px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  
+}
  
  /* Estilos para la imagen */
- .card img {
-   width: auto; /* Imagen ocupa todo el ancho de la tarjeta */
-   height: 170px; /* Alto fijo para la imagen */
-   object-fit: cover; /* Mantiene la proporción y cubre el área */
-   border-radius: 5px; /* Bordes redondeados */
- }
+ 
  
  /* Estilos para el contenido de texto */
  .card h3, .card p {
@@ -416,20 +336,495 @@
    margin-left: auto; /* Alinea el botón a la derecha */
    display: block; /* Asegura que el botón ocupe el ancho completo disponible */
    width: fit-content; /* Ajusta el ancho del botón al contenido */
+   border-radius: 25px;
  }
+
  
- /* Cambia el color del botón al pasar el mouse */
- .card button:hover {
-   background-color: #333; /* Color de fondo del botón al pasar el mouse */
- }
+
+
+
+
+
+
+/* NUEVOS ESTILOS */
+
+
+/* Pagination Styles */
+.pagination  {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  align-items: center;
+  
+}
+
+.page-btn {
+  padding: 10px 15px;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
+}
+
+.page-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+.page-btn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+
+
+
+
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Changed from 120% to 100% */
+  height: 42%;
+  object-fit: cover;
+  z-index: 0;
+   filter: brightness(0.6); /* Darkens the background image */
+}
+.logo-img {
+  position: relative;
+  width: 40%;
+  height: 60%;
+  background: white;
+  border-radius: 10%;
+  padding: 10px;
+  z-index: 1;
+  margin-top: 90px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius:50%;
+}
+
+
+
+.card h3 {
+  position: relative;
+  z-index: 1;
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+.card p {
+  position: relative;
+  z-index: 1;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+  width: 90%; /* Added to control text width */
+  margin-top: 1px;
+}
+
+
+.card button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Efectos hover para la card */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* estilos del filtro*/
+
+
+
+
+/* Sidebar Styles */
+.carticas {
+  width: 30%;
+  /* min-width: 300px; */
+  height: calc(100vh - 200px);
+  top: 20px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  
+}
+
+.carticas h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000;
+}
+
+.carticas h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.carticas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carticas ul li {
+  margin-bottom: 0.8rem;
+}
+
+.carticas ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.carticas ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.carticas ul li a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  height: calc(120vh - 200px);
+  overflow-y: auto;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+/* Search Bar Improvements */
+.search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  padding: 1rem 0;
+  margin: 0 1rem 1rem 1rem;
+  width: calc(100% - 2rem);
+  max-width: 500px;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+@media screen and (max-width: 1092px) {
+  .container-bar {
+      flex-direction: column;
+  }
+  
+  .carticas {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      position: relative;
+      top: 0;
+  }
+  
+  .main-content {
+      height: auto;
+      max-height: none;
+  }
+  
+  .search-bar {
+      position: relative;
+      margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-bar {
+      padding: 0 0.5rem;
+  }
+  
+  .carticas {
+      padding: 1rem;
+  }
+  
+  .carticas ul li a {
+      padding: 0.6rem;
+  }
+  
+  .search-bar input[type="text"] {
+      padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Custom Scrollbar for Carticas */
+.carticas {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.carticas::-webkit-scrollbar {
+  width: 6px;
+}
+
+.carticas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carticas::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+/* Animation for cards on scroll */
+.row {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.row.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+
+
+.container-bar {
+  display: flex;
+  gap: 2rem;
  
- /* Estilos para el enlace dentro del botón */
- .card button a {
-   color: white; /* Color del enlace */
-   text-decoration: none; /* Sin subrayado */
-   display: block; /* Bloque para ocupar todo el botón */
-   width: 100%; /* Ancho completo del botón */
-   height: 100%; /* Alto completo del botón */
- }
+  left: 0;
+  top: 0;
  
- 
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0;
+  
+}
+
+/* Sidebar Content Styles */
+.sidebar-content {
+  width: 30%;
+  height: 100vh;
+  top: 20px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+
+/* Header Section Styles */
+.header-section {
+  padding-bottom: 1rem;
+}
+
+.header-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000;
+  text-align: center;
+}
+
+/* Search Section Styles */
+.search-section {
+  margin-bottom: 1.5rem;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/* Explorar Todo Section */
+.sidebar-content h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 1rem 0;
+  padding-top: 0.5rem;
+}
+
+/* Navigation List Styles */
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-content ul li {
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-content ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-content ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.sidebar-content ul li a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .container-bar {
+      gap: 1.5rem;
+  }
+  
+  .sidebar-content {
+      width: 100%;
+      min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-bar {
+      flex-direction: column;
+  }
+  
+  .sidebar-content {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-bar {
+      padding: 0 0.5rem;
+  }
+  
+  .sidebar-content {
+      padding: 1rem;
+  }
+  
+  .search-section input {
+      padding: 0.8rem;
+  }
+}
+
+
+/* Container Bar y Layout Principal */
+/* .container-bar {
+  display: flex;
+  gap: 2rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0;
+  
+  background-color: #f5f5f5;
+}
+
+/* Sidebar Content Styles */
+
+
+
+
+
+
+
+
