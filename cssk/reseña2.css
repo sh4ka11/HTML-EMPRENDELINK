@@ -8,48 +8,6 @@ body {
     min-height: 100vh;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.menu-toggle img {
-  font-size: 24px;
-  cursor: pointer;
-  
-}
-
-.barra {
-  height: 35px; 
-  margin-right: 10px;
-  margin-left: 8px;
-}
-
-.logo {
-  height: 60px;
-  margin-right: 10px;
-  margin-top: 15px;
-}
-.logo img {
-  height: 80px;
-}
-.header-right a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #000;
-}
-
-.header-right a i {
-  margin-right: 5px;
-}
 
 
 
@@ -57,61 +15,6 @@ header {
 
 
 
-.sidebar {
-  position: fixed;/*maneja el menu de barras */
-  left: -300px; /* maneja la salida de el menu de barras*/
-  top: 0;
-  height: 100%;
-  width: 250px;
-  background-color: #333;
-  color: #fff;
-  transition: left 0.3s ease;
-  z-index: 2000;
-  overflow-y: auto;
-}
-
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar .profile {
-  padding: 20px;
-  text-align: center;
-}
-
-.sidebar .profile img {/*maneja la imagen del menu */
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
-  padding: 15px 20px;
-  border-bottom: 2px solid #444;
-}
-
-.sidebar ul li a { /* maneja el color de las letras del menu */
-  color: #fff;
-  text-decoration: none;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 35px;
-  padding: 0;
-  
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
 
 
 
@@ -169,10 +72,12 @@ nav ul li a {
 }
 
 .company-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .header-text h2 {
@@ -183,8 +88,8 @@ nav ul li a {
 
 .review-metadata {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: end;
+ 
 }
 
 .timestamp {
@@ -304,8 +209,11 @@ nav ul li a {
   transform: translateY(-1px);
 }
 
-.button-icon {
+.span.button-icon {
   font-size: 1.25rem;
+  background-color: #000000;
+  color: #000000;
+ 
 }
 
 /* Responsive */

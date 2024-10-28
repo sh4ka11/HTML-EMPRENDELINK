@@ -7,48 +7,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f8f8f8;
-        }
-        
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-        
-        .menu-toggle img {
-            font-size: 24px;
-            cursor: pointer;
-            
-        }
-        
-        .barra {
-            height: 35px; 
-            margin-right: 10px;
-            margin-left: 8px;
-        }
-        
-        .logo {
-            height: 60px;
-            margin-right: 10px;
-            margin-top: 15px;
-        }
-        .logo img {
-            height: 80px;
-        }
-        .header-right a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #000;
-        }
-        
-        .header-right a i {
-            margin-right: 5px;
-        }
+      
         
         
         
@@ -56,62 +15,7 @@
         
         
         
-        .sidebar {
-            position: fixed;/*maneja el menu de barras */
-            left: -300px; /* maneja la salida de el menu de barras*/
-            top: 0;
-            height: 100%;
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            transition: left 0.3s ease;
-            z-index: 2000;
-            overflow-y: auto;
-        }
-        
-        .sidebar.active {
-            left: 0;
-        }
-        
-        .sidebar .profile {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .sidebar .profile img {/*maneja la imagen del menu */
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-        }
-        
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .sidebar ul li {/* maneja el espacio de las opciones del menu, y color */
-            padding: 15px 20px;
-            border-bottom: 2px solid #444;
-        }
-        
-        .sidebar ul li a { /* maneja el color de las letras del menu */
-            color: #fff;
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 35px;
-            padding: 0;
-            
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-
+       
 
 
         .review-container {
@@ -153,12 +57,13 @@
         }
         
         .company-logo {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50px;
             object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+            margin-right: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          }
         
         .review-info h2 {
             font-size: 1.8rem;
@@ -266,19 +171,23 @@
         .reply-input {
             min-height: 100px;
             padding: 15px;
-            border: 1px solid #e0e0e0;
+          
             border-radius: 8px;
             margin-bottom: 15px;
             background: #fff;
-            color: #2c3e50;
+            color: black;
             font-size: 1rem;
             line-height: 1.5;
             transition: border-color 0.3s ease;
+            
+        }
+        a:visited {
+            color: black; /* Cambia esto al color que desees */
         }
         
         .reply-input:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: black;
             box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
         }
         
@@ -297,7 +206,7 @@
             align-items: center;
             gap: 8px;
             padding: 12px 24px;
-            background: #3498db;
+            background: black;
             color: white;
             border: none;
             border-radius: 6px;
@@ -307,7 +216,7 @@
         }
         
         .reply-button:hover {
-            background: #2980b9;
+            background: gray;
         }
         
         /* Responsive Adjustments */
