@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         .navbar-nav .nav-link:hover {
-            color: #007bff;
+            color: gray;
         }
 
         .dropdown-menu {
