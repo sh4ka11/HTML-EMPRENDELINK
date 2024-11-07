@@ -1,0 +1,146 @@
+* {
+    margin: 20;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.message {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sender-logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.sender-info strong {
+    display: block;
+    font-size: 18px;
+}
+
+.sender-info span {
+    color: #888;
+    font-size: 14px;
+}
+
+.message-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.message-content h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.message-content ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.message-content ul li {
+    margin-bottom: 10px;
+}
+
+.message-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.message-actions .delete-btn, .message-actions .reply-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-nav ul li {
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
